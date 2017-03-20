@@ -2,15 +2,18 @@
 title: "Diplomado en R"
 author: "Francisco Javier Luna Vázquez"
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
-output: bookdown::html_book:
-    theme: united
+site: bookdown::bookdown_site 
+output: 
+  bookdown::gitbook: default
 documentclass: book
-bibliography: #[book.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: #rstudio/bookdown-demo
 description: "Documento con las notas de introducción a R, RStudio y RMarkdown"
 ---
 
 # Prerequisitos
+```{r}
+  x<-matrix(NA,ncol=3)
+  x
+```
+
