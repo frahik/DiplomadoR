@@ -1,0 +1,12 @@
+book_filename: "Diplomado_R_Luna"
+language:
+  label:
+    fig: 'Figura '
+    tab: 'Tabla '
+    eq: 'Ecuación '
+    thm: 'Teorema '
+    def: 'Definición '
+    ex: 'Ejemplo '
+  ui:
+    edit: Edit
+    chapter_name: "Capítulo "
