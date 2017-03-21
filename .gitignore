@@ -4,6 +4,7 @@
 .Ruserdata
 
 \.Rbuildignore
+\_book
 
 DiplomadoR\.Rproj
 
