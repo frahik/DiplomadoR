@@ -85,15 +85,110 @@ y
 ### Vector
 
 ### Matriz
+Para crear una matriz en **R** se utiliza la función
+
+```{R Matriz, eval=F, eval=F}
+matrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE, dimnames = NULL)
+```
+
+donde `matrix()` corresponde al nombre de la función y todo lo que está dentro de los paréntesis son los argumentos de dicha función.
+
+| Argumentos | Significado |
+|------------|------------|
+|   `data`   |Es un vector de datos opcional |
+|   `nrow`   |Número deseado de filas        |
+|   `ncol`   |Número deseado de columnas     |
+|   `byrow`  |Valor lógico. Si es falso (valor por defecto), la matriz se llena por orden columna, de otra manera se llenará primero por filas. |
+| `dimnames` |Utilizado para darles nombres a las filas y a las columnas, respectivamente. |
+
 
 ### Data Frame
+Los dataframes, son una clase parecida a las matrices, sin embargo, poseen determinadas características que las hace más útiles en ciertas ocasiones. 
+
+Al igual que los vectores y matrices, existen varias formas de crear data frames, una forma sencilla de crearlos es especificar los datos de las columnas como en el ejemplo siguiente:
+
+```{r dataframe1}
+data.frame(w = 1, x = 1:5, y = LETTERS[1:5], z=runif(5))
+```
 
 ### Lista
 
 ## Manejo de datos
 
+### Salvar datos
+En algún momento, tendremos la necesidad de guardar o leer algo en un formato determinado, sea `.csv` o `.Rdata`, veamos unos ejemplos que podrán ser de utilidad.
+
+#### CSV (Comma-separated values)
+
+Un formato muy utilizado en **R** a parte de los `.RData` (que son archivos especiales de **R**), para exportar los datos en dicho formato:  
+
+```{R ExportarCSVConFilas, eval=F}
+df = data.frame(runif(10), runif(10), runif(10)) 
+names(df) = c("dato1", "dato2", "dato3")
+
+write.table(df, file = "dataframe1.csv", sep = ",",
+col.names = NA, qmethod = "double") 
+```
+
+En caso de que no se quisiera exportar el nombre de las filas, basta con modificar un poco el código, como en el siguiente ejemplo:
+
+```{R ExportarCSVSinFilas, eval=F}
+write.table(df, file = "dataframe2.csv", sep = ",",
+row.names = FALSE, qmethod = "double")
+```
+
+#### .RData
+Si tienes objetos que te gustaría guardar como tal para luego procesarlos o simplemente se te hace más sencillo comprenderlo sobre un `.csv`, los comandos serán los siguientes:
+
+```{r save, eval=F}
+foo = "bar"
+save(foo, file="nombre.RData")
+```
+
 ### Leer datos
 
-### Salvar datos
+#### CSV
+```{R ImportarCSVConFilas, eval=F} 
+read.table("dataframe1.csv", header = TRUE, sep = ",",
+row.names = 1) 
+```
 
-## Ejemplos
+Y si no se quieren importar los nombres de las filas optaremos por el siguiente comando:
+
+```{R ImportarCSVSinFilas, eval=F} 
+read.table("dataframe2.csv", header = TRUE, sep = ",")
+```
+
+Aunque, la forma más sencilla de importar un `.csv` es a través del comando `read.csv(...)`, cuya implementación es la siguiente:
+
+```{r ImportarCSV, eval=F}
+read.csv(file, header = TRUE, sep = ",", dec = ".", ...)
+```
+
+Dónde:
+
+| Argumentos  | Significado o uso  |
+|-------------|-------------------|
+| `file`      | Ruta al archivo, en caso de estar en el mismo directorio de trabajo poner solo el nombre del archivo, de otro modo ingresar la ruta completa  |
+| `header`    | Valor lógico para determinar si el archivo incluye encabezados en la primera linea.   |
+| `sep`       | Este campo sirve para especificar el carácter de separación. |
+| `dec`       | El carácter usado para los puntos decimales  |
+| `...`       | Ver la documentación para argumentos extras   |
+
+Un ejemplo seria el siguiente:
+```{r readcsv2,eval=F}
+csv <- read.csv("dataframe1.csv")
+```
+
+#### .RData
+para volver a cargar los datos:
+```{r load, eval=F}
+load("nombre.RData")
+```
+Para llamar el objeto, basta con volver a introducir su variable, que, aunque no haya sido creada antes de usar la función `load()`, esta se encarga de crear el objeto y asignarle el valor que decidimos guardar en un principio.
+```{r loadfoo, eval=F}
+foo
+```
+```{r loadfoo2,echo=F}
+"bar"
+```
