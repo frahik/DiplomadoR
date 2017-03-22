@@ -1,2 +1,61 @@
 # Introducción a RStudio {#RStudio}
 
+![Rstudio](./assets/images/Rstudio.png)
+
+Rstudio se encuentra dividido en 12 importantes paneles que están divididas en 4 secciones que pueden ser configurados al gusto de cada persona.
+
+## Panel de código
+
+![Panel de código](./assets/images/Panel_Script.png)
+
+| Comando | Uso |
+|---------|-----|
+| [Control] + [Shift] + [A] | Formatea el código de R que se encuentre seleccionado |
+| [Tab]   | Abre la opción de autocompletado en función a lo que se va escribiendo | 
+
+----
+
+## Panel de Consola
+
+![Consola](./assets/images/Panel_Consola.png)
+
+
+----
+
+## Panel de entorno
+
+![Panel de entorno](./assets/images/Panel_Entorno.png)
+
+
+----
+
+## Panel de historial
+![Panel de historial](./assets/images/Panel_Historial.png)
+
+## Panel de Construcción
+
+![Panl de construcción](./assets/images/Panel_Construcción.png)
+
+## Panel de Control de versiones (Git)
+
+![git](./assets/images/Panel_Git.png)
+
+## Panel de archivos
+
+![Panel de archivos](./assets/images/Panel_Archivos.png)
+
+## Panel de gráficos
+![Panel de gráficos](./assets/images/Panel_Grafica.png)
+
+
+## Panel de Paquetes
+![Panel de Paquetes](./assets/images/Panel_Paquetes.png)
+
+## Panel de ayuda
+![Panel de ayuda](./assets/images/Panel_Ayuda.png)
+
+## Panel de visualización
+![Panel de Visualización](./assets/images/Panel_Viewer.png)
+
+
+
