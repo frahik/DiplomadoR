@@ -1,2 +1,99 @@
-# Introducción a R [Manejo de datos] {#intro}
+# Introducción a R{#intro}
 
+## Primeros pasos 
+Para interactuar con R se dispone de una potente línea de comandos y en un principio, la manera más sencilla de ver **R** es que puede ser usado como una calculadora: 
+
+```{R Suma}
+10+5 
+``` 
+
+o
+
+```{R División}
+10/5 
+``` 
+
+Sin embargo, su potencial va más allá... 
+
+Principalmente por que este documento ha sido diseñado en **R** y **RMarkdown** ;)
+
+### Establecer directorios de trabajo
+
+Al ejecutar **R**, este establece un directorio de trabajo, es decir, establece una carpeta donde guardar los datos ejecutados en R, misma que será la carpeta que usara para buscar, leer y escribir los archivos (de ser requerido) durante la sesión (es decir, mientras se mantiene el programa abierto), por ello, para obtener el directorio de trabajo actual basta con usar el siguiente comando:
+
+```{r WD}
+getwd()
+```
+
+Dicho directorio va a variar dependiendo de la maquina, por ello, más de una vez será necesario modificarlo, para lo cual se usara el comando `setwd("Ruta")`, el cual varia dependiendo del Sistema Operativo, es recomendable como buena practica del programador establecer el directorio de trabajado dentro de la carpeta de Documentos, además de que es más sencillo encontrar los proyectos de trabajo, si se usa la **ruta relativa** y no la **ruta física**, si se requiere mover todos los archivos para trabajar en otra computadora, no se tendrá que volver a modificar el directorio de trabajo.
+
+**Ejemplo usando la Ruta relativa en Linux**
+```{r SWD, eval=FALSE}
+setwd("~/Documentos/Curso") #Linux
+```
+
+**Ejemplo usando la _Ruta física_ y la _ruta relativa_ en Windows**
+```{r SWDWindows, eval=FALSE}
+setwd("C:\\Usuario\\Documentos\\Curso") #MALA PRACTICA
+setwd("~/Curso") #BUENA PRACTICA (Equivalente al comando anterior)
+```
+
+### Creación de objetos/variables
+
+En **R** podemos crear y manipular objetos asignándole valores, cadenas de texto, funciones y un largo etc. 
+Por ser el primer contacto con **R**, crearemos un objeto (izquierda del símbolo `=`), asignándole como valor la cadena de texto "Hola mundo" 
+```{R Creación-Saludo, eval=F}
+saludo = "Hola mundo" 
+``` 
+Ahora para mostrar en consola lo que contiene la _variable_ u _objeto_ `saludo`, lo escribiremos tal cual y obtendremos una salida muy similar a la siguiente. 
+```{R Saludo, echo=F, eval=T}
+saludo = "Hola mundo" 
+saludo 
+``` 
+
+**NOTAS:** 
+
+> **R** es sensible a las MAYÚSCULAS y minúsculas, por lo que `saludo` no es igual a `Saludo`, ni a `SALUDO`.
+>
+> **R** <span style="color:#DA0101">NO</span> requiere explicitar que tipo de valores van a contener las variables.
+
+Otra manera de asignar valores a las variables es mediante el símbolo `<-` que se compone de un menor que y el signo de menos. 
+ 
+```{R Asignación}
+x <- 10+5 
+``` 
+ 
+Es recomendable incluir un espacio simple a cada lado del operador de asignación para incrementar la legibilidad. Pero <span style="color:#DA0101">NO</span> coloques un espacio entre el `<` y el `-` que forman la flecha, recuerda que a pesar de estar compuesto por dos caracteres es un único símbolo. 
+ 
+Es posible reasignar un valor a la variable que hemos creado, así como reutilizar el valor de la variable para realizar un calculo:   
+```{R Objetos, eval=F}
+y <- x + 5 
+y
+```
+
+```{R Objetos2, echo=F}
+x <- 10 + 5
+y <- x + 5
+y 
+``` 
+
+> Recuerde que aunque pareciera algo matemático, los símbolos `<-` y `=` no funcionan como un «_igual_», si no, como un «_equivale a_» o una «_asignación_», por que a partir de ese momento, el valor de la derecha se le asigna al de la izquierda.
+
+
+## Clases de datos
+
+### Vector
+
+### Matriz
+
+### Data Frame
+
+### Lista
+
+## Manejo de datos
+
+### Leer datos
+
+### Salvar datos
+
+## Ejemplos
