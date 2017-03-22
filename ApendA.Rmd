@@ -1,2 +1,46 @@
 # Apendice {#ap.Aw}
 
+
+| Aritméticos |                     | Lógicos |                 | Comparativos |           |
+|:-----------:|---------------------|:-------:|-----------------|:------------:|-----------|
+|      +      | Adición             |    ==   | Igual a         |      \&      | Y Lógico  |
+|      -      | Substracción        |    !=   | Diferente de    |       !      | No Lógico |
+|      *      | Multiplicación      |    <    | Menor que       |       |      | O Lógico  |
+|      /      | División            |    >    | Mayor que       |   is.na(x)   | ¿Es NA?   |
+|  $\hat{ }$  | Potencia            |    <=   | Menor o igual a |  is.null(x)  | ¿Es Null? |
+|    \%/\%    | División de enteros |    >=   | Mayor o igual a |   is.nan(x)  | ¿Es NaN?  |
+
+
+
+
+|   Función  | Matemáticas                           |    Función   | Estadísticas                  |
+|:----------:|---------------------------------------|:------------:|-------------------------------|
+|   sqrt(x)  | Raíz de $x$                           |    mean(x)   | Media                         |
+|   exp(x)   | Exponencial de $x$                    |     sd(x)    | Desviación estándar           |
+|   log(x)   | Logaritmo natural de $x$              |    var(x)    | Varianza                      |
+|  log10(x)  | Logaritmo base 10                     |   median(x)  | Mediana                       |
+|   sum(x)   | Suma de los elementos de $x$          | quantiles(x) | Quantiles                     |
+|   prod(x)  | Producto de los elementos de $x$      |   cor(x,y)   | Correlación                   |
+|   sin(x)   | Seno                                  |    max(x)    | Valor máximo                  |
+|   cos(x)   | Coseno                                |    min(x)    | Valor mínimo                  |
+|   tan(x)   | Tangente                              |   range(x)   | Retorna el máximo y mínimo    |
+| round(x,n) | Redondea a $n$ dígitos                |    sort(x)   | Ordena los elementos de $x$   |
+|  cumsum(x) | Calcula las sumas acumuladas          |    summary   | Resumen de las variables      |
+|            | ($x_1, x_1 + x_2, + x_1 +\ldots+x_n$) |  choose(n,k) | Combinatoria de $n$ sobre $k$ |
+
+
+| Distribución             | Función de densidad | distribución acumulada | función cuantil | Uso de numeros aleatorios |
+|--------------------------|---------------------|------------------------|-----------------|---------------------------|
+| Normal                   | dnorm(...)          | pnorm(...)             | qnorm(...)      | rnorm(...)                |
+| Uniforme                 | dunif(...)          | punif(...)             | qunif(...)      | runif(...)                |
+| Student's t              | dt(...)             | pt(...)                | qt(...)         | rt(...)                   |
+| Chi-cuadrada             | dchisq(...)         | pchisq(...)            | qchisq(...)     | rchisq(...)               |
+| Gamma                    | dgamma(...)         | pgamma(...)            | qgamma(...)     | rgamma(...)               |
+| Normal Multivariada      | dmvnorm(...)        | pmvnorm(...)           |                 | rmvnorm(...)              |
+| Student's t Multivariada | dmvt(...)           | pmvt(...)              | qmvt(...)       | rmvt(...)                 |
+| Exponencial              | dexp(...)           | pexp(...)              | qexp(...)       | rexp(...)                 |
+| Cauchy                   | dcauchy(...)        | pcauchy(...)           | qcauchy(...)    | rcauchy(...)              |
+| Wishart                  | dwish(...)          |                        |                 | rwish(...)                |
+
+
+
