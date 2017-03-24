@@ -1,7 +1,7 @@
 # Introducción a R-Markdown {#RMarkDown}
 
 ## Sintaxis de Markdown
-Esta es una rapida refencia de como usar ***Markdown***, para consultar más información sobre Markdown usar el siguiente enlace [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
+Esta es una rápida referencia de como usar **Markdown**, para consultar más información sobre **Markdown** usar el siguiente enlace [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
 
 ### Encabezados o Títulos
 
@@ -27,9 +27,9 @@ Alt-H2
 ### Texto
 
 ```
-Para usar texto en italica (cursiva), es atraves de *asteriscos* o _Guion bajo_.
+Para usar texto en itálica (cursiva), es a través de *asteriscos* o _Guion bajo_.
 
-Para usar texto en negritas, es a traves de **doble asterisco** o __doble guión bajo__.
+Para usar texto en negritas, es a través de **doble asterisco** o __doble guión bajo__.
 
 Es posible combinarlos con **Una parte en negritas y __además en cursiva__**
 
@@ -37,9 +37,9 @@ Para tachar algo usar ~~Texto no deseado~~.
 ```
 
 **DEMOSTRACIÓN**
-Para usar texto en italica (cursiva), es atraves de *asteriscos* o _Guion bajo_.
+Para usar texto en itálica (cursiva), es a través de *asteriscos* o _Guion bajo_.
 
-Para usar texto en negritas, es a traves de **doble asterisco** o __doble guión bajo__.
+Para usar texto en negritas, es a través de **doble asterisco** o __doble guión bajo__.
 
 Es posible combinarlos con **Una parte en negritas y __además en cursiva__**
 
@@ -49,34 +49,33 @@ Para tachar algo usar ~~Texto no deseado~~.
 
 ### Listas
 
-
 ```
 1. Primer elemento en la lista.
 2. Un elemento más.
-    * Una sub-lista o elemento anidado.
+* Una sub-lista o elemento anidado.
 1. No importa la numeración, solo son números.
-    1. Una sub-lista anidada.
+1. Una sub-lista anidada.
 4. Último elemento.
 
 Otro tipo de listas:
 
-  * Las listas no ordenadas pueden usar asteriscos
-  - O el simbolo de menos
-  + O el simbolo de más
+* Las listas no ordenadas pueden usar asteriscos
+- O el símbolo de menos
++ O el símbolo de más
 ```
 
 1. Primer elemento en la lista.
 2. Un elemento más.
-    * Una sub-lista o elemento anidado.
+* Una sub-lista o elemento anidado.
 1. No importa la numeración, solo son números.
-    1. Una sub-lista anidada.
+1. Una sub-lista anidada.
 4. Último elemento.
 
 Otro tipo de listas:
 
-  * Las listas no ordenadas pueden usar asteriscos
-  - O el simbolo de menos
-  + O el simbolo de más
+* Las listas no ordenadas pueden usar asteriscos
+- O el símbolo de menos
++ O el símbolo de más
 
 ---
 
@@ -89,14 +88,13 @@ Existen varás formas de crear enlaces:
 
 [Enlace a google con título](https://www.google.com "Página de Google")
 
-[Enlace referenciado a google][Texto de referencia al enlace]
+[Enlace a google][Texto de referencia al enlace]
 
-[Tambien es posible usar números para referenciar][1]
+[También es posible usar números para realizar referencias][1]
 
-o dejarlo vacio y sar el enlace como propio texto [texto].
+o dejarlo vacío y usar el enlace como propio texto [texto].
 
-
-URLs y URLs entre los símbolos `<` y `>` automaticamente seran transformados a enlace. 
+URLs y URLs entre los símbolos `<` y `>` automáticamente serán transformados a enlace.
 http://www.example.com o <http://www.example.com>.
 
 [Texto de referencia al enlace]: https://www.google.com
@@ -110,28 +108,28 @@ DEMOSTRACIÓN:
 
 [Enlace a google con título](https://www.google.com "Página de Google")
 
-[Enlace referenciado a google][Texto de referencia al enlace]
+[Enlace a google][Texto de referencia al enlace]
 
-[Tambien es posible usar números para referenciar][1]
+[También es posible usar números para realizar referencias][1]
 
-o dejarlo vacio y sar el enlace como propio texto [texto].
+o dejarlo vacío y usar el enlace como propio texto [texto].
 
-
-URLs y URLs entre los símbolos `<` y `>` automaticamente seran transformados a enlace. 
+URLs y URLs entre los símbolos `<` y `>` automáticamente serán transformados a enlace.
 http://www.example.com o <http://www.example.com>.
 
 [Texto de referencia al enlace]: https://www.google.com
 [1]: https://www.google.com
 [texto]: https://www.google.com
 
+
 ---
 
-### Imagenes
+### Imágenes
 
 ```
 ![Texto alternativo](http://www.uqroo.mx/image/escudo_uqroo_negro.gif "Logo UQroo")
 
-Reference-style: 
+Reference-style:
 ![Texto alternativo][logo]
 
 [logo]: http://www.uqroo.mx/logos/logo_full.gif "Logo UQroo"
@@ -142,7 +140,7 @@ DEMOSTRACIÓN:
 Referencia en la misma linea:
 ![Texto alternativo](http://www.uqroo.mx/image/escudo_uqroo_negro.gif "Logo UQroo")
 
-Mediante referencia de texto: 
+Mediante referencia de texto:
 ![Texto alternativo][logo]
 
 [logo]: http://www.uqroo.mx/logos/logo_full.gif "Logo UQroo"
@@ -151,27 +149,27 @@ Mediante referencia de texto:
 
 ### Tablas
 
-El símbolo de dos puntos `:` es usado como alineador de columnas
+El símbolo de dos puntos `:` es usado como alineado de columnas
 
 ```
-| Ejemplo        | de una        |      Tabla     |
+| Ejemplo | de una | Tabla |
 |:---------------|:-------------:|---------------:|
-| La columna tres| está alineada | a la derecha   |
-| La columna dos | está          | centrada       |
+| La columna tres| está alineada | a la derecha |
+| La columna dos | está | centrada |
 | La columna uno | está alienada | a la izquierda |
 ```
 
 DEMOSTRACIÓN:
 
-| Ejemplo        | de una        |      Tabla     |
+| Ejemplo | de una | Tabla |
 |:---------------|:-------------:|---------------:|
-| La columna tres| está alineada | a la derecha   |
-| La columna dos | está          | centrada       |
+| La columna tres| está alineada | a la derecha |
+| La columna dos | está | centrada |
 | La columna uno | está alienada | a la izquierda |
 
 ---
 
-Es necesario que en cada columna haya por lo menos 3 lineas separando cada celda, donde las barras de los extremos son opcionales (|), además de que no es necesario (Pero es preferible), que la tabla tenga que estar alineada en las columnas como se muestra en el siguiente código, esta se seguira mostrando igual que una alineada:
+Es necesario que en cada columna haya por lo menos 3 lineas separando cada celda, donde las barras de los extremos son opcionales (|), además de que no es necesario (Pero es preferible), que la tabla tenga que estar alineada en las columnas como se muestra en el siguiente código, esta se seguirá mostrando igual que una alineada:
 
 ```
 Ejemplo | de una | Tabla
@@ -191,33 +189,34 @@ la | tabla | anterior
 
 ### Bloques de cita
 
-
 ```
 > Los bloques de cita son especialmente útiles para enfatizar.
-> Tambien para realizar citas de texto.
-> 
-> Está linea tambíen pertenece al bloque.
+> También para realizar citas de texto.
+>
+> Esta linea también pertenece al bloque.
 
-Está linea ya no pertenece al bloque al estar separado por un salto de línea.
+Esta linea ya no pertenece al bloque al estar separado por un salto de línea.
 
-> Sin embargo, siempre es posible utilizar nuevamente los bloques de citas, aunque sean de  una línea.
+> Sin embargo, siempre es posible utilizar nuevamente los bloques de citas, aunque sean de una línea.
 ```
 
 DEMOSTRACIÓN:
+
 > Los bloques de cita son especialmente útiles para enfatizar.
-> Tambien para realizar citas de texto.
-> 
-> Está linea tambíen pertenece al bloque.
+> También para realizar citas de texto.
+>
+> Esta linea también pertenece al bloque.
 
-Está linea ya no pertenece al bloque.
+Esta linea ya no pertenece al bloque al estar separado por un salto de línea.
 
-> Sin embargo, siempre es posible utilizar nuevamente los bloques de citas.
+> Sin embargo, siempre es posible utilizar nuevamente los bloques de citas, aunque sean de una línea.
+
 
 ---
 
 ### HTML en Markdown
 
-Es posible insertar código en `HTML` dentro de `Markdown`, esto con el fin de añadir algunas funcionalidades que `Markdown` carece.
+Es posible insertar código en HTML dentro de **Markdown**, esto con el fin de añadir algunas funcionalidades que **Markdown** carece.
 
 ```
 Por ejemplo, poner el texto de <span style="color:#DA0101">otro color</span>.
@@ -255,55 +254,53 @@ o tres guiones bajos
 
 ___
 
-
 ### Saltos de línea
 
-Al igual que LaTeX, Markdown necesita doble salto de línea para poder separar parrafos de texto, así como para poder crear tablas, bloques de código o de citas, etc., en caso de que una parte del escrito no se muestre como lo planeado, se tendrá que incluir un salto de línea para separar los dos contextos, ejemplo:
+Al igual que **LaTeX**, **Markdown** necesita doble salto de línea para poder separar párrafos de texto, así como para poder crear tablas, bloques de código o de citas, etc., en caso de que una parte del escrito no se muestre como lo planeado, se tendrá que incluir un salto de línea para separar los dos contextos, ejemplo:
 
 ```
-La siguiente tabla no se vizualiza:
+La siguiente tabla no se visualiza:
 | Tabla | Ejemplo |
 |:-----:|:-------:|
-|   1   |   2     |
+| 1 | 2 |
 ```
 
 Demostración:
 
-La siguiente tabla no se vizualiza:
+La siguiente tabla no se visualiza:
 | Tabla | Ejemplo |
 |:-----:|:-------:|
-|   1   |   2     |
+| 1 | 2 |
 
 Corrección:
 
 ```
-La siguiente tabla ya se vizualiza:
+La siguiente tabla ya se visualiza:
 
 | Tabla | Ejemplo |
 |:-----:|:-------:|
-|   1   |   2     |
+| 1 | 2 |
 ```
 
 Demostración:
 
-La siguiente tabla ya se vizualiza:
+La siguiente tabla ya se visualiza:
 
 | Tabla | Ejemplo |
 |:-----:|:-------:|
-|   1   |   2     |
-
+| 1 | 2 |
 
 ### Código y Resaltado de Sintaxis
 
 Los bloques de código son parte de la sintaxis de _Markdown_, pero, el resaltado de sintaxis no lo es, sin embargo, muchos programas que trabajan con _Markdown_ para exportarlo a HTML ya lo incluyen, tal es el caso como RStudio con _RMarkdown_, que nos permitira crear bloques especiales para lenguajes como _R_, _Python_, _Sql_, _Bash_, _RCpp_. Existen otros programas que incluyen otros lenguajes para el resaltado de sintaxis, por el momento veremos más a detalle _RMarkdown_ y su forma de trabajar uniendo _Markdown_ y _R_.
 
 ```
-En Markdown para resaltar partes de  `código` es necesario ponerlo entre `cómillas inversas`. 
+En **Markdown** para resaltar partes de `código` es necesario ponerlo entre `comillas inversas`.
 ```
 
 DEMOSTRACIÓN:
 
-En Markdown para resaltar partes de  `código` es necesario ponerlo entre `cómillas inversas`.
+En **Markdown** para resaltar partes de `código` es necesario ponerlo entre `comillas inversas`.
 
 ---
 
@@ -312,12 +309,13 @@ Los bloques de código, por otra parte, es necesario ponerlo entre tripes comill
 <pre lang="no-highlight"><code>
 ```r
 x <- matrix(NA, ncol=3, nrow=3)
-```</code></pre>
+```
+</code></pre>
 
 DEMOSTRACIÓN:
 
 ```r
 x <- matrix(NA, ncol=3, nrow=3)
-```
+``` 
 
 ## RMarkdown
