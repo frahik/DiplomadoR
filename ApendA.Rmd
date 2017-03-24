@@ -1,4 +1,4 @@
-# Apendice {#ap.Aw}
+# Apendice A {#apendA}
 
 
 | Aritméticos |                     | Lógicos |                 | Comparativos |           |
