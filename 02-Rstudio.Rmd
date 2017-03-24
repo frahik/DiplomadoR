@@ -69,9 +69,9 @@ Además de que al igual que el Panel de código, el panel de consola cuenta con 
 
 ## Panel de Construcción
 
-![Panel de construcción](./assets/images/Panel_Construcción.png)
+![Panel de construcción](./assets/images/Panel_Construccion.png)
 
-![Opciones Construcción](./assets/images/Panel_Construcción_Options.png)
+![Opciones Construcción](./assets/images/Panel_Construccion_Options.png)
 
 
 ## Panel de Control de versiones (Git)

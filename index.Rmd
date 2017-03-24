@@ -39,7 +39,7 @@ Una vez instalado, un entorno de desarrollo integrado será necesario para facil
 
 ![RIDE](https://rstudio.com/wp-content/uploads/2015/10/rstudio-300x260.png)
 
-En este caso, Sera necesario instalar RStudio para realizar los ejercicios de manera comoda, por lo que, para instalar RStudio para los distintios Sistemas Operativos podemos hacerlo desde la liga principal, o para evitar buscar podemos usar la liga que más nos convenga de la siguiente tabla.
+En este caso, Sera necesario instalar RStudio para realizar los ejercicios de manera cómoda, por lo que, para instalar RStudio para los distintos Sistemas Operativos podemos hacerlo desde la liga principal, o para evitar buscar podemos usar la liga que más nos convenga de la siguiente tabla.
 
 
 
