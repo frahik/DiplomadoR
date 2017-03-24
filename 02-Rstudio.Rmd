@@ -8,10 +8,38 @@ Rstudio se encuentra dividido en 12 importantes paneles que están divididas en 
 
 ![Panel de código](./assets/images/Panel_Script.png)
 
+El panel de código es básicamente imprescindible, nos permitirá estar trabajando con todos nuestros scripts, ejecutarlos, en este panel además de permitirnos escribir nuestro código para salvarlo y después utilizarlo, cuenta con resaltado de sintaxis para los scripts de **R**, para que en el aspecto visual podamos ir identificando posibles errores al momento; para modificar el resaltado de sintaxis, tamaño de letra y otros aspectos de este panel solo es necesario presionar `[ALT] + [T]` o presionar en la barra de herramientas seleccionar `Tools` y presionar `[ALT] + [G]` o directamente en `Global Options...`, seleccionamos `Appearance` y nos saldrá la siguiente ventana:
+
+![Appearance](./assets/images/Panel_Script_GlobalOptions.png)
+
+En esta ventana podremos controlar el resaltado de sintaxis para hacerlo lo más visualmente atractivo para nosotros, así como el tamaño y la fuente que deseamos utilizar, Para aplicar los cambios una vez que nos encontremos satisfechos solo se ha de presionar el botón `[OK]`, si queremos descartar todos los cambios que se realizaron en ese momento (si no se ha presionado `[Apply]` u `[OK]`), se ha de presionar el botón `[Cancel]` y para ir observando los cambios al momento se ha de presionar el botón `[Apply]`.
+
+![Opciones](./assets/images/Panel_Script_Options.png)
+
+
+| Identificador   | Uso o significado           |
+|-----------------|-----------------------------|
+|       1         | Pestaña de trabajo actual.  |
+|       2         | Abrir el código en una ventana independiente.  |
+|       3         | Guardar el archivo del código actual.   |
+|       4         | Si esta seleccionado, el código será ejecutado cada vez que se guarde el archivo. |
+|       5         | Buscar o Reemplazar una parte del código.  |
+|       6         | Herramientas para el código. |
+|       7         | Genera un reporte del código actual en base a los comentarios en el código (No recomendable). |
+|       8         | Ejecutar la línea de código seleccionada. |
+|       9         | Se vuelve a ejecutar el bloque ejecutado anteriormente. |
+|      10         | Ejecutar todo el código con el comando `source(...)`. |
+|      11         | Despliega una ventana para ayudar en la navegación del código (Ideal para navegar entre grandes scripts). |
+
+Además de tener todas estás funcionalidades a la mano, tambien es posible acceder a algunas de ellas de manera rápida a tráves del teclado como se puede observar en la siguiente tabla.
+
 | Comando | Uso |
 |---------|-----|
-| [Control] + [Shift] + [A] | Formatea el código de R que se encuentre seleccionado |
-| [Tab]   | Abre la opción de autocompletado en función a lo que se va escribiendo | 
+| [Control] + [Shift] + [A] | Formatea el código de **R** que se encuentre seleccionado. |
+| [Tab]   | Abre la opción de auto-completado en función a lo que se va escribiendo. | 
+|[Control] + [Enter]  | Ejecutar la línea que se encuentre seleccionada (pueden ser varias).  |
+|[Control] + [S] | Salvar el archivo en el que se esta trabajando. |
+| [F1]  | Acceder a la ayuda del comando que se está escribiend o esté seleccionado. |
 
 ----
 
@@ -19,6 +47,10 @@ Rstudio se encuentra dividido en 12 importantes paneles que están divididas en 
 
 ![Consola](./assets/images/Panel_Consola.png)
 
+Este panel es la consola bien conocida de **R**, donde podremos interactuar directamente con ella o a traves del panel de código.
+
+Existe un comando que nos servirá de ayuda en caso de que ocupemos abortar la ejecución actual de **R**  `[CONTROL] + [C]`.
+Además de que al igual que el Panel de código, el panel de consola cuenta con autocompletado, podemos ir escribiendo un comando y con la tecla `[TAB]` podemos acceder al autocompletado y en caso de tener dudas podemos usar la tecla `[F1]` para acceder de manera rápida a la ayuda.
 
 ----
 
@@ -26,36 +58,61 @@ Rstudio se encuentra dividido en 12 importantes paneles que están divididas en 
 
 ![Panel de entorno](./assets/images/Panel_Entorno.png)
 
+![Opciones de Entorno](./assets/images/Panel_Entorno_Options.png)
 
 ----
 
 ## Panel de historial
 ![Panel de historial](./assets/images/Panel_Historial.png)
 
+![Opciones Historial](./assets/images/Panel_Historia_Options.png)
+
 ## Panel de Construcción
 
-![Panl de construcción](./assets/images/Panel_Construcción.png)
+![Panel de construcción](./assets/images/Panel_Construcción.png)
+
+![Opciones Construcción](./assets/images/Panel_Construcción_Options.png)
+
 
 ## Panel de Control de versiones (Git)
 
 ![git](./assets/images/Panel_Git.png)
 
+
+![Opciones Git](./assets/images/Panel_Git_Options.png)
+
+
 ## Panel de archivos
 
 ![Panel de archivos](./assets/images/Panel_Archivos.png)
 
+![Opciones Archivos](./assets/images/Panel_Archivos_Options.png)
+
+
+
 ## Panel de gráficos
 ![Panel de gráficos](./assets/images/Panel_Grafica.png)
+
+![Opciones Graficos](./assets/images/Panel_Grafica_Options.png)
 
 
 ## Panel de Paquetes
 ![Panel de Paquetes](./assets/images/Panel_Paquetes.png)
 
+![Opciones Paquetes](./assets/images/Panel_Paquetes_Options.png)
+
+
 ## Panel de ayuda
 ![Panel de ayuda](./assets/images/Panel_Ayuda.png)
 
+![Opciones Ayuda](./assets/images/Panel_Ayuda_Options.png)
+
+
+
 ## Panel de visualización
 ![Panel de Visualización](./assets/images/Panel_Viewer.png)
+
+![Opciones de Visualización](./assets/images/Panel_Viewer_Options.png)
 
 
 
