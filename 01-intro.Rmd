@@ -1,13 +1,14 @@
 # Introducción a R{#intro}
 
 ## Primeros pasos 
-Para interactuar con R se dispone de una potente línea de comandos y en un principio, la manera más sencilla de ver **R** es que puede ser usado como una calculadora: 
+Para interactuar con **R** se dispone de una potente línea de comandos y en un principio, la manera más sencilla de ver **R** es que puede ser usado como una calculadora: 
 
+Como sumar: 
 ```{R Suma}
 10+5 
 ``` 
 
-o
+o dividir:
 
 ```{R División}
 10/5 
@@ -19,13 +20,13 @@ Principalmente por que este documento ha sido diseñado en **R** y **RMarkdown**
 
 ### Establecer directorios de trabajo
 
-Al ejecutar **R**, este establece un directorio de trabajo, es decir, establece una carpeta donde guardar los datos ejecutados en R, misma que será la carpeta que usara para buscar, leer y escribir los archivos (de ser requerido) durante la sesión (es decir, mientras se mantiene el programa abierto), por ello, para obtener el directorio de trabajo actual basta con usar el siguiente comando:
+Al ejecutar **R**, este establece un directorio de trabajo, es decir, establece una carpeta donde guardar los datos ejecutados en **R**, misma que será la carpeta que usara para buscar, leer y escribir los archivos (de ser requerido) durante la sesión (es decir, mientras se mantiene el programa abierto), por ello, para obtener el directorio de trabajo actual basta con usar el siguiente comando:
 
 ```{r WD}
 getwd()
 ```
 
-Dicho directorio va a variar dependiendo de la maquina, por ello, más de una vez será necesario modificarlo, para lo cual se usara el comando `setwd("Ruta")`, el cual varia dependiendo del Sistema Operativo, es recomendable como buena practica del programador establecer el directorio de trabajado dentro de la carpeta de Documentos, además de que es más sencillo encontrar los proyectos de trabajo, si se usa la **ruta relativa** y no la **ruta física**, si se requiere mover todos los archivos para trabajar en otra computadora, no se tendrá que volver a modificar el directorio de trabajo.
+Dicho directorio va a variar dependiendo del sistema, por ello, más de una vez será necesario modificar esta ruta, para lo cual se usara el comando `setwd("Ruta")`, el cual varia dependiendo del Sistema Operativo, como buena practica del programador, se recomienda establecer el directorio de trabajado dentro de la carpeta de Documentos, además de que es más sencillo encontrar los proyectos de trabajo, si se usa la ruta **ruta relativa** y no la **ruta física**, si se requiere mover todos los archivos para trabajar en otra computadora, no se tendrá que volver a modificar todo el directorio de trabajo.
 
 **Ejemplo usando la Ruta relativa en Linux**
 ```{r SWD, eval=FALSE}
@@ -34,28 +35,37 @@ setwd("~/Documentos/Curso") #Linux
 
 **Ejemplo usando la _Ruta física_ y la _ruta relativa_ en Windows**
 ```{r SWDWindows, eval=FALSE}
-setwd("C:\\Usuario\\Documentos\\Curso") #MALA PRACTICA
-setwd("~/Curso") #BUENA PRACTICA (Equivalente al comando anterior)
+setwd("C:\\Usuario\\Documentos\\Curso") #MALA PRACTICA (Ruta física)
+setwd("~/Curso") #BUENA PRACTICA (Ruta relativa del comando anterior)
 ```
 
 ### Creación de objetos/variables
 
 En **R** podemos crear y manipular objetos asignándole valores, cadenas de texto, funciones y un largo etc. 
-Por ser el primer contacto con **R**, crearemos un objeto (izquierda del símbolo `=`), asignándole como valor la cadena de texto "Hola mundo" 
+Por ser el primer contacto con **R**, crearemos un objeto (izquierda del símbolo `=`), asignándole como valor la cadena de texto "Hola mundo". Es importante aclarar que es necesario que se pongan dobles comillas `" "` o comillas simples `' '` al escribir una cadena de texto, de otra manera será interpretado como uno o varios objetos, ejemplo:
+
+```{r, error=TRUE}
+saludo = Hola
+```
+
+Por lo que, para insertar la cadena de texto "Hola mundo" en la variable `saludo`, se deberá hacer como se mencionó anteriormente:
+
 ```{R Creación-Saludo, eval=F}
 saludo = "Hola mundo" 
 ``` 
-Ahora para mostrar en consola lo que contiene la _variable_ u _objeto_ `saludo`, lo escribiremos tal cual y obtendremos una salida muy similar a la siguiente. 
+
+Ahora para mostrar en consola lo que contiene la _variable_ u _objeto_ `saludo`, lo escribiremos tal cual y obtendremos una salida muy similar a la siguiente.
+
 ```{R Saludo, echo=F, eval=T}
 saludo = "Hola mundo" 
 saludo 
 ``` 
 
-**NOTAS:** 
+**NOTAS IMPORTANTES:** 
 
 > **R** es sensible a las MAYÚSCULAS y minúsculas, por lo que `saludo` no es igual a `Saludo`, ni a `SALUDO`.
 >
-> **R** <span style="color:#DA0101">NO</span> requiere explicitar que tipo de valores van a contener las variables.
+> **R** <span style="color:#DA0101">NO</span> requiere explicitar que tipo de valores van a contener las variables, 
 
 Otra manera de asignar valores a las variables es mediante el símbolo `<-` que se compone de un menor que y el signo de menos. 
  
@@ -63,13 +73,16 @@ Otra manera de asignar valores a las variables es mediante el símbolo `<-` que 
 x <- 10+5 
 ``` 
  
-Es recomendable incluir un espacio simple a cada lado del operador de asignación para incrementar la legibilidad. Pero <span style="color:#DA0101">NO</span> coloques un espacio entre el `<` y el `-` que forman la flecha, recuerda que a pesar de estar compuesto por dos caracteres es un único símbolo. 
+Se recomienda incluir un espacio simple a cada lado del operador de asignación para incrementar la legibilidad. Pero <span style="color:#DA0101">NO</span> coloques un espacio entre el `<` y el `-` que forman la flecha, recuerda que a pesar de estar compuesto por dos caracteres es un único símbolo. 
  
-Es posible reasignar un valor a la variable que hemos creado, así como reutilizar el valor de la variable para realizar un calculo:   
+Es posible reasignar un valor a la variable que hemos creado, así como reutilizar el valor de la variable para realizar un calculo:
+
 ```{R Objetos, eval=F}
 y <- x + 5 
 y
 ```
+
+Ahora reutilizaremos el valor de la variable `y`:
 
 ```{R Objetos2, echo=F}
 x <- 10 + 5
@@ -79,30 +92,280 @@ y
 
 > Recuerde que aunque pareciera algo matemático, los símbolos `<-` y `=` no funcionan como un «_igual_», si no, como un «_equivale a_» o una «_asignación_», por que a partir de ese momento, el valor de la derecha se le asigna al de la izquierda.
 
-
 ## Clases de datos
+
+Existen 4 tipos de clases de objetos con las que tendremos que trabajar en R, cada uno tiene sus ventajas y desventajas, así que se verá de manera detalla como crear cada uno de ellos, acceder a sus valores, así como posibles problemas.
 
 ### Vector
 
+Desde que empezamos con la variable `saludo`, estábamos trabajando con vectores, sin embargo, era un vector de indice 1, dado que en `R` no existen como en otros lenguajes las variables individuales, todas a las que se les asigna un valor o más, son tratados inicialmente como vectores.
+
+La manera de representar un vector es de la siguiente forma:
+
+| Valor1  | Valor2  | Valor3  | ... | Valorn  |
+|---------|---------|---------|-----|---------|
+
+Existen varias formas de declarar un vector de más de un valor, la manera más sencilla es a través de la función concatenar `c(...)`; la cual es una función genérica que combina los valores separado por comas en un vector.
+
+
+
+Ejemplos:
+Vector con un varios datos y un `NA`.
+```{r}
+vector <- c(1:9,NA,10:15)
+vector
+```
+
+Vector de nombres de personas
+```{r}
+vectorNombres <- c("Francisco","Claudia","Valeria","Fernando","Julia")
+vectorNombres
+```
+
+Vector con los datos de otros vectores
+```{r}
+vec1 <- 1
+vec2 <- 20:30
+vecFinal <- c(vec1,vec2)
+vecFinal
+```
+
+Ya que hemos visto como se crea un vector ahora veremos como acceder y trabajar con los valores de un vector.
+
+#### Acceder a uno o varios datos del vector.
+
+Tenemos el siguiente vector que tiene almacenado el nombre de 6 clientes.
+
+```{r Demovector0}
+vector <- c("Francisco","Claudia","Valeria","Fernando","Julia", "Osval")
+```
+
+```{r DemoVector2, echo=F}
+knitr::kable(t(vector))
+```
+
+En **R** a diferencia de otros lenguajes de programación como **C** o **Java**, los índices de un vector o una matriz siempre inician en 1 y no en 0 como en esos otros lenguajes, por lo que la tabla anterior se podría observar de la siguiente manera:
+
+```{r DemoVectorTablas, echo=F}
+knitr::kable(rbind(t(c("1","2","3","4","5","6")), t(vector)))
+```
+
+Donde el primer indice, hace referencia al primer elemento del vector, el segundo indice al segundo elemento y así de manera consecutiva.
+
+Por lo que para acceder a uno o varios elementos se pueden utilizar los siguientes códigos:
+
+  * Un elemento en especifico
+```{r vector1}
+vector[3]
+```
+
+  * Varios elementos en secuencia.
+```{r vector2}
+vector[2:4]
+```  
+
+  * Un elemento especificado anteriormente.
+```{r vector3}
+n <- 3
+vector[n]
+```
+
+  * Varios elementos especificados
+```{r vector4}
+vector[c(1,2,5)]
+```
+
+  * Todos los elementos, excluyendo uno especifico.
+```{r vector5}
+vector[-3]
+```
+
+  * Todos los elementos, excluyendo varios.
+```{r vector6}
+vector[-c(4:6)]
+```
+
+  * Almacenar los datos extraídos en otra variable.
+```{r vector7}
+grupo1 <- vector[-c(4:6)]
+grupo1
+```
+
+#### Ordenar los datos de un vector
+
+Para ordenar los datos existe la función `sort(...)`.
+
+* Ordenar un vector de forma creciente
+```{r vector8}
+sort(vector)
+```
+
+* Ordenar un vector de forma decreciente
+```{r vector9}
+sort(vector, decreasing = T)
+```
+
+* Ordenar un vector y conocer sus antiguas posiciones.
+```{r vector10}
+sort(vector, decreasing = T, index.return = TRUE)
+```
+
+
+Este último método retorna dos listas, la primera es `$x` que representa la lista de los valores ordenados y la segunda  es `$ix` que representa las antiguas posiciones de los valores.
+
+#### Tratar los datos de un vector
+
+Tenemos un vector con los gastos de la última semana:
+
+```{r Demovector3, cache=T}
+gastos <- c(150,120,300,250,400,380,100)
+```
+
+que se pueden representar de la siguiente manera:
+
+```{r DemoVector4, echo=F}
+knitr::kable(t(gastos))
+```
+
+En **R** ya existen varias funciones para ser utilizadas, se mostrará el funcionamiento de algunas de ellas y otras más podrán ser encontradas en el Capitulo \@ref(apendA) (Apéndices).
+* El menor gasto en la semana
+```{r vector11}
+min(gastos)
+```
+* El mayor gasto en la semana
+```{r vector12}
+max(gastos)
+```
+* Obtener el promedio de gasto en la semana.
+```{r vector13}
+mean(gastos)
+```
+* Obtener el total del gasto de la semana, (Sumar todos los elementos).
+```{r vector14}
+sum(gastos)
+```
+* Obtener el total del gasto de una semana laboral (Lunes-Viernes), (Sumar elementos específicos)
+```{r vector15}
+sum(gastos[1:5])
+```
+* Obtener la varianza del gasto semanal
+```{r vector16}
+var(gastos)
+```
+* Obtener la desviación estándar del gasto semanal
+```{r vector17}
+sd(gastos)
+```
+Obtener un resumen de los datos
+```{r vector18}
+summary(gastos)
+```
+
+Este último comando muestra mucha información de utilidad, el valor mínimo, el primer cuantil, la mediana, el promedio, el tercer cuantil y el valor máximo dentro del vector.
+Con el cuál, se puede ahorrar tiempo a que si se utiliza de manera separada como se ve en los primeros tres comandos.
+
+#### Problemas comunes
+
+##### Mayúsculas y mínusculas
+
+Como ya se mencionó anteriormente, **R** es sensible a las Mayúsculas y Minúsculas, por lo que las funciones no funcionaran si se ponen total o parcialmente en Mayúsculas, para comprender ésto veremos dos ejemplos:
+
+Crear un vector:
+<span style="color:#DA0101">MAL [X]</span> 
+```{r vec_error1, error=T}
+vector <- C(1,2,3)
+```
+
+<span style="color:#04B404">BIEN [O]</span> 
+```{r vec_corr1}
+vector <- c(1,2,3)
+```
+
+Sumar los datos de un vector:
+<span style="color:#DA0101">MAL [X]</span> 
+```{r vec_error2, error=T}
+vector <- c(1,2,3)
+SUM(vector)
+```
+
+<span style="color:#04B404">BIEN [O]</span> 
+```{r vec_corr2}
+vector <- c(1,2,3)
+sum(vector)
+```
+
+
 ### Matriz
+
 Para crear una matriz en **R** se utiliza la función
 
-```{R Matriz, eval=F, eval=F}
+```{R Matriz, eval=F}
 matrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE, dimnames = NULL)
 ```
 
-donde `matrix()` corresponde al nombre de la función y todo lo que está dentro de los paréntesis son los argumentos de dicha función.
-
-| Argumentos | Significado |
-|------------|------------|
-|   `data`   |Es un vector de datos opcional |
-|   `nrow`   |Número deseado de filas        |
-|   `ncol`   |Número deseado de columnas     |
-|   `byrow`  |Valor lógico. Si es falso (valor por defecto), la matriz se llena por orden columna, de otra manera se llenará primero por filas. |
-| `dimnames` |Utilizado para darles nombres a las filas y a las columnas, respectivamente. |
+Donde `matrix()` corresponde al nombre de la función y todo lo que está dentro de los paréntesis son los argumentos de dicha función.
 
 
+| Argumentos | Significado del argumento        |
+|------------|----------------------------------|
+|   `data`   |  Son los datos a ingresar en la matriz.  |
+|   `nrow`   |  Número deseado de filas.        |
+|   `ncol`   |  Número deseado de columnas.     |
+|   `byrow`  |  Valor lógico. Si es falso (valor por defecto), la matriz se llena por orden columna, de otra manera se llenará primero por filas. |
+| `dimnames` |  Utilizado para darles nombres a las filas y a las columnas, respectivamente. |
+
+------
+
+#### Crear una matriz
+some text
+
+------
+
+#### Trabajar con matrices
+some text
+
+------
+
+#### Ordenar datos
+some text
+
+------
+
+#### Extraer datos
+some text
+
+------
+
+#### Tratar los datos (apply)
+
+some text
+
+------
+
+#### Problemas comunes
+
+
+##### Los nombres en `dimnames` no concuerdan con las dimensiones de la matriz.
+
+##### Los datos no se ordenan o se desordenan.
+
+##### Los datos no concuerdan con las dimensiones de la matriz
+
+Supongamos que tenemos un vector en secuencia del 1 hasta el 31 y queremos representar solo el mes de mayo del 2017
+```{r}
+vector <- 1:31
+matrix(vector, nrow = 5, ncol=7, byrow=T)
+```
+
+Vemos que R nos ha devuelto un error que nos indica que el vector de datos no es un submúltiplo o múltiplo del número de filas y columnas de la matriz, en otras palabras, la matriz es de 5 renglones por 7 columnas, es decir, tendrá un espacio para ingresar 35 valores y nosotros estamos ingresando solo 31, por lo que R intentará completar la matriz repitiendo el vector hasta completar los 35 valores. Si nosotros no queremos que suceda esto debemos de completar la cantidad de datos, existen varias maneras de solucionar este problema, este es uno de varias de ellas:
+
+```{r}
+vector <- 1:31
+matrix(c(vector,NA,NA,NA,NA), nrow = 5, ncol=7, byrow=T)
+```
+Lo que sucede aquí es que al vector le agregamos 4 valores `NA` que significa que no están disponibles y ahora tenemos un vector de longitud 35, la cual entra exactamente en la matriz de 5*7.
 ### Data Frame
+
 Los dataframes, son una clase parecida a las matrices, sin embargo, poseen determinadas características que las hace más útiles en ciertas ocasiones. 
 
 Al igual que los vectores y matrices, existen varias formas de crear data frames, una forma sencilla de crearlos es especificar los datos de las columnas como en el ejemplo siguiente:
@@ -111,8 +374,31 @@ Al igual que los vectores y matrices, existen varias formas de crear data frames
 data.frame(w = 1, x = 1:5, y = LETTERS[1:5], z=runif(5))
 ```
 
+#### Crear un Data frame
+
+#### Trabajar con Data frames
+
+#### Ordenar los datos de un Data frame
+
+#### Extraer datos de un data frame
+
+#### Tratar los datos de un data frame(apply)
+
+#### Problemas comunes
+
 ### Lista
 
+#### Crear una lista
+
+#### Trabajar con listas
+
+#### Ordenar los datos de una lista
+
+#### Extraer datos de una lista
+
+#### Tratar los datos de una lista
+
+#### Problemas comunes
 ## Manejo de datos
 
 ### Salvar datos
@@ -137,7 +423,7 @@ write.table(df, file = "dataframe2.csv", sep = ",",
 row.names = FALSE, qmethod = "double")
 ```
 
-#### .RData
+#### .RData {#GuardarRdata}
 Si tienes objetos que te gustaría guardar como tal para luego procesarlos o simplemente se te hace más sencillo comprenderlo sobre un `.csv`, los comandos serán los siguientes:
 
 ```{r save, eval=F}
@@ -185,10 +471,22 @@ para volver a cargar los datos:
 ```{r load, eval=F}
 load("nombre.RData")
 ```
-Para llamar el objeto, basta con volver a introducir su variable, que, aunque no haya sido creada antes de usar la función `load()`, esta se encarga de crear el objeto y asignarle el valor que decidimos guardar en un principio.
+Para llamar el objeto, basta con volver a introducir su variable, que, aunque no haya sido creada antes de usar la función `load()`, esta se encarga de crear el objeto y asignarle el valor que decidimos guardar en un principio, ver \@ref(GuardarRdata).
+
 ```{r loadfoo, eval=F}
 foo
 ```
 ```{r loadfoo2,echo=F}
 "bar"
 ```
+
+##### Problemas comunes con .RData
+
+
+###### Error al cargar los datos
+
+> **R** dice que no los datos que trato de cargar no existen pero yo veo que sí existen en mi carpeta.
+
+###### ¿Donde están los datos?
+
+###### ¿Cuales son los datos que cargué?
