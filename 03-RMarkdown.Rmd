@@ -127,23 +127,23 @@ http://www.example.com o <http://www.example.com>.
 ### Imágenes
 
 ```
-![Texto alternativo](http://www.uqroo.mx/image/escudo_uqroo_negro.gif "Logo UQroo")
+![Texto alternativo](./assets/images/escudo_uqroo_negro.png "Logo UQroo")
 
 Reference-style:
 ![Texto alternativo][logo]
 
-[logo]: http://www.uqroo.mx/logos/logo_full.gif "Logo UQroo"
+[logo]: ./assets/images/logo_full.png "Logo UQroo"
 ```
 
 DEMOSTRACIÓN:
 
 Referencia en la misma linea:
-![Texto alternativo](http://www.uqroo.mx/image/escudo_uqroo_negro.gif "Logo UQroo")
+![Texto alternativo](./assets/images/escudo_uqroo_negro.png "Logo UQroo")
 
 Mediante referencia de texto:
 ![Texto alternativo][logo]
 
-[logo]: http://www.uqroo.mx/logos/logo_full.gif "Logo UQroo"
+[logo]: ./assets/images/logo_full.png "Logo UQroo"
 
 ---
 
