@@ -70,9 +70,11 @@ saludo
 Otra manera de asignar valores a las variables es mediante el símbolo `<-` que se compone de un menor que y el signo de menos. 
  
 ```{R Asignación}
-x <- 10+5 
+x <- 10 + 5 
 ``` 
- 
+
+  > «Podemos ver a las variables como una persona, cada persona tiene su nombre para poder ser identificadas sobre el resto de las personas, pero bajo la manera de ordenar del lenguaje R, si dos personas quieren llamarse de la misma manera, la nueva persona tiene que 'matar' a la persona ya existente para poder tomar su lugar.»
+  
 Se recomienda incluir un espacio simple a cada lado del operador de asignación para incrementar la legibilidad. Pero <span style="color:#DA0101">NO</span> coloques un espacio entre el `<` y el `-` que forman la flecha, recuerda que a pesar de estar compuesto por dos caracteres es un único símbolo. 
  
 Es posible reasignar un valor a la variable que hemos creado, así como reutilizar el valor de la variable para realizar un calculo:
@@ -105,9 +107,9 @@ La manera de representar un vector es de la siguiente forma:
 | Valor1  | Valor2  | Valor3  | ... | Valorn  |
 |---------|---------|---------|-----|---------|
 
-Existen varias formas de declarar un vector de más de un valor, la manera más sencilla es a través de la función concatenar `c(...)`; la cual es una función genérica que combina los valores separado por comas en un vector.
+> Una forma de ver a los vectores, es como la fila de espera del banco, todos tienen un turno único, pero que puede ser transferible, por lo que si mando a llamar el primer turno, solo el cliente con ese turno sera el que pasará a ventanilla, pero mientras, el cliente con turno 10, puede ser que esté guardando el lugar para un amigo y cuando el amigo llegue, el nuevo cliente sustituira al actual cliente con el turno 10.
 
-
+Una vez entendido el mensaje anterior, existen varias formas de declarar un vector de más de un valor, la manera más sencilla es a través de la función concatenar `c(...)`; la cual es una función genérica que combina los valores separado por comas en un vector.
 
 Ejemplos:
 Vector con un varios datos y un `NA`.
@@ -191,22 +193,61 @@ grupo1 <- vector[-c(4:6)]
 grupo1
 ```
 
+  * Modificar un elemento especifico de un vector
+```{r vector8}
+vector[4] <-  "Alberto"
+vector
+```
+
+  * Modificar varios elementos de un vector
+```{r vector9}
+vector[4:6] <- NA
+vector
+```
+
+  * Encontrar **las posiciones** de los valores NA (Not Available) en un vector
+```{r vector10}
+is.na(vector)
+```
+  * Encontrar **las posiciones** de los valores que no sean NA en un vector
+```{r vector11}
+!is.na(vector)
+```
+
+  * Extrar los elementos de las posiciones en los que los valores **NO** son NA
+```{r vector12}
+which(!is.na(vector) == TRUE)
+#Alternativa
+which(is.na(vector) == FALSE)
+```
+
+  * Extrar las posiciones del vector que cumplan con una consulta
+```{r vector13}
+which(vector == "Francisco")
+```
+
+  * Modificar las posiciones del vector que cumplan con una consulta
+```{r vector14}
+vector[which(vector == "Francisco")] <- "Francisco Javier"
+```
+
+
 #### Ordenar los datos de un vector
 
 Para ordenar los datos existe la función `sort(...)`.
 
 * Ordenar un vector de forma creciente
-```{r vector8}
+```{r vector15}
 sort(vector)
 ```
 
 * Ordenar un vector de forma decreciente
-```{r vector9}
+```{r vector16}
 sort(vector, decreasing = T)
 ```
 
 * Ordenar un vector y conocer sus antiguas posiciones.
-```{r vector10}
+```{r vector17}
 sort(vector, decreasing = T, index.return = TRUE)
 ```
 
@@ -229,35 +270,35 @@ knitr::kable(t(gastos))
 
 En **R** ya existen varias funciones para ser utilizadas, se mostrará el funcionamiento de algunas de ellas y otras más podrán ser encontradas en el Capitulo \@ref(apendA) (Apéndices).
 * El menor gasto en la semana
-```{r vector11}
+```{r vector18}
 min(gastos)
 ```
 * El mayor gasto en la semana
-```{r vector12}
+```{r vector19}
 max(gastos)
 ```
 * Obtener el promedio de gasto en la semana.
-```{r vector13}
+```{r vector20}
 mean(gastos)
 ```
 * Obtener el total del gasto de la semana, (Sumar todos los elementos).
-```{r vector14}
+```{r vector21}
 sum(gastos)
 ```
 * Obtener el total del gasto de una semana laboral (Lunes-Viernes), (Sumar elementos específicos)
-```{r vector15}
+```{r vector22}
 sum(gastos[1:5])
 ```
 * Obtener la varianza del gasto semanal
-```{r vector16}
+```{r vector23}
 var(gastos)
 ```
 * Obtener la desviación estándar del gasto semanal
-```{r vector17}
+```{r vector24}
 sd(gastos)
 ```
 Obtener un resumen de los datos
-```{r vector18}
+```{r vector25}
 summary(gastos)
 ```
 
@@ -299,12 +340,11 @@ sum(vector)
 
 Para crear una matriz en **R** se utiliza la función
 
-```{R Matriz, eval=F}
+```{R AyudaMatriz, eval=F}
 matrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE, dimnames = NULL)
 ```
 
 Donde `matrix()` corresponde al nombre de la función y todo lo que está dentro de los paréntesis son los argumentos de dicha función.
-
 
 | Argumentos | Significado del argumento        |
 |------------|----------------------------------|
@@ -314,12 +354,21 @@ Donde `matrix()` corresponde al nombre de la función y todo lo que está dentro
 |   `byrow`  |  Valor lógico. Si es falso (valor por defecto), la matriz se llena por orden columna, de otra manera se llenará primero por filas. |
 | `dimnames` |  Utilizado para darles nombres a las filas y a las columnas, respectivamente. |
 
-------
+Algunos ejemplos de como crear una matriz:
 
-#### Crear una matriz
-some text
+* Una matriz de NA de 5 * 5:
+```{r DemoMatriz1}
+matrix(NA,nrow = 5, ncol = 5)
+```
 
-------
+* Una matriz desde los datos de un vector:
+```{r DemoMatriz2, eval=F}
+vector <- c("Francisco",500)
+matrix()
+```
+
+
+
 
 #### Trabajar con matrices
 some text
