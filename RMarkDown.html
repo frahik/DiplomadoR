@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Diplomado en R</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Documento con las notas de introducción a R, RStudio y RMarkdown">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Diplomado en R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Documento con las notas de introducción a R, RStudio y RMarkdown" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Diplomado en R" />
+  
+  <meta name="twitter:description" content="Documento con las notas de introducción a R, RStudio y RMarkdown" />
+  
+
+<meta name="author" content="Francisco Javier Luna Vázquez">
+
+
+<meta name="date" content="2017-04-10">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="RStudio.html">
+<link rel="next" href="apendA.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diplomado en R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisitos</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#instalacion-de-r"><i class="fa fa-check"></i><b>1.1</b> Instalación de R</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#comprobar-la-instalacion-de-r"><i class="fa fa-check"></i><b>1.1.1</b> Comprobar la instalación de R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#entornos-de-desarrollo-para-r"><i class="fa fa-check"></i><b>1.2</b> Entornos de desarrollo para R</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#instalacion-rstudio"><i class="fa fa-check"></i><b>1.2.1</b> Instalación RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introducción a R</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#primeros-pasos"><i class="fa fa-check"></i><b>2.1</b> Primeros pasos</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#espacio-de-trabajo"><i class="fa fa-check"></i><b>2.1.1</b> Espacio de trabajo</a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#establecer-directorios-de-trabajo"><i class="fa fa-check"></i><b>2.1.2</b> Establecer directorios de trabajo</a></li>
+<li class="chapter" data-level="2.1.3" data-path="intro.html"><a href="intro.html#creacion-de-objetosvariables"><i class="fa fa-check"></i><b>2.1.3</b> Creación de objetos/variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#clases-de-datos"><i class="fa fa-check"></i><b>2.2</b> Clases de datos</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="intro.html"><a href="intro.html#vector"><i class="fa fa-check"></i><b>2.2.1</b> Vector</a></li>
+<li class="chapter" data-level="2.2.2" data-path="intro.html"><a href="intro.html#matriz"><i class="fa fa-check"></i><b>2.2.2</b> Matriz</a></li>
+<li class="chapter" data-level="2.2.3" data-path="intro.html"><a href="intro.html#lista"><i class="fa fa-check"></i><b>2.2.3</b> Lista</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#manejo-de-datos"><i class="fa fa-check"></i><b>2.3</b> Manejo de datos</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="intro.html"><a href="intro.html#salvar-datos"><i class="fa fa-check"></i><b>2.3.1</b> Salvar datos</a></li>
+<li class="chapter" data-level="2.3.2" data-path="intro.html"><a href="intro.html#leer-datos"><i class="fa fa-check"></i><b>2.3.2</b> Leer datos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="RStudio.html"><a href="RStudio.html"><i class="fa fa-check"></i><b>3</b> Introducción a RStudio</a><ul>
+<li class="chapter" data-level="3.1" data-path="RStudio.html"><a href="RStudio.html#el-entorno-y-los-paneles"><i class="fa fa-check"></i><b>3.1</b> El entorno y los paneles</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="RStudio.html"><a href="RStudio.html#panel-de-codigo"><i class="fa fa-check"></i><b>3.1.1</b> Panel de código</a></li>
+<li class="chapter" data-level="3.1.2" data-path="RStudio.html"><a href="RStudio.html#panel-de-consola"><i class="fa fa-check"></i><b>3.1.2</b> Panel de Consola</a></li>
+<li class="chapter" data-level="3.1.3" data-path="RStudio.html"><a href="RStudio.html#panel-de-entorno"><i class="fa fa-check"></i><b>3.1.3</b> Panel de entorno</a></li>
+<li class="chapter" data-level="3.1.4" data-path="RStudio.html"><a href="RStudio.html#panel-de-historial"><i class="fa fa-check"></i><b>3.1.4</b> Panel de historial</a></li>
+<li class="chapter" data-level="3.1.5" data-path="RStudio.html"><a href="RStudio.html#panel-de-construccion"><i class="fa fa-check"></i><b>3.1.5</b> Panel de Construcción</a></li>
+<li class="chapter" data-level="3.1.6" data-path="RStudio.html"><a href="RStudio.html#panel-de-control-de-versiones-git"><i class="fa fa-check"></i><b>3.1.6</b> Panel de Control de versiones (Git)</a></li>
+<li class="chapter" data-level="3.1.7" data-path="RStudio.html"><a href="RStudio.html#panel-de-archivos"><i class="fa fa-check"></i><b>3.1.7</b> Panel de archivos</a></li>
+<li class="chapter" data-level="3.1.8" data-path="RStudio.html"><a href="RStudio.html#panel-de-graficos-panel-de-graficos"><i class="fa fa-check"></i><b>3.1.8</b> Panel de gráficos <img src="assets/images/Panel_Grafica.png" alt="Panel de gráficos" /></a></li>
+<li class="chapter" data-level="3.1.9" data-path="RStudio.html"><a href="RStudio.html#panel-de-paquetes-panel-de-paquetes"><i class="fa fa-check"></i><b>3.1.9</b> Panel de Paquetes <img src="assets/images/Panel_Paquetes.png" alt="Panel de Paquetes" /></a></li>
+<li class="chapter" data-level="3.1.10" data-path="RStudio.html"><a href="RStudio.html#panel-de-ayuda-panel-de-ayuda"><i class="fa fa-check"></i><b>3.1.10</b> Panel de ayuda <img src="assets/images/Panel_Ayuda.png" alt="Panel de ayuda" /></a></li>
+<li class="chapter" data-level="3.1.11" data-path="RStudio.html"><a href="RStudio.html#panel-de-visualizacion"><i class="fa fa-check"></i><b>3.1.11</b> Panel de visualización</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="RStudio.html"><a href="RStudio.html#proyectos"><i class="fa fa-check"></i><b>3.2</b> Proyectos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="RMarkDown.html"><a href="RMarkDown.html"><i class="fa fa-check"></i><b>4</b> Introducción a R-Markdown</a><ul>
+<li class="chapter" data-level="4.1" data-path="RMarkDown.html"><a href="RMarkDown.html#sintaxis-de-markdown"><i class="fa fa-check"></i><b>4.1</b> Sintaxis de Markdown</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="RMarkDown.html"><a href="RMarkDown.html#encabezados-o-titulos"><i class="fa fa-check"></i><b>4.1.1</b> Encabezados o Títulos</a></li>
+<li class="chapter" data-level="4.1.2" data-path="RMarkDown.html"><a href="RMarkDown.html#texto"><i class="fa fa-check"></i><b>4.1.2</b> Texto</a></li>
+<li class="chapter" data-level="4.1.3" data-path="RMarkDown.html"><a href="RMarkDown.html#listas"><i class="fa fa-check"></i><b>4.1.3</b> Listas</a></li>
+<li class="chapter" data-level="4.1.4" data-path="RMarkDown.html"><a href="RMarkDown.html#enlaces"><i class="fa fa-check"></i><b>4.1.4</b> Enlaces</a></li>
+<li class="chapter" data-level="4.1.5" data-path="RMarkDown.html"><a href="RMarkDown.html#imagenes"><i class="fa fa-check"></i><b>4.1.5</b> Imágenes</a></li>
+<li class="chapter" data-level="4.1.6" data-path="RMarkDown.html"><a href="RMarkDown.html#tablas"><i class="fa fa-check"></i><b>4.1.6</b> Tablas</a></li>
+<li class="chapter" data-level="4.1.7" data-path="RMarkDown.html"><a href="RMarkDown.html#bloques-de-cita"><i class="fa fa-check"></i><b>4.1.7</b> Bloques de cita</a></li>
+<li class="chapter" data-level="4.1.8" data-path="RMarkDown.html"><a href="RMarkDown.html#html-en-markdown"><i class="fa fa-check"></i><b>4.1.8</b> HTML en Markdown</a></li>
+<li class="chapter" data-level="4.1.9" data-path="RMarkDown.html"><a href="RMarkDown.html#lineas-horizontales"><i class="fa fa-check"></i><b>4.1.9</b> Lineas horizontales</a></li>
+<li class="chapter" data-level="4.1.10" data-path="RMarkDown.html"><a href="RMarkDown.html#saltos-de-linea"><i class="fa fa-check"></i><b>4.1.10</b> Saltos de línea</a></li>
+<li class="chapter" data-level="4.1.11" data-path="RMarkDown.html"><a href="RMarkDown.html#codigo-y-resaltado-de-sintaxis"><i class="fa fa-check"></i><b>4.1.11</b> Código y Resaltado de Sintaxis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="RMarkDown.html"><a href="RMarkDown.html#rmarkdown"><i class="fa fa-check"></i><b>4.2</b> RMarkdown</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="RMarkDown.html"><a href="RMarkDown.html#ecuaciones-matematicas"><i class="fa fa-check"></i><b>4.2.1</b> Ecuaciones matemáticas</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="RMarkDown.html"><a href="RMarkDown.html#bloques-de-codigo-ejecutables"><i class="fa fa-check"></i><b>4.3</b> Bloques de código ejecutables</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="apendA.html"><a href="apendA.html"><i class="fa fa-check"></i><b>5</b> Apendice A</a></li>
+<li class="divider"></li>
+<li><a>Autor:</a><a href="http://github.com/frahik/" target="blank">Francisco Javier Luna Vázquez</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diplomado en R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="RMarkDown" class="section level1">
+<h1><span class="header-section-number">Capítulo 4</span> Introducción a R-Markdown</h1>
+<div id="sintaxis-de-markdown" class="section level2">
+<h2><span class="header-section-number">4.1</span> Sintaxis de Markdown</h2>
+<p>Esta es una rápida referencia de como usar <strong>Markdown</strong>, para consultar más información sobre <strong>Markdown</strong> usar el siguiente enlace <a href="http://github.github.com/github-flavored-markdown/">Github-flavored Markdown info page</a>.</p>
+<div id="encabezados-o-titulos" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Encabezados o Títulos</h3>
+<pre><code># H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+De manera alternativa, Para los encabezados de primer y segundo nivel pueden ser utilizados de la siguiente manera:
+
+Alt-H1
+======
+
+Alt-H2
+------</code></pre>
+<hr />
+</div>
+<div id="texto" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Texto</h3>
+<pre><code>Para usar texto en itálica (cursiva), es a través de *asteriscos* o _Guion bajo_.
+
+Para usar texto en negritas, es a través de **doble asterisco** o __doble guión bajo__.
+
+Es posible combinarlos con **Una parte en negritas y __además en cursiva__**
+
+Para tachar algo usar ~~Texto no deseado~~.</code></pre>
+<p><strong>DEMOSTRACIÓN</strong> Para usar texto en itálica (cursiva), es a través de <em>asteriscos</em> o <em>Guion bajo</em>.</p>
+<p>Para usar texto en negritas, es a través de <strong>doble asterisco</strong> o <strong>doble guión bajo</strong>.</p>
+<p>Es posible combinarlos con <strong>Una parte en negritas y <strong>además en cursiva</strong></strong></p>
+<p>Para tachar algo usar <del>Texto no deseado</del>.</p>
+<hr />
+</div>
+<div id="listas" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> Listas</h3>
+<pre><code>1. Primer elemento en la lista.
+2. Un elemento más.
+* Una sub-lista o elemento anidado.
+1. No importa la numeración, solo son números.
+1. Una sub-lista anidada.
+4. Último elemento.
+
+Otro tipo de listas:
+
+* Las listas no ordenadas pueden usar asteriscos
+- O el símbolo de menos
++ O el símbolo de más</code></pre>
+<ol style="list-style-type: decimal">
+<li>Primer elemento en la lista.</li>
+<li>Un elemento más.</li>
+</ol>
+<ul>
+<li>Una sub-lista o elemento anidado.</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>No importa la numeración, solo son números.</li>
+<li>Una sub-lista anidada.</li>
+<li>Último elemento.</li>
+</ol>
+<p>Otro tipo de listas:</p>
+<ul>
+<li>Las listas no ordenadas pueden usar asteriscos</li>
+<li>O el símbolo de menos</li>
+<li>O el símbolo de más</li>
+</ul>
+<hr />
+</div>
+<div id="enlaces" class="section level3">
+<h3><span class="header-section-number">4.1.4</span> Enlaces</h3>
+<p>Existen varás formas de crear enlaces:</p>
+<pre><code>[Enlace a google](https://www.google.com)
+
+[Enlace a google con título](https://www.google.com &quot;Página de Google&quot;)
+
+[Enlace a google][Texto de referencia al enlace]
+
+[También es posible usar números para realizar referencias][1]
+
+o dejarlo vacío y usar el enlace como propio texto [texto].
+
+URLs y URLs entre los símbolos `&lt;` y `&gt;` automáticamente serán transformados a enlace.
+http://www.example.com o &lt;http://www.example.com&gt;.
+
+[Texto de referencia al enlace]: https://www.google.com
+[1]: https://www.google.com
+[texto]: https://www.google.com</code></pre>
+<p>DEMOSTRACIÓN:</p>
+<p><a href="https://www.google.com">Enlace a google</a></p>
+<p><a href="https://www.google.com" title="Página de Google">Enlace a google con título</a></p>
+<p><a href="https://www.google.com">Enlace a google</a></p>
+<p><a href="https://www.google.com">También es posible usar números para realizar referencias</a></p>
+<p>o dejarlo vacío y usar el enlace como propio texto <a href="https://www.google.com">texto</a>.</p>
+<p>URLs y URLs entre los símbolos <code>&lt;</code> y <code>&gt;</code> automáticamente serán transformados a enlace. <a href="http://www.example.com" class="uri">http://www.example.com</a> o <a href="http://www.example.com" class="uri">http://www.example.com</a>.</p>
+<hr />
+</div>
+<div id="imagenes" class="section level3">
+<h3><span class="header-section-number">4.1.5</span> Imágenes</h3>
+<pre><code>![Texto alternativo](./assets/images/escudo_uqroo_negro.png &quot;Logo UQroo&quot;)
+
+Reference-style:
+![Texto alternativo][logo]
+
+[logo]: ./assets/images/logo_full.png &quot;Logo UQroo&quot;</code></pre>
+<p>DEMOSTRACIÓN:</p>
+<p>Referencia en la misma linea: <img src="assets/images/escudo_uqroo_negro.png" title="Logo UQroo" alt="Texto alternativo" /></p>
+<p>Mediante referencia de texto: <img src="assets/images/logo_full.png" title="Logo UQroo" alt="Texto alternativo" /></p>
+<hr />
+</div>
+<div id="tablas" class="section level3">
+<h3><span class="header-section-number">4.1.6</span> Tablas</h3>
+<p>El símbolo de dos puntos <code>:</code> es usado como alineado de columnas</p>
+<pre><code>| Ejemplo | de una | Tabla |
+|:---------------|:-------------:|---------------:|
+| La columna tres| está alineada | a la derecha |
+| La columna dos | está | centrada |
+| La columna uno | está alienada | a la izquierda |</code></pre>
+<p>DEMOSTRACIÓN:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Ejemplo</th>
+<th align="center">de una</th>
+<th align="right">Tabla</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">La columna tres</td>
+<td align="center">está alineada</td>
+<td align="right">a la derecha</td>
+</tr>
+<tr class="even">
+<td align="left">La columna dos</td>
+<td align="center">está</td>
+<td align="right">centrada</td>
+</tr>
+<tr class="odd">
+<td align="left">La columna uno</td>
+<td align="center">está alienada</td>
+<td align="right">a la izquierda</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Es necesario que en cada columna haya por lo menos 3 lineas separando cada celda, donde las barras de los extremos son opcionales (|), además de que no es necesario (Pero es preferible), que la tabla tenga que estar alineada en las columnas como se muestra en el siguiente código, esta se seguirá mostrando igual que una alineada:</p>
+<pre><code>Ejemplo | de una | Tabla
+--- | --- | ---
+Menos | ordenada | que
+la | tabla | anterior</code></pre>
+<p>DEMOSTRACIÓN:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Ejemplo</th>
+<th>de una</th>
+<th>Tabla</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Menos</td>
+<td>ordenada</td>
+<td>que</td>
+</tr>
+<tr class="even">
+<td>la</td>
+<td>tabla</td>
+<td>anterior</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+<div id="bloques-de-cita" class="section level3">
+<h3><span class="header-section-number">4.1.7</span> Bloques de cita</h3>
+<pre><code>&gt; Los bloques de cita son especialmente útiles para enfatizar.
+&gt; También para realizar citas de texto.
+&gt;
+&gt; Esta linea también pertenece al bloque.
+
+Esta linea ya no pertenece al bloque al estar separado por un salto de línea.
+
+&gt; Sin embargo, siempre es posible utilizar nuevamente los bloques de citas, aunque sean de una línea.</code></pre>
+<p>DEMOSTRACIÓN:</p>
+<blockquote>
+<p>Los bloques de cita son especialmente útiles para enfatizar. También para realizar citas de texto.</p>
+<p>Esta linea también pertenece al bloque.</p>
+</blockquote>
+<p>Esta linea ya no pertenece al bloque al estar separado por un salto de línea.</p>
+<blockquote>
+<p>Sin embargo, siempre es posible utilizar nuevamente los bloques de citas, aunque sean de una línea.</p>
+</blockquote>
+<hr />
+</div>
+<div id="html-en-markdown" class="section level3">
+<h3><span class="header-section-number">4.1.8</span> HTML en Markdown</h3>
+<p>Es posible insertar código en HTML dentro de <strong>Markdown</strong>, esto con el fin de añadir algunas funcionalidades que <strong>Markdown</strong> carece.</p>
+<pre><code>Por ejemplo, poner el texto de &lt;span style=&quot;color:#DA0101&quot;&gt;otro color&lt;/span&gt;.</code></pre>
+<p>Por ejemplo, poner el texto de <span style="color:#DA0101">otro color</span>.</p>
+<hr />
+</div>
+<div id="lineas-horizontales" class="section level3">
+<h3><span class="header-section-number">4.1.9</span> Lineas horizontales</h3>
+<p>Es posible poner lineas horizontales para separar zonas de texto usando alguno de los siguientes códigos:</p>
+<pre><code>Una línea hecha con tres líneas
+---
+O con tres asteriscos
+***
+o tres guiones bajos
+___
+</code></pre>
+<p>DEMOSTRACIÓN:</p>
+<p>Una línea hecha con tres líneas</p>
+<hr />
+<p>O con tres asteriscos</p>
+<hr />
+<p>o tres guiones bajos</p>
+<hr />
+</div>
+<div id="saltos-de-linea" class="section level3">
+<h3><span class="header-section-number">4.1.10</span> Saltos de línea</h3>
+<p>Al igual que <strong>LaTeX</strong>, <strong>Markdown</strong> necesita doble salto de línea para poder separar párrafos de texto, así como para poder crear tablas, bloques de código o de citas, etc., en caso de que una parte del escrito no se muestre como lo planeado, se tendrá que incluir un salto de línea para separar los dos contextos, ejemplo:</p>
+<pre><code>La siguiente tabla no se visualiza:
+| Tabla | Ejemplo |
+|:-----:|:-------:|
+| 1 | 2 |</code></pre>
+<p>Demostración:</p>
+<p>La siguiente tabla no se visualiza: | Tabla | Ejemplo | |:—–:|:——-:| | 1 | 2 |</p>
+<p>Corrección:</p>
+<pre><code>La siguiente tabla ya se visualiza:
+
+| Tabla | Ejemplo |
+|:-----:|:-------:|
+| 1 | 2 |</code></pre>
+<p>Demostración:</p>
+<p>La siguiente tabla ya se visualiza:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Tabla</th>
+<th align="center">Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="codigo-y-resaltado-de-sintaxis" class="section level3">
+<h3><span class="header-section-number">4.1.11</span> Código y Resaltado de Sintaxis</h3>
+<p>Los bloques de código son parte de la sintaxis de <em>Markdown</em>, pero, el resaltado de sintaxis no lo es, sin embargo, muchos programas que trabajan con <em>Markdown</em> para exportarlo a HTML ya lo incluyen, tal es el caso como RStudio con <em>RMarkdown</em>, que nos permitira crear bloques especiales para lenguajes como <em>R</em>, <em>Python</em>, <em>Sql</em>, <em>Bash</em>, <em>RCpp</em>. Existen otros programas que incluyen otros lenguajes para el resaltado de sintaxis, por el momento veremos más a detalle <em>RMarkdown</em> y su forma de trabajar uniendo <em>Markdown</em> y <em>R</em>.</p>
+<pre><code>En **Markdown** para resaltar partes de `código` es necesario ponerlo entre `comillas inversas`.</code></pre>
+<p>DEMOSTRACIÓN:</p>
+<p>En <strong>Markdown</strong> para resaltar partes de <code>código</code> es necesario ponerlo entre <code>comillas inversas</code>.</p>
+<hr />
+<p>Los bloques de código, por otra parte, es necesario ponerlo entre tripes comillas inversas y especificar al lenguaje que pertenece</p>
+<pre lang="no-highlight"><code>
+```r
+x <- matrix(NA, ncol=3, nrow=3)
+```
+</code></pre>
+<p>DEMOSTRACIÓN:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="ot">NA</span>, <span class="dt">ncol=</span><span class="dv">3</span>, <span class="dt">nrow=</span><span class="dv">3</span>)</code></pre></div>
+</div>
+</div>
+<div id="rmarkdown" class="section level2">
+<h2><span class="header-section-number">4.2</span> RMarkdown</h2>
+<p>RMarkdown es una variación del Markdown que integra la facilidad de su estructura con la potencia y desarrollo de <strong>R</strong>, dicha variación fué desarrollado para crear documentos interactivos, para facilitar la transmisión de ideas entre los desarrolladores de <strong>R</strong> sin tener que preocuparse por tener que desarrollar la documentación con diversos programas y tener que actualizar los documentos en cada ocasión que se modifica el código, además RMarkdown permite desde un mismo código crear versiones en pdf, word y html del mismo.</p>
+<p>Existen algunas diferencias entre <strong>Markdown</strong> y <strong>RMarkdown</strong>, mismas que se van a detallar a continuación:</p>
+<div id="ecuaciones-matematicas" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Ecuaciones matemáticas</h3>
+<p>Si algo le hizo falta a Markdown, fué la integración con las ecuaciones matematicas, es por ello que fué integrado con Rmarkdown para facilitar la explicación de las ecuaciones matematicas que van implicadas en el código, la manera de escribir ecuaciones es como en <span class="math inline">\(\LaTeX\)</span>, rodeado de un símbolo <code>$</code> al inicio y final para escribirlo en la misma linea del texto y doble <code>$$</code> para hacerlo en una nueva línea, ejemplo:</p>
+<pre><code>$$
+x^2 - \sqrt{25} = 20 
+$$
+
+Donde $x$ es la incognita.</code></pre>
+<p>Este código al ser compilado en RMarkdown se obtiene la siguiente salida:</p>
+<p><span class="math display">\[
+x^2 - \sqrt{25} = 20 
+\]</span></p>
+<p>Donde <span class="math inline">\(x\)</span> es la incognita.</p>
+<p>La escritura de ecuaciones matemáticas como en <span class="math inline">\(\LaTeX\)</span> nos permite no solo reducir la cantidad de errores en cuanto a las ecuaciones, si no, tambien tener una excelente vizualicación de ellos.</p>
+</div>
+</div>
+<div id="bloques-de-codigo-ejecutables" class="section level2">
+<h2><span class="header-section-number">4.3</span> Bloques de código ejecutables</h2>
+<p>Al hablar de Markdown, se habló un poco de los bloques de código, dichos bloques sirven para mostrar el código que</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="RStudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="apendA.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["Diplomado_R_Luna.pdf", "Diplomado_R_Luna.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

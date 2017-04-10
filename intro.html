@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Diplomado en R</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Documento con las notas de introducción a R, RStudio y RMarkdown">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Diplomado en R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Documento con las notas de introducción a R, RStudio y RMarkdown" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Diplomado en R" />
+  
+  <meta name="twitter:description" content="Documento con las notas de introducción a R, RStudio y RMarkdown" />
+  
+
+<meta name="author" content="Francisco Javier Luna Vázquez">
+
+
+<meta name="date" content="2017-04-10">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="RStudio.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diplomado en R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisitos</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#instalacion-de-r"><i class="fa fa-check"></i><b>1.1</b> Instalación de R</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#comprobar-la-instalacion-de-r"><i class="fa fa-check"></i><b>1.1.1</b> Comprobar la instalación de R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#entornos-de-desarrollo-para-r"><i class="fa fa-check"></i><b>1.2</b> Entornos de desarrollo para R</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#instalacion-rstudio"><i class="fa fa-check"></i><b>1.2.1</b> Instalación RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introducción a R</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#primeros-pasos"><i class="fa fa-check"></i><b>2.1</b> Primeros pasos</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#espacio-de-trabajo"><i class="fa fa-check"></i><b>2.1.1</b> Espacio de trabajo</a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#establecer-directorios-de-trabajo"><i class="fa fa-check"></i><b>2.1.2</b> Establecer directorios de trabajo</a></li>
+<li class="chapter" data-level="2.1.3" data-path="intro.html"><a href="intro.html#creacion-de-objetosvariables"><i class="fa fa-check"></i><b>2.1.3</b> Creación de objetos/variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#clases-de-datos"><i class="fa fa-check"></i><b>2.2</b> Clases de datos</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="intro.html"><a href="intro.html#vector"><i class="fa fa-check"></i><b>2.2.1</b> Vector</a></li>
+<li class="chapter" data-level="2.2.2" data-path="intro.html"><a href="intro.html#matriz"><i class="fa fa-check"></i><b>2.2.2</b> Matriz</a></li>
+<li class="chapter" data-level="2.2.3" data-path="intro.html"><a href="intro.html#lista"><i class="fa fa-check"></i><b>2.2.3</b> Lista</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#manejo-de-datos"><i class="fa fa-check"></i><b>2.3</b> Manejo de datos</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="intro.html"><a href="intro.html#salvar-datos"><i class="fa fa-check"></i><b>2.3.1</b> Salvar datos</a></li>
+<li class="chapter" data-level="2.3.2" data-path="intro.html"><a href="intro.html#leer-datos"><i class="fa fa-check"></i><b>2.3.2</b> Leer datos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="RStudio.html"><a href="RStudio.html"><i class="fa fa-check"></i><b>3</b> Introducción a RStudio</a><ul>
+<li class="chapter" data-level="3.1" data-path="RStudio.html"><a href="RStudio.html#el-entorno-y-los-paneles"><i class="fa fa-check"></i><b>3.1</b> El entorno y los paneles</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="RStudio.html"><a href="RStudio.html#panel-de-codigo"><i class="fa fa-check"></i><b>3.1.1</b> Panel de código</a></li>
+<li class="chapter" data-level="3.1.2" data-path="RStudio.html"><a href="RStudio.html#panel-de-consola"><i class="fa fa-check"></i><b>3.1.2</b> Panel de Consola</a></li>
+<li class="chapter" data-level="3.1.3" data-path="RStudio.html"><a href="RStudio.html#panel-de-entorno"><i class="fa fa-check"></i><b>3.1.3</b> Panel de entorno</a></li>
+<li class="chapter" data-level="3.1.4" data-path="RStudio.html"><a href="RStudio.html#panel-de-historial"><i class="fa fa-check"></i><b>3.1.4</b> Panel de historial</a></li>
+<li class="chapter" data-level="3.1.5" data-path="RStudio.html"><a href="RStudio.html#panel-de-construccion"><i class="fa fa-check"></i><b>3.1.5</b> Panel de Construcción</a></li>
+<li class="chapter" data-level="3.1.6" data-path="RStudio.html"><a href="RStudio.html#panel-de-control-de-versiones-git"><i class="fa fa-check"></i><b>3.1.6</b> Panel de Control de versiones (Git)</a></li>
+<li class="chapter" data-level="3.1.7" data-path="RStudio.html"><a href="RStudio.html#panel-de-archivos"><i class="fa fa-check"></i><b>3.1.7</b> Panel de archivos</a></li>
+<li class="chapter" data-level="3.1.8" data-path="RStudio.html"><a href="RStudio.html#panel-de-graficos-panel-de-graficos"><i class="fa fa-check"></i><b>3.1.8</b> Panel de gráficos <img src="assets/images/Panel_Grafica.png" alt="Panel de gráficos" /></a></li>
+<li class="chapter" data-level="3.1.9" data-path="RStudio.html"><a href="RStudio.html#panel-de-paquetes-panel-de-paquetes"><i class="fa fa-check"></i><b>3.1.9</b> Panel de Paquetes <img src="assets/images/Panel_Paquetes.png" alt="Panel de Paquetes" /></a></li>
+<li class="chapter" data-level="3.1.10" data-path="RStudio.html"><a href="RStudio.html#panel-de-ayuda-panel-de-ayuda"><i class="fa fa-check"></i><b>3.1.10</b> Panel de ayuda <img src="assets/images/Panel_Ayuda.png" alt="Panel de ayuda" /></a></li>
+<li class="chapter" data-level="3.1.11" data-path="RStudio.html"><a href="RStudio.html#panel-de-visualizacion"><i class="fa fa-check"></i><b>3.1.11</b> Panel de visualización</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="RStudio.html"><a href="RStudio.html#proyectos"><i class="fa fa-check"></i><b>3.2</b> Proyectos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="RMarkDown.html"><a href="RMarkDown.html"><i class="fa fa-check"></i><b>4</b> Introducción a R-Markdown</a><ul>
+<li class="chapter" data-level="4.1" data-path="RMarkDown.html"><a href="RMarkDown.html#sintaxis-de-markdown"><i class="fa fa-check"></i><b>4.1</b> Sintaxis de Markdown</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="RMarkDown.html"><a href="RMarkDown.html#encabezados-o-titulos"><i class="fa fa-check"></i><b>4.1.1</b> Encabezados o Títulos</a></li>
+<li class="chapter" data-level="4.1.2" data-path="RMarkDown.html"><a href="RMarkDown.html#texto"><i class="fa fa-check"></i><b>4.1.2</b> Texto</a></li>
+<li class="chapter" data-level="4.1.3" data-path="RMarkDown.html"><a href="RMarkDown.html#listas"><i class="fa fa-check"></i><b>4.1.3</b> Listas</a></li>
+<li class="chapter" data-level="4.1.4" data-path="RMarkDown.html"><a href="RMarkDown.html#enlaces"><i class="fa fa-check"></i><b>4.1.4</b> Enlaces</a></li>
+<li class="chapter" data-level="4.1.5" data-path="RMarkDown.html"><a href="RMarkDown.html#imagenes"><i class="fa fa-check"></i><b>4.1.5</b> Imágenes</a></li>
+<li class="chapter" data-level="4.1.6" data-path="RMarkDown.html"><a href="RMarkDown.html#tablas"><i class="fa fa-check"></i><b>4.1.6</b> Tablas</a></li>
+<li class="chapter" data-level="4.1.7" data-path="RMarkDown.html"><a href="RMarkDown.html#bloques-de-cita"><i class="fa fa-check"></i><b>4.1.7</b> Bloques de cita</a></li>
+<li class="chapter" data-level="4.1.8" data-path="RMarkDown.html"><a href="RMarkDown.html#html-en-markdown"><i class="fa fa-check"></i><b>4.1.8</b> HTML en Markdown</a></li>
+<li class="chapter" data-level="4.1.9" data-path="RMarkDown.html"><a href="RMarkDown.html#lineas-horizontales"><i class="fa fa-check"></i><b>4.1.9</b> Lineas horizontales</a></li>
+<li class="chapter" data-level="4.1.10" data-path="RMarkDown.html"><a href="RMarkDown.html#saltos-de-linea"><i class="fa fa-check"></i><b>4.1.10</b> Saltos de línea</a></li>
+<li class="chapter" data-level="4.1.11" data-path="RMarkDown.html"><a href="RMarkDown.html#codigo-y-resaltado-de-sintaxis"><i class="fa fa-check"></i><b>4.1.11</b> Código y Resaltado de Sintaxis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="RMarkDown.html"><a href="RMarkDown.html#rmarkdown"><i class="fa fa-check"></i><b>4.2</b> RMarkdown</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="RMarkDown.html"><a href="RMarkDown.html#ecuaciones-matematicas"><i class="fa fa-check"></i><b>4.2.1</b> Ecuaciones matemáticas</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="RMarkDown.html"><a href="RMarkDown.html#bloques-de-codigo-ejecutables"><i class="fa fa-check"></i><b>4.3</b> Bloques de código ejecutables</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="apendA.html"><a href="apendA.html"><i class="fa fa-check"></i><b>5</b> Apendice A</a></li>
+<li class="divider"></li>
+<li><a>Autor:</a><a href="http://github.com/frahik/" target="blank">Francisco Javier Luna Vázquez</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diplomado en R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro" class="section level1">
+<h1><span class="header-section-number">Capítulo 2</span> Introducción a R</h1>
+<p>R es un potente software y a su vez un lenguaje orientado a objetos destinado al análisis estadistico y la representación de datos, es completamente gratuito y de código abierto, por lo que la comunidad científica, las empresas y las universidades lo están implementando cada vez más.</p>
+<div id="primeros-pasos" class="section level2">
+<h2><span class="header-section-number">2.1</span> Primeros pasos</h2>
+<p>Para interactuar con <strong>R</strong> se dispone de una potente línea de comandos y en un principio, la manera más sencilla de ver <strong>R</strong> es que puede ser usado como una calculadora:</p>
+<p>Como sumar:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">10</span> <span class="op">+</span><span class="st"> </span><span class="dv">5</span> </code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<p>o dividir:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">10</span><span class="op">/</span><span class="dv">5</span> </code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<p>Sin embargo, su potencial va más allá…</p>
+<p>Principalmente por que este documento ha sido diseñado en <strong>R</strong> y <strong>RMarkdown</strong> ;)</p>
+<div id="espacio-de-trabajo" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Espacio de trabajo</h3>
+<p>Si se realizó la prueba de instalación, al momento de ejecutar el comando <code>q()</code> para finalizar la ejecución de <strong>R</strong>, esté manda un mensaje si se desea guardar el espacio de trabajo actual (“workspace”), dicho espacio es donde se incluyen todos los objetos que han sido creados por los scripts (se explicará más a detalle sobre los objetos en las siguientes secciones), si se almacenan en disco dichos objetos volverán a ser cargados al iniciar la sesión de <strong>R</strong>.</p>
+</div>
+<div id="establecer-directorios-de-trabajo" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Establecer directorios de trabajo</h3>
+<p>Al ejecutar <strong>R</strong>, este establece un directorio de trabajo, es decir, establece una carpeta donde guardar los datos ejecutados en <strong>R</strong>, misma que será la carpeta que usara para buscar, leer y escribir los archivos (de ser requerido) durante la sesión (es decir, mientras se mantiene el programa abierto), por ello, para obtener el directorio de trabajo actual basta con usar el siguiente comando:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>()</code></pre></div>
+<pre><code>## [1] &quot;/home/frahik/Documentos/R-project/DiplomadoR&quot;</code></pre>
+<p>Dicho directorio va a variar dependiendo del sistema, por ello, más de una vez será necesario modificar esta ruta, para lo cual se usara el comando <code>setwd(&quot;Ruta&quot;)</code>, el cual varia dependiendo del Sistema Operativo, como buena practica del programador, se recomienda establecer el directorio de trabajado dentro de la carpeta de Documentos, además de que es más sencillo encontrar los proyectos de trabajo, si se usa la ruta <strong>ruta relativa</strong> y no la <strong>ruta física</strong>, si se requiere mover todos los archivos para trabajar en otra computadora, no se tendrá que volver a modificar todo el directorio de trabajo.</p>
+<p><strong>Ejemplo usando la Ruta relativa en Linux</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">setwd</span>(<span class="st">&quot;~/Documentos/Curso&quot;</span>) <span class="co">#Linux</span></code></pre></div>
+<p><strong>Ejemplo usando la <em>Ruta física</em> y la <em>ruta relativa</em> en Windows</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">setwd</span>(<span class="st">&quot;C:</span><span class="ch">\\</span><span class="st">Usuario</span><span class="ch">\\</span><span class="st">Documentos</span><span class="ch">\\</span><span class="st">Curso&quot;</span>) <span class="co">#MALA PRACTICA (Ruta física)</span>
+<span class="kw">setwd</span>(<span class="st">&quot;~/Curso&quot;</span>) <span class="co">#BUENA PRACTICA (Ruta relativa del comando anterior)</span></code></pre></div>
+<p>Si se a trabajado con las terminales del sistema operativo antes, los comandos</p>
+</div>
+<div id="creacion-de-objetosvariables" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Creación de objetos/variables</h3>
+<p>En <strong>R</strong> podemos crear y manipular objetos asignándole valores, cadenas de texto, funciones y un largo etc. Por ser el primer contacto con <strong>R</strong>, crearemos un objeto (izquierda del símbolo <code>=</code>), asignándole como valor la cadena de texto “Hola mundo”. Es importante aclarar que es necesario que se pongan dobles comillas <code>&quot; &quot;</code> o comillas simples <code>' '</code> al escribir una cadena de texto, de otra manera será interpretado como uno o varios objetos, ejemplo:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">saludo =<span class="st"> </span>Hola</code></pre></div>
+<pre><code>## Error in eval(expr, envir, enclos): objeto &#39;Hola&#39; no encontrado</code></pre>
+<p>Por lo que, para insertar la cadena de texto “Hola mundo” en la variable <code>saludo</code>, se deberá hacer como se mencionó anteriormente:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">saludo =<span class="st"> &quot;Hola mundo&quot;</span> </code></pre></div>
+<p>Ahora para mostrar en consola lo que contiene la <em>variable</em> u <em>objeto</em> <code>saludo</code>, lo escribiremos tal cual y obtendremos una salida muy similar a la siguiente.</p>
+<pre><code>## [1] &quot;Hola mundo&quot;</code></pre>
+<p><strong>NOTAS IMPORTANTES:</strong></p>
+<blockquote>
+<p><strong>R</strong> es sensible a las MAYÚSCULAS y minúsculas, por lo que <code>saludo</code> no es igual a <code>Saludo</code>, ni a <code>SALUDO</code>.</p>
+<p><strong>R</strong> <span style="color:#DA0101">NO</span> requiere explicitar que tipo de valores van a contener las variables.</p>
+</blockquote>
+<p>Otra manera de asignar valores a las variables es mediante el símbolo <code>&lt;-</code> que se compone de un menor que y el signo de menos.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">10</span> <span class="op">+</span><span class="st"> </span><span class="dv">5</span> </code></pre></div>
+<blockquote>
+<p>«Podemos ver a las variables como una persona, cada persona tiene su nombre para poder ser identificadas sobre el resto de las personas, pero bajo la manera de ordenar del lenguaje R, si dos personas quieren llamarse de la misma manera, la nueva persona tiene que ‘eliminar’ a la persona ya existente para poder tomar su lugar.»</p>
+</blockquote>
+<p>Se recomienda incluir un espacio simple a cada lado del operador de asignación para incrementar la legibilidad. Pero <span style="color:#DA0101">NO</span> coloques un espacio entre el <code>&lt;</code> y el <code>-</code> que forman la flecha, recuerda que a pesar de estar compuesto por dos caracteres es un único símbolo.</p>
+<p>Es posible reasignar un valor a la variable que hemos creado, así como reutilizar el valor de la variable para realizar un calculo:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y &lt;-<span class="st"> </span>x <span class="op">+</span><span class="st"> </span><span class="dv">5</span> 
+y</code></pre></div>
+<p>Ahora reutilizaremos el valor de la variable <code>y</code>:</p>
+<pre><code>## [1] 20</code></pre>
+<blockquote>
+<p>Recuerde que aunque pareciera algo matemático, los símbolos <code>&lt;-</code> y <code>=</code> no funcionan como un «<em>igual</em>», si no, como un «<em>equivale a</em>» o una «<em>asignación</em>», por que a partir de ese momento, el valor de la derecha se le asigna al de la izquierda.</p>
+</blockquote>
+</div>
+</div>
+<div id="clases-de-datos" class="section level2">
+<h2><span class="header-section-number">2.2</span> Clases de datos</h2>
+<p>Existen 4 tipos de clases de objetos con las que tendremos que trabajar en R, cada uno tiene sus ventajas y desventajas, así que se verá de manera detalla como crear cada uno de ellos, acceder a sus valores, así como posibles problemas.</p>
+<div id="vector" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Vector</h3>
+<p>Desde que empezamos con la variable <code>saludo</code>, estábamos trabajando con vectores, sin embargo, era un vector de indice 1, dado que en <code>R</code> no existen como en otros lenguajes las variables individuales, todas a las que se les asigna un valor o más, son tratados inicialmente como vectores.</p>
+<p>La manera de representar un vector es de la siguiente forma:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Valor1</th>
+<th>Valor2</th>
+<th>Valor3</th>
+<th>…</th>
+<th>Valorn</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<blockquote>
+<p>Una forma de ver a los vectores, es como la fila de espera del banco, todos tienen un turno único, pero que puede ser transferible, por lo que si mando a llamar el primer turno, solo el cliente con ese turno sera el que pasará a ventanilla, pero mientras, el cliente con turno 10, puede ser que esté guardando el lugar para un amigo y cuando el amigo llegue, el nuevo cliente sustituira al actual cliente con el turno 10.</p>
+</blockquote>
+<p>Una vez entendido el mensaje anterior, existen varias formas de declarar un vector de más de un valor, la manera más sencilla es a través de la función concatenar <code>c(...)</code>; la cual es una función genérica que combina los valores separado por comas en un vector.</p>
+<p>Ejemplos: Vector con un varios datos y un <code>NA</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">9</span>,<span class="ot">NA</span>,<span class="dv">10</span><span class="op">:</span><span class="dv">15</span>)
+vector</code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 NA 10 11 12 13 14 15</code></pre>
+<p>Vector de nombres de personas</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vectorNombres &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Francisco&quot;</span>,<span class="st">&quot;Claudia&quot;</span>,<span class="st">&quot;Valeria&quot;</span>,<span class="st">&quot;Fernando&quot;</span>,<span class="st">&quot;Julia&quot;</span>)
+vectorNombres</code></pre></div>
+<pre><code>## [1] &quot;Francisco&quot; &quot;Claudia&quot;   &quot;Valeria&quot;   &quot;Fernando&quot;  &quot;Julia&quot;</code></pre>
+<p>Vector con los datos de otros vectores</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vec1 &lt;-<span class="st"> </span><span class="dv">1</span>
+vec2 &lt;-<span class="st"> </span><span class="dv">20</span><span class="op">:</span><span class="dv">30</span>
+vecFinal &lt;-<span class="st"> </span><span class="kw">c</span>(vec1,vec2)
+vecFinal</code></pre></div>
+<pre><code>##  [1]  1 20 21 22 23 24 25 26 27 28 29 30</code></pre>
+<p>Ya que hemos visto como se crea un vector ahora veremos como acceder y trabajar con los valores de un vector.</p>
+<div id="acceder-a-uno-o-varios-datos-del-vector." class="section level4">
+<h4><span class="header-section-number">2.2.1.1</span> Acceder a uno o varios datos del vector.</h4>
+<p>Tenemos el siguiente vector que tiene almacenado el nombre de 6 clientes.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Francisco&quot;</span>,<span class="st">&quot;Claudia&quot;</span>,<span class="st">&quot;Valeria&quot;</span>,<span class="st">&quot;Fernando&quot;</span>,<span class="st">&quot;Julia&quot;</span>, <span class="st">&quot;Osval&quot;</span>)</code></pre></div>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">Francisco</td>
+<td align="left">Claudia</td>
+<td align="left">Valeria</td>
+<td align="left">Fernando</td>
+<td align="left">Julia</td>
+<td align="left">Osval</td>
+</tr>
+</tbody>
+</table>
+<p>En <strong>R</strong> a diferencia de otros lenguajes de programación como <strong>C</strong> o <strong>Java</strong>, los índices de un vector o una matriz siempre inician en 1 y no en 0 como en esos otros lenguajes, por lo que la tabla anterior se podría observar de la siguiente manera:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="left">3</td>
+<td align="left">4</td>
+<td align="left">5</td>
+<td align="left">6</td>
+</tr>
+<tr class="even">
+<td align="left">Francisco</td>
+<td align="left">Claudia</td>
+<td align="left">Valeria</td>
+<td align="left">Fernando</td>
+<td align="left">Julia</td>
+<td align="left">Osval</td>
+</tr>
+</tbody>
+</table>
+<p>Donde el primer indice, hace referencia al primer elemento del vector, el segundo indice al segundo elemento y así de manera consecutiva.</p>
+<p>Por lo que para acceder a uno o varios elementos se pueden utilizar los siguientes códigos:</p>
+<ul>
+<li>Un elemento en especifico</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector[<span class="dv">3</span>]</code></pre></div>
+<pre><code>## [1] &quot;Valeria&quot;</code></pre>
+<ul>
+<li>Varios elementos en secuencia.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector[<span class="dv">2</span><span class="op">:</span><span class="dv">4</span>]</code></pre></div>
+<pre><code>## [1] &quot;Claudia&quot;  &quot;Valeria&quot;  &quot;Fernando&quot;</code></pre>
+<ul>
+<li>Un elemento especificado anteriormente.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">n &lt;-<span class="st"> </span><span class="dv">3</span>
+vector[n]</code></pre></div>
+<pre><code>## [1] &quot;Valeria&quot;</code></pre>
+<ul>
+<li>Varios elementos especificados</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector[<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>)]</code></pre></div>
+<pre><code>## [1] &quot;Francisco&quot; &quot;Claudia&quot;   &quot;Julia&quot;</code></pre>
+<ul>
+<li>Todos los elementos, excluyendo uno especifico.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector[<span class="op">-</span><span class="dv">3</span>]</code></pre></div>
+<pre><code>## [1] &quot;Francisco&quot; &quot;Claudia&quot;   &quot;Fernando&quot;  &quot;Julia&quot;     &quot;Osval&quot;</code></pre>
+<ul>
+<li>Todos los elementos, excluyendo varios.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector[<span class="op">-</span><span class="kw">c</span>(<span class="dv">4</span><span class="op">:</span><span class="dv">6</span>)]</code></pre></div>
+<pre><code>## [1] &quot;Francisco&quot; &quot;Claudia&quot;   &quot;Valeria&quot;</code></pre>
+<ul>
+<li>Almacenar los datos extraídos en otra variable.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">grupo1 &lt;-<span class="st"> </span>vector[<span class="op">-</span><span class="kw">c</span>(<span class="dv">4</span><span class="op">:</span><span class="dv">6</span>)]
+grupo1</code></pre></div>
+<pre><code>## [1] &quot;Francisco&quot; &quot;Claudia&quot;   &quot;Valeria&quot;</code></pre>
+<ul>
+<li>Modificar un elemento especifico de un vector</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector[<span class="dv">4</span>] &lt;-<span class="st">  &quot;Alberto&quot;</span>
+vector</code></pre></div>
+<pre><code>## [1] &quot;Francisco&quot; &quot;Claudia&quot;   &quot;Valeria&quot;   &quot;Alberto&quot;   &quot;Julia&quot;     &quot;Osval&quot;</code></pre>
+<ul>
+<li>Modificar varios elementos de un vector</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector[<span class="dv">4</span><span class="op">:</span><span class="dv">6</span>] &lt;-<span class="st"> </span><span class="ot">NA</span>
+vector</code></pre></div>
+<pre><code>## [1] &quot;Francisco&quot; &quot;Claudia&quot;   &quot;Valeria&quot;   NA          NA          NA</code></pre>
+<ul>
+<li>Encontrar <strong>las posiciones</strong> de los valores NA (Not Available) en un vector</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.na</span>(vector)</code></pre></div>
+<pre><code>## [1] FALSE FALSE FALSE  TRUE  TRUE  TRUE</code></pre>
+<ul>
+<li>Encontrar <strong>las posiciones</strong> de los valores que no sean NA en un vector</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="op">!</span><span class="kw">is.na</span>(vector)</code></pre></div>
+<pre><code>## [1]  TRUE  TRUE  TRUE FALSE FALSE FALSE</code></pre>
+<ul>
+<li>Extrar los elementos de las posiciones en los que los valores <strong>NO</strong> son NA</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">which</span>(<span class="op">!</span><span class="kw">is.na</span>(vector) <span class="op">==</span><span class="st"> </span><span class="ot">TRUE</span>)</code></pre></div>
+<pre><code>## [1] 1 2 3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Alternativa</span>
+<span class="kw">which</span>(<span class="kw">is.na</span>(vector) <span class="op">==</span><span class="st"> </span><span class="ot">FALSE</span>)</code></pre></div>
+<pre><code>## [1] 1 2 3</code></pre>
+<ul>
+<li>Extrar las posiciones del vector que cumplan con una consulta</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">which</span>(vector <span class="op">==</span><span class="st"> &quot;Francisco&quot;</span>)</code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<ul>
+<li>Modificar las posiciones del vector que cumplan con una consulta</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector[<span class="kw">which</span>(vector <span class="op">==</span><span class="st"> &quot;Francisco&quot;</span>)] &lt;-<span class="st"> &quot;Francisco Javier&quot;</span></code></pre></div>
+</div>
+<div id="ordenar-los-datos-de-un-vector" class="section level4">
+<h4><span class="header-section-number">2.2.1.2</span> Ordenar los datos de un vector</h4>
+<p>Para ordenar los datos existe la función <code>sort(...)</code>.</p>
+<ul>
+<li>Ordenar un vector de forma creciente</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sort</span>(vector)</code></pre></div>
+<pre><code>## [1] &quot;Claudia&quot;          &quot;Francisco Javier&quot; &quot;Valeria&quot;</code></pre>
+<ul>
+<li>Ordenar un vector de forma decreciente</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sort</span>(vector, <span class="dt">decreasing =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<pre><code>## [1] &quot;Valeria&quot;          &quot;Francisco Javier&quot; &quot;Claudia&quot;</code></pre>
+<ul>
+<li>Ordenar un vector y conocer sus antiguas posiciones.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sort</span>(vector, <span class="dt">decreasing =</span> <span class="ot">TRUE</span>, <span class="dt">index.return =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<pre><code>## $x
+## [1] &quot;Valeria&quot;          &quot;Francisco Javier&quot; &quot;Claudia&quot;         
+## 
+## $ix
+## [1] 3 1 2</code></pre>
+<p>Este último método retorna dos listas, la primera es <code>$x</code> que representa la lista de los valores ordenados y la segunda es <code>$ix</code> que representa las antiguas posiciones de los valores.</p>
+</div>
+<div id="tratar-los-datos-de-un-vector" class="section level4">
+<h4><span class="header-section-number">2.2.1.3</span> Tratar los datos de un vector</h4>
+<p>Tenemos un vector con los gastos de la última semana:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">gastos &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">150</span>,<span class="dv">120</span>,<span class="dv">300</span>,<span class="dv">250</span>,<span class="dv">400</span>,<span class="dv">380</span>,<span class="dv">100</span>)</code></pre></div>
+<p>que se pueden representar de la siguiente manera:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="right">150</td>
+<td align="right">120</td>
+<td align="right">300</td>
+<td align="right">250</td>
+<td align="right">400</td>
+<td align="right">380</td>
+<td align="right">100</td>
+</tr>
+</tbody>
+</table>
+<p>En <strong>R</strong> ya existen varias funciones para ser utilizadas, se mostrará el funcionamiento de algunas de ellas y otras más podrán ser encontradas en el Capitulo <a href="apendA.html#apendA">5</a> (Apéndices). * El menor gasto en la semana</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">min</span>(gastos)</code></pre></div>
+<pre><code>## [1] 100</code></pre>
+<ul>
+<li>El mayor gasto en la semana</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">max</span>(gastos)</code></pre></div>
+<pre><code>## [1] 400</code></pre>
+<ul>
+<li>Obtener el promedio de gasto en la semana.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(gastos)</code></pre></div>
+<pre><code>## [1] 242.8571</code></pre>
+<ul>
+<li>Obtener el total del gasto de la semana, (Sumar todos los elementos).</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(gastos)</code></pre></div>
+<pre><code>## [1] 1700</code></pre>
+<ul>
+<li>Obtener el total del gasto de una semana laboral (Lunes-Viernes), (Sumar elementos específicos)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sum</span>(gastos[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>])</code></pre></div>
+<pre><code>## [1] 1220</code></pre>
+<ul>
+<li>Obtener la varianza del gasto semanal</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">var</span>(gastos)</code></pre></div>
+<pre><code>## [1] 15157.14</code></pre>
+<ul>
+<li>Obtener la desviación estándar del gasto semanal</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(gastos)</code></pre></div>
+<pre><code>## [1] 123.1143</code></pre>
+<ul>
+<li>Obtener un resumen de los datos</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(gastos)</code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   100.0   135.0   250.0   242.9   340.0   400.0</code></pre>
+<p>Este último comando muestra mucha información de utilidad, el valor mínimo, el primer cuantil, la mediana, el promedio, el tercer cuantil y el valor máximo dentro del vector. Con el cuál, se puede ahorrar tiempo a que si se utiliza de manera separada como se ve en los primeros tres comandos.</p>
+</div>
+<div id="problemas-comunes" class="section level4">
+<h4><span class="header-section-number">2.2.1.4</span> Problemas comunes</h4>
+<div id="mayusculas-y-minusculas" class="section level5">
+<h5><span class="header-section-number">2.2.1.4.1</span> Mayúsculas y mínusculas</h5>
+<p>Como ya se mencionó anteriormente, <strong>R</strong> es sensible a las Mayúsculas y Minúsculas, por lo que las funciones no funcionaran si se ponen total o parcialmente en Mayúsculas, para comprender ésto veremos dos ejemplos:</p>
+<p>Crear un vector: <span style="color:#DA0101">MAL [X]</span></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector &lt;-<span class="st"> </span><span class="kw">C</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</code></pre></div>
+<pre><code>## Error in C(1, 2, 3): object not interpretable as a factor</code></pre>
+<p><span style="color:#04B404">BIEN [O]</span></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</code></pre></div>
+<p>Sumar los datos de un vector: <span style="color:#DA0101">MAL [X]</span></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)
+<span class="kw">SUM</span>(vector)</code></pre></div>
+<pre><code>## Error in eval(expr, envir, enclos): no se pudo encontrar la función &quot;SUM&quot;</code></pre>
+<p><span style="color:#04B404">BIEN [O]</span></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)
+<span class="kw">sum</span>(vector)</code></pre></div>
+<pre><code>## [1] 6</code></pre>
+</div>
+</div>
+</div>
+<div id="matriz" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Matriz</h3>
+<p>Para crear una matriz en <strong>R</strong> se utiliza la función</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="dt">data =</span> <span class="ot">NA</span>, <span class="dt">nrow =</span> <span class="dv">1</span>, <span class="dt">ncol =</span> <span class="dv">1</span>, <span class="dt">byrow =</span> <span class="ot">FALSE</span>, <span class="dt">dimnames =</span> <span class="ot">NULL</span>)</code></pre></div>
+<p>Donde <code>matrix()</code> corresponde al nombre de la función y todo lo que está dentro de los paréntesis son los argumentos de dicha función.</p>
+<table style="width:67%;">
+<colgroup>
+<col width="18%" />
+<col width="48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Argumentos</th>
+<th>Significado del argumento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data</code></td>
+<td>Son los datos a ingresar en la matriz.</td>
+</tr>
+<tr class="even">
+<td><code>nrow</code></td>
+<td>Número deseado de filas.</td>
+</tr>
+<tr class="odd">
+<td><code>ncol</code></td>
+<td>Número deseado de columnas.</td>
+</tr>
+<tr class="even">
+<td><code>byrow</code></td>
+<td>Valor lógico. Si es falso (valor por defecto), la matriz se llena por orden columna, de otra manera se llenará primero por filas.</td>
+</tr>
+<tr class="odd">
+<td><code>dimnames</code></td>
+<td>Utilizado para darles nombres a las filas y a las columnas, respectivamente.</td>
+</tr>
+</tbody>
+</table>
+<p>Algunos ejemplos de como crear una matriz:</p>
+<ul>
+<li>Una matriz de NA de 5 * 5:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="ot">NA</span>,<span class="dt">nrow =</span> <span class="dv">5</span>, <span class="dt">ncol =</span> <span class="dv">5</span>)</code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5]
+## [1,]   NA   NA   NA   NA   NA
+## [2,]   NA   NA   NA   NA   NA
+## [3,]   NA   NA   NA   NA   NA
+## [4,]   NA   NA   NA   NA   NA
+## [5,]   NA   NA   NA   NA   NA</code></pre>
+<ul>
+<li>Una matriz desde los datos de un vector:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Francisco&quot;</span>,<span class="dv">500</span>)
+<span class="kw">matrix</span>()</code></pre></div>
+<div id="trabajar-con-matrices" class="section level4">
+<h4><span class="header-section-number">2.2.2.1</span> Trabajar con matrices</h4>
+<p>some text</p>
+<hr />
+</div>
+<div id="ordenar-datos" class="section level4">
+<h4><span class="header-section-number">2.2.2.2</span> Ordenar datos</h4>
+<p>some text</p>
+<hr />
+</div>
+<div id="extraer-datos" class="section level4">
+<h4><span class="header-section-number">2.2.2.3</span> Extraer datos</h4>
+<p>some text</p>
+<hr />
+</div>
+<div id="tratar-los-datos-apply" class="section level4">
+<h4><span class="header-section-number">2.2.2.4</span> Tratar los datos (apply)</h4>
+<p>some text</p>
+<hr />
+</div>
+<div id="problemas-comunes-1" class="section level4">
+<h4><span class="header-section-number">2.2.2.5</span> Problemas comunes</h4>
+<div id="los-nombres-en-dimnames-no-concuerdan-con-las-dimensiones-de-la-matriz." class="section level5">
+<h5><span class="header-section-number">2.2.2.5.1</span> Los nombres en <code>dimnames</code> no concuerdan con las dimensiones de la matriz.</h5>
+</div>
+<div id="los-datos-no-se-ordenan-o-se-desordenan." class="section level5">
+<h5><span class="header-section-number">2.2.2.5.2</span> Los datos no se ordenan o se desordenan.</h5>
+</div>
+<div id="los-datos-no-concuerdan-con-las-dimensiones-de-la-matriz" class="section level5">
+<h5><span class="header-section-number">2.2.2.5.3</span> Los datos no concuerdan con las dimensiones de la matriz</h5>
+<p>Supongamos que tenemos un vector en secuencia del 1 hasta el 31 y queremos representar solo el mes de mayo del 2017</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">31</span>
+<span class="kw">matrix</span>(vector, <span class="dt">nrow =</span> <span class="dv">5</span>, <span class="dt">ncol=</span><span class="dv">7</span>, <span class="dt">byrow=</span>T)</code></pre></div>
+<pre><code>## Warning in matrix(vector, nrow = 5, ncol = 7, byrow = T): la longitud de
+## los datos [31] no es un submúltiplo o múltiplo del número de filas [5] en
+## la matriz</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7]
+## [1,]    1    2    3    4    5    6    7
+## [2,]    8    9   10   11   12   13   14
+## [3,]   15   16   17   18   19   20   21
+## [4,]   22   23   24   25   26   27   28
+## [5,]   29   30   31    1    2    3    4</code></pre>
+<p>Vemos que R nos ha devuelto un error que nos indica que el vector de datos no es un submúltiplo o múltiplo del número de filas y columnas de la matriz, en otras palabras, la matriz es de 5 renglones por 7 columnas, es decir, tendrá un espacio para ingresar 35 valores y nosotros estamos ingresando solo 31, por lo que R intentará completar la matriz repitiendo el vector hasta completar los 35 valores. Si nosotros no queremos que suceda esto debemos de completar la cantidad de datos, existen varias maneras de solucionar este problema, este es uno de varias de ellas:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vector &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">31</span>
+<span class="kw">matrix</span>(<span class="kw">c</span>(vector,<span class="ot">NA</span>,<span class="ot">NA</span>,<span class="ot">NA</span>,<span class="ot">NA</span>), <span class="dt">nrow =</span> <span class="dv">5</span>, <span class="dt">ncol=</span><span class="dv">7</span>, <span class="dt">byrow=</span>T)</code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7]
+## [1,]    1    2    3    4    5    6    7
+## [2,]    8    9   10   11   12   13   14
+## [3,]   15   16   17   18   19   20   21
+## [4,]   22   23   24   25   26   27   28
+## [5,]   29   30   31   NA   NA   NA   NA</code></pre>
+<p>Lo que sucede aquí es que al vector le agregamos 4 valores <code>NA</code> que significa que no están disponibles y ahora tenemos un vector de longitud 35, la cual entra exactamente en la matriz de 5*7. ### Data Frame</p>
+<p>Los dataframes, son una clase parecida a las matrices, sin embargo, poseen determinadas características que las hace más útiles en ciertas ocasiones.</p>
+<p>Al igual que los vectores y matrices, existen varias formas de crear data frames, una forma sencilla de crearlos es especificar los datos de las columnas como en el ejemplo siguiente:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data.frame</span>(<span class="dt">w =</span> <span class="dv">1</span>, <span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dt">y =</span> LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="dt">z=</span><span class="kw">runif</span>(<span class="dv">5</span>))</code></pre></div>
+<pre><code>##   w x y          z
+## 1 1 1 A 0.29192550
+## 2 1 2 B 0.21861321
+## 3 1 3 C 0.37794577
+## 4 1 4 D 0.38757682
+## 5 1 5 E 0.06210559</code></pre>
+</div>
+</div>
+<div id="crear-un-data-frame" class="section level4">
+<h4><span class="header-section-number">2.2.2.6</span> Crear un Data frame</h4>
+</div>
+<div id="trabajar-con-data-frames" class="section level4">
+<h4><span class="header-section-number">2.2.2.7</span> Trabajar con Data frames</h4>
+</div>
+<div id="ordenar-los-datos-de-un-data-frame" class="section level4">
+<h4><span class="header-section-number">2.2.2.8</span> Ordenar los datos de un Data frame</h4>
+</div>
+<div id="extraer-datos-de-un-data-frame" class="section level4">
+<h4><span class="header-section-number">2.2.2.9</span> Extraer datos de un data frame</h4>
+</div>
+<div id="tratar-los-datos-de-un-data-frameapply" class="section level4">
+<h4><span class="header-section-number">2.2.2.10</span> Tratar los datos de un data frame(apply)</h4>
+</div>
+<div id="problemas-comunes-2" class="section level4">
+<h4><span class="header-section-number">2.2.2.11</span> Problemas comunes</h4>
+</div>
+</div>
+<div id="lista" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Lista</h3>
+<div id="crear-una-lista" class="section level4">
+<h4><span class="header-section-number">2.2.3.1</span> Crear una lista</h4>
+</div>
+<div id="trabajar-con-listas" class="section level4">
+<h4><span class="header-section-number">2.2.3.2</span> Trabajar con listas</h4>
+</div>
+<div id="ordenar-los-datos-de-una-lista" class="section level4">
+<h4><span class="header-section-number">2.2.3.3</span> Ordenar los datos de una lista</h4>
+</div>
+<div id="extraer-datos-de-una-lista" class="section level4">
+<h4><span class="header-section-number">2.2.3.4</span> Extraer datos de una lista</h4>
+</div>
+<div id="tratar-los-datos-de-una-lista" class="section level4">
+<h4><span class="header-section-number">2.2.3.5</span> Tratar los datos de una lista</h4>
+</div>
+<div id="problemas-comunes-3" class="section level4">
+<h4><span class="header-section-number">2.2.3.6</span> Problemas comunes</h4>
+</div>
+</div>
+</div>
+<div id="manejo-de-datos" class="section level2">
+<h2><span class="header-section-number">2.3</span> Manejo de datos</h2>
+<div id="salvar-datos" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Salvar datos</h3>
+<p>En algún momento, tendremos la necesidad de guardar o leer algo en un formato determinado, sea <code>.csv</code> o <code>.Rdata</code>, veamos unos ejemplos que podrán ser de utilidad.</p>
+<div id="csv-comma-separated-values" class="section level4">
+<h4><span class="header-section-number">2.3.1.1</span> CSV (Comma-separated values)</h4>
+<p>Un formato muy utilizado en <strong>R</strong> a parte de los <code>.RData</code> (que son archivos especiales de <strong>R</strong>), para exportar los datos en dicho formato:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df =<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">runif</span>(<span class="dv">10</span>), <span class="kw">runif</span>(<span class="dv">10</span>), <span class="kw">runif</span>(<span class="dv">10</span>)) 
+<span class="kw">names</span>(df) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;dato1&quot;</span>, <span class="st">&quot;dato2&quot;</span>, <span class="st">&quot;dato3&quot;</span>)
+
+<span class="kw">write.table</span>(df, <span class="dt">file =</span> <span class="st">&quot;dataframe1.csv&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>,
+<span class="dt">col.names =</span> <span class="ot">NA</span>, <span class="dt">qmethod =</span> <span class="st">&quot;double&quot;</span>) </code></pre></div>
+<p>En caso de que no se quisiera exportar el nombre de las filas, basta con modificar un poco el código, como en el siguiente ejemplo:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write.table</span>(df, <span class="dt">file =</span> <span class="st">&quot;dataframe2.csv&quot;</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>,
+<span class="dt">row.names =</span> <span class="ot">FALSE</span>, <span class="dt">qmethod =</span> <span class="st">&quot;double&quot;</span>)</code></pre></div>
+</div>
+<div id="GuardarRdata" class="section level4">
+<h4><span class="header-section-number">2.3.1.2</span> .RData</h4>
+<p>Si tienes objetos que te gustaría guardar como tal para luego procesarlos o simplemente se te hace más sencillo comprenderlo sobre un <code>.csv</code>, los comandos serán los siguientes:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">foo =<span class="st"> &quot;bar&quot;</span>
+<span class="kw">save</span>(foo, <span class="dt">file=</span><span class="st">&quot;nombre.RData&quot;</span>)</code></pre></div>
+</div>
+</div>
+<div id="leer-datos" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Leer datos</h3>
+<div id="csv" class="section level4">
+<h4><span class="header-section-number">2.3.2.1</span> CSV</h4>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">read.table</span>(<span class="st">&quot;dataframe1.csv&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>,
+<span class="dt">row.names =</span> <span class="dv">1</span>) </code></pre></div>
+<p>Y si no se quieren importar los nombres de las filas optaremos por el siguiente comando:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">read.table</span>(<span class="st">&quot;dataframe2.csv&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>)</code></pre></div>
+<p>Aunque, la forma más sencilla de importar un <code>.csv</code> es a través del comando <code>read.csv(...)</code>, cuya implementación es la siguiente:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">read.csv</span>(file, <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="dt">dec =</span> <span class="st">&quot;.&quot;</span>, ...)</code></pre></div>
+<p>Dónde:</p>
+<table style="width:47%;">
+<colgroup>
+<col width="19%" />
+<col width="27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Argumentos</th>
+<th>Significado o uso</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>file</code></td>
+<td>Ruta al archivo, en caso de estar en el mismo directorio de trabajo poner solo el nombre del archivo, de otro modo ingresar la ruta completa</td>
+</tr>
+<tr class="even">
+<td><code>header</code></td>
+<td>Valor lógico para determinar si el archivo incluye encabezados en la primera linea.</td>
+</tr>
+<tr class="odd">
+<td><code>sep</code></td>
+<td>Este campo sirve para especificar el carácter de separación.</td>
+</tr>
+<tr class="even">
+<td><code>dec</code></td>
+<td>El carácter usado para los puntos decimales</td>
+</tr>
+<tr class="odd">
+<td><code>...</code></td>
+<td>Ver la documentación para argumentos extras</td>
+</tr>
+</tbody>
+</table>
+<p>Un ejemplo seria el siguiente:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">csv &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;dataframe1.csv&quot;</span>)</code></pre></div>
+</div>
+<div id="rdata" class="section level4">
+<h4><span class="header-section-number">2.3.2.2</span> .RData</h4>
+<p>para volver a cargar los datos:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">load</span>(<span class="st">&quot;nombre.RData&quot;</span>)</code></pre></div>
+<p>Para llamar el objeto, basta con volver a introducir su variable, que, aunque no haya sido creada antes de usar la función <code>load()</code>, esta se encarga de crear el objeto y asignarle el valor que decidimos guardar en un principio, ver <a href="intro.html#GuardarRdata">2.3.1.2</a>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">foo</code></pre></div>
+<pre><code>## [1] &quot;bar&quot;</code></pre>
+<div id="problemas-comunes-con-.rdata" class="section level5">
+<h5><span class="header-section-number">2.3.2.2.1</span> Problemas comunes con .RData</h5>
+<div id="error-al-cargar-los-datos" class="section level6">
+<h6><span class="header-section-number">2.3.2.2.1.1</span> Error al cargar los datos</h6>
+<blockquote>
+<p><strong>R</strong> dice que no los datos que trato de cargar no existen pero yo veo que sí existen en mi carpeta.</p>
+</blockquote>
+</div>
+<div id="donde-estan-los-datos" class="section level6">
+<h6><span class="header-section-number">2.3.2.2.1.2</span> ¿Donde están los datos?</h6>
+</div>
+<div id="cuales-son-los-datos-que-cargue" class="section level6">
+<h6><span class="header-section-number">2.3.2.2.1.3</span> ¿Cuales son los datos que cargué?</h6>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="RStudio.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["Diplomado_R_Luna.pdf", "Diplomado_R_Luna.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

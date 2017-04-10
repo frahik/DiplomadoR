@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Diplomado en R</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Documento con las notas de introducción a R, RStudio y RMarkdown">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Diplomado en R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Documento con las notas de introducción a R, RStudio y RMarkdown" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Diplomado en R" />
+  
+  <meta name="twitter:description" content="Documento con las notas de introducción a R, RStudio y RMarkdown" />
+  
+
+<meta name="author" content="Francisco Javier Luna Vázquez">
+
+
+<meta name="date" content="2017-04-10">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+<link rel="next" href="intro.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Diplomado en R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisitos</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#instalacion-de-r"><i class="fa fa-check"></i><b>1.1</b> Instalación de R</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#comprobar-la-instalacion-de-r"><i class="fa fa-check"></i><b>1.1.1</b> Comprobar la instalación de R</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#entornos-de-desarrollo-para-r"><i class="fa fa-check"></i><b>1.2</b> Entornos de desarrollo para R</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#instalacion-rstudio"><i class="fa fa-check"></i><b>1.2.1</b> Instalación RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introducción a R</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#primeros-pasos"><i class="fa fa-check"></i><b>2.1</b> Primeros pasos</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#espacio-de-trabajo"><i class="fa fa-check"></i><b>2.1.1</b> Espacio de trabajo</a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#establecer-directorios-de-trabajo"><i class="fa fa-check"></i><b>2.1.2</b> Establecer directorios de trabajo</a></li>
+<li class="chapter" data-level="2.1.3" data-path="intro.html"><a href="intro.html#creacion-de-objetosvariables"><i class="fa fa-check"></i><b>2.1.3</b> Creación de objetos/variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#clases-de-datos"><i class="fa fa-check"></i><b>2.2</b> Clases de datos</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="intro.html"><a href="intro.html#vector"><i class="fa fa-check"></i><b>2.2.1</b> Vector</a></li>
+<li class="chapter" data-level="2.2.2" data-path="intro.html"><a href="intro.html#matriz"><i class="fa fa-check"></i><b>2.2.2</b> Matriz</a></li>
+<li class="chapter" data-level="2.2.3" data-path="intro.html"><a href="intro.html#lista"><i class="fa fa-check"></i><b>2.2.3</b> Lista</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#manejo-de-datos"><i class="fa fa-check"></i><b>2.3</b> Manejo de datos</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="intro.html"><a href="intro.html#salvar-datos"><i class="fa fa-check"></i><b>2.3.1</b> Salvar datos</a></li>
+<li class="chapter" data-level="2.3.2" data-path="intro.html"><a href="intro.html#leer-datos"><i class="fa fa-check"></i><b>2.3.2</b> Leer datos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="RStudio.html"><a href="RStudio.html"><i class="fa fa-check"></i><b>3</b> Introducción a RStudio</a><ul>
+<li class="chapter" data-level="3.1" data-path="RStudio.html"><a href="RStudio.html#el-entorno-y-los-paneles"><i class="fa fa-check"></i><b>3.1</b> El entorno y los paneles</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="RStudio.html"><a href="RStudio.html#panel-de-codigo"><i class="fa fa-check"></i><b>3.1.1</b> Panel de código</a></li>
+<li class="chapter" data-level="3.1.2" data-path="RStudio.html"><a href="RStudio.html#panel-de-consola"><i class="fa fa-check"></i><b>3.1.2</b> Panel de Consola</a></li>
+<li class="chapter" data-level="3.1.3" data-path="RStudio.html"><a href="RStudio.html#panel-de-entorno"><i class="fa fa-check"></i><b>3.1.3</b> Panel de entorno</a></li>
+<li class="chapter" data-level="3.1.4" data-path="RStudio.html"><a href="RStudio.html#panel-de-historial"><i class="fa fa-check"></i><b>3.1.4</b> Panel de historial</a></li>
+<li class="chapter" data-level="3.1.5" data-path="RStudio.html"><a href="RStudio.html#panel-de-construccion"><i class="fa fa-check"></i><b>3.1.5</b> Panel de Construcción</a></li>
+<li class="chapter" data-level="3.1.6" data-path="RStudio.html"><a href="RStudio.html#panel-de-control-de-versiones-git"><i class="fa fa-check"></i><b>3.1.6</b> Panel de Control de versiones (Git)</a></li>
+<li class="chapter" data-level="3.1.7" data-path="RStudio.html"><a href="RStudio.html#panel-de-archivos"><i class="fa fa-check"></i><b>3.1.7</b> Panel de archivos</a></li>
+<li class="chapter" data-level="3.1.8" data-path="RStudio.html"><a href="RStudio.html#panel-de-graficos-panel-de-graficos"><i class="fa fa-check"></i><b>3.1.8</b> Panel de gráficos <img src="assets/images/Panel_Grafica.png" alt="Panel de gráficos" /></a></li>
+<li class="chapter" data-level="3.1.9" data-path="RStudio.html"><a href="RStudio.html#panel-de-paquetes-panel-de-paquetes"><i class="fa fa-check"></i><b>3.1.9</b> Panel de Paquetes <img src="assets/images/Panel_Paquetes.png" alt="Panel de Paquetes" /></a></li>
+<li class="chapter" data-level="3.1.10" data-path="RStudio.html"><a href="RStudio.html#panel-de-ayuda-panel-de-ayuda"><i class="fa fa-check"></i><b>3.1.10</b> Panel de ayuda <img src="assets/images/Panel_Ayuda.png" alt="Panel de ayuda" /></a></li>
+<li class="chapter" data-level="3.1.11" data-path="RStudio.html"><a href="RStudio.html#panel-de-visualizacion"><i class="fa fa-check"></i><b>3.1.11</b> Panel de visualización</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="RStudio.html"><a href="RStudio.html#proyectos"><i class="fa fa-check"></i><b>3.2</b> Proyectos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="RMarkDown.html"><a href="RMarkDown.html"><i class="fa fa-check"></i><b>4</b> Introducción a R-Markdown</a><ul>
+<li class="chapter" data-level="4.1" data-path="RMarkDown.html"><a href="RMarkDown.html#sintaxis-de-markdown"><i class="fa fa-check"></i><b>4.1</b> Sintaxis de Markdown</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="RMarkDown.html"><a href="RMarkDown.html#encabezados-o-titulos"><i class="fa fa-check"></i><b>4.1.1</b> Encabezados o Títulos</a></li>
+<li class="chapter" data-level="4.1.2" data-path="RMarkDown.html"><a href="RMarkDown.html#texto"><i class="fa fa-check"></i><b>4.1.2</b> Texto</a></li>
+<li class="chapter" data-level="4.1.3" data-path="RMarkDown.html"><a href="RMarkDown.html#listas"><i class="fa fa-check"></i><b>4.1.3</b> Listas</a></li>
+<li class="chapter" data-level="4.1.4" data-path="RMarkDown.html"><a href="RMarkDown.html#enlaces"><i class="fa fa-check"></i><b>4.1.4</b> Enlaces</a></li>
+<li class="chapter" data-level="4.1.5" data-path="RMarkDown.html"><a href="RMarkDown.html#imagenes"><i class="fa fa-check"></i><b>4.1.5</b> Imágenes</a></li>
+<li class="chapter" data-level="4.1.6" data-path="RMarkDown.html"><a href="RMarkDown.html#tablas"><i class="fa fa-check"></i><b>4.1.6</b> Tablas</a></li>
+<li class="chapter" data-level="4.1.7" data-path="RMarkDown.html"><a href="RMarkDown.html#bloques-de-cita"><i class="fa fa-check"></i><b>4.1.7</b> Bloques de cita</a></li>
+<li class="chapter" data-level="4.1.8" data-path="RMarkDown.html"><a href="RMarkDown.html#html-en-markdown"><i class="fa fa-check"></i><b>4.1.8</b> HTML en Markdown</a></li>
+<li class="chapter" data-level="4.1.9" data-path="RMarkDown.html"><a href="RMarkDown.html#lineas-horizontales"><i class="fa fa-check"></i><b>4.1.9</b> Lineas horizontales</a></li>
+<li class="chapter" data-level="4.1.10" data-path="RMarkDown.html"><a href="RMarkDown.html#saltos-de-linea"><i class="fa fa-check"></i><b>4.1.10</b> Saltos de línea</a></li>
+<li class="chapter" data-level="4.1.11" data-path="RMarkDown.html"><a href="RMarkDown.html#codigo-y-resaltado-de-sintaxis"><i class="fa fa-check"></i><b>4.1.11</b> Código y Resaltado de Sintaxis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="RMarkDown.html"><a href="RMarkDown.html#rmarkdown"><i class="fa fa-check"></i><b>4.2</b> RMarkdown</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="RMarkDown.html"><a href="RMarkDown.html#ecuaciones-matematicas"><i class="fa fa-check"></i><b>4.2.1</b> Ecuaciones matemáticas</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="RMarkDown.html"><a href="RMarkDown.html#bloques-de-codigo-ejecutables"><i class="fa fa-check"></i><b>4.3</b> Bloques de código ejecutables</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="apendA.html"><a href="apendA.html"><i class="fa fa-check"></i><b>5</b> Apendice A</a></li>
+<li class="divider"></li>
+<li><a>Autor:</a><a href="http://github.com/frahik/" target="blank">Francisco Javier Luna Vázquez</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Diplomado en R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Diplomado en R</h1>
+<h4 class="author"><em>Francisco Javier Luna Vázquez</em></h4>
+<h4 class="date"><em>2017-04-10</em></h4>
+</div>
+<div id="prerequisitos" class="section level1">
+<h1><span class="header-section-number">Capítulo 1</span> Prerequisitos</h1>
+<div id="instalacion-de-r" class="section level2">
+<h2><span class="header-section-number">1.1</span> Instalación de R</h2>
+<p>Empezaremos por lo más básico, Podemos instalar <strong>R</strong> desde el siguiente link: <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a></p>
+<p>Pero como muchos somos algo despistados, estas son las maneras más sencillas para instalar <strong>R</strong> en distintos Sistemas Operativos:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Sistema Operativo</th>
+<th>Método</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Windows</td>
+<td><a href="https://cran.itam.mx/bin/windows/base/R-3.3.3-win.exe">CRAN-R-Windows.Exe</a></td>
+</tr>
+<tr class="even">
+<td>Debian y derivados</td>
+<td><code>sudo apt-get install r-base</code></td>
+</tr>
+<tr class="odd">
+<td>Redhat y derivados</td>
+<td><code>sudo yum install R-core R-devel</code></td>
+</tr>
+<tr class="even">
+<td>Arch y derivados</td>
+<td><code>sudo pacman -S r</code></td>
+</tr>
+<tr class="odd">
+<td>Mac</td>
+<td><a href="https://www.youtube.com/watch?v=ICGkG7Gg6j0" class="uri">https://www.youtube.com/watch?v=ICGkG7Gg6j0</a></td>
+</tr>
+</tbody>
+</table>
+<div id="comprobar-la-instalacion-de-r" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Comprobar la instalación de R</h3>
+<p>Windows</p>
+<ul>
+<li>Iniciar el programa desde su acceso directo en el escritorio o desde el menú de programas.</li>
+<li><p>Para salir de la aplicación ejecutar lo siguiente</p>
+<pre><code>q()</code></pre></li>
+</ul>
+<p>Linux</p>
+<ul>
+<li>Abrir la terminal</li>
+<li><p>Ejecutar el comando de inicio de R:</p>
+<pre><code>R</code></pre></li>
+<li><p>Salir de la aplicación con el comando:</p>
+<pre><code>q()</code></pre></li>
+</ul>
+</div>
+</div>
+<div id="entornos-de-desarrollo-para-r" class="section level2">
+<h2><span class="header-section-number">1.2</span> Entornos de desarrollo para R</h2>
+<p>Una vez instalado, un entorno de desarrollo integrado será necesario para facilitar el desarrollo de códigos en <strong>R</strong>, por lo que se presentan tres de varias opciones para trabajar con <strong>R</strong>.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">IDE</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Tinn-R</td>
+<td><a href="https://sourceforge.net/projects/tinn-r/" class="uri">https://sourceforge.net/projects/tinn-r/</a></td>
+</tr>
+<tr class="even">
+<td align="center">RStudio [Recomendado]</td>
+<td><a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a></td>
+</tr>
+<tr class="odd">
+<td align="center">R commander (Rcmdr)</td>
+<td><a href="http://www.rcommander.com/" class="uri">http://www.rcommander.com/</a></td>
+</tr>
+</tbody>
+</table>
+<div id="instalacion-rstudio" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Instalación RStudio</h3>
+<div class="figure">
+<img src="assets/images/Rstudio-300x260.png" alt="RStudio IDE" />
+<p class="caption">RStudio IDE</p>
+</div>
+<p>En este caso, Sera necesario instalar RStudio para realizar los ejercicios de manera cómoda, por lo que, para instalar RStudio para los distintos Sistemas Operativos podemos hacerlo desde la liga principal, o para evitar buscar podemos usar la liga que más nos convenga de la siguiente tabla.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Rstudio</th>
+<th>enlace</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Windows x64</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Linux</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Mac</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Y finalmente sera necesario tener instalados el siguiente paquete:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>, <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p>Con dicho paquete crearemos documentos dinamicos en la tercera parte del curso.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["Diplomado_R_Luna.pdf", "Diplomado_R_Luna.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
