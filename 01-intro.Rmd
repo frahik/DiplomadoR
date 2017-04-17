@@ -94,6 +94,47 @@ y
 
 > Recuerde que aunque pareciera algo matemático, los símbolos `<-` y `=` no funcionan como un «_igual_», si no, como un «_equivale a_» o una «_asignación_», por que a partir de ese momento, el valor de la derecha se le asigna al de la izquierda.
 
+
+
+### Instalar librerias
+Los paquetes en **R**, son como _«Extensiones»_ y nos sirven para evitar reinventar la rueda, existen muchos paquetes disponibles en el CRAN de **R** o GitHub y para instalarlos basta un comando en la propia terminal de **R**:
+
+*Para paquetes oficiales de CRAN*
+
+```{R IntalarPaqueteCRAN, eval=FALSE}
+install.packages("NombreDelPaquete")
+library(NombreDelPaquete) #Para usar el paquete
+```
+
+*Para paquetes de GitHub*
+
+```{R InstalarPaqueteGitHub, eval=FALSE}
+install.packages("devtools") #Correr solo si no se tiene el paquete "devtools" instalado.
+devtools::install_github("usuario/repositorio")
+```
+
+Al agregar nuevos paquetes podremos expandir el potencial de **R** y a la vez facilitarnos el trabajo de _«hacerlo por nosotros mismos»_.
+
+
+### Ayuda y documentación
+
+**R** Nos proporciona toda la documentación de sus paquetes, así que si se nos olvida para que funciona un comando o por que la función no hace lo que uno escribe, revisar la documentación podrá evitar que pases horas frente al ordenador buscando el «punto y coma» que te falta, cuando en **R** los códigos no lo llevan.
+
+```{r help, eval=F}
+help(nombre)
+```
+
+Donde `nombre` puede ser cualquier función o librería instalada de **R**.
+
+ejemplos:
+
+```{r helpEjemplo, eval=F}
+help(help)  #Sí, es posible
+help(sum)   #Documentación de una función
+help(slidify) #Documentación de un paquete
+```
+
+
 ## Clases de datos
 
 Existen 4 tipos de clases de objetos con las que tendremos que trabajar en R, cada uno tiene sus ventajas y desventajas, así que se verá de manera detalla como crear cada uno de ellos, acceder a sus valores, así como posibles problemas.
@@ -157,6 +198,7 @@ Donde el primer indice, hace referencia al primer elemento del vector, el segund
 Por lo que para acceder a uno o varios elementos se pueden utilizar los siguientes códigos:
 
   * Un elemento en especifico
+  
 ```{r vector1}
 vector[3]
 ```
@@ -173,27 +215,32 @@ vector[n]
 ```
 
   * Varios elementos especificados
+  
 ```{r vector4}
 vector[c(1,2,5)]
 ```
 
   * Todos los elementos, excluyendo uno especifico.
+  
 ```{r vector5}
 vector[-3]
 ```
 
   * Todos los elementos, excluyendo varios.
+  
 ```{r vector6}
 vector[-c(4:6)]
 ```
 
   * Almacenar los datos extraídos en otra variable.
+  
 ```{r vector7}
 grupo1 <- vector[-c(4:6)]
 grupo1
 ```
 
   * Modificar un elemento especifico de un vector
+  
 ```{r vector8}
 vector[4] <-  "Alberto"
 vector
@@ -206,15 +253,19 @@ vector
 ```
 
   * Encontrar **las posiciones** de los valores NA (Not Available) en un vector
+  
 ```{r vector10}
 is.na(vector)
 ```
+
   * Encontrar **las posiciones** de los valores que no sean NA en un vector
+  
 ```{r vector11}
 !is.na(vector)
 ```
 
   * Extrar los elementos de las posiciones en los que los valores **NO** son NA
+  
 ```{r vector12}
 which(!is.na(vector) == TRUE)
 #Alternativa
@@ -222,11 +273,13 @@ which(is.na(vector) == FALSE)
 ```
 
   * Extrar las posiciones del vector que cumplan con una consulta
+  
 ```{r vector13}
 which(vector == "Francisco")
 ```
 
   * Modificar las posiciones del vector que cumplan con una consulta
+  
 ```{r vector14}
 vector[which(vector == "Francisco")] <- "Francisco Javier"
 ```
@@ -269,35 +322,51 @@ knitr::kable(t(gastos))
 ```
 
 En **R** ya existen varias funciones para ser utilizadas, se mostrará el funcionamiento de algunas de ellas y otras más podrán ser encontradas en el Capitulo \@ref(apendA) (Apéndices).
+
 * El menor gasto en la semana
+
 ```{r vector18}
 min(gastos)
 ```
+
 * El mayor gasto en la semana
+
 ```{r vector19}
 max(gastos)
 ```
+
 * Obtener el promedio de gasto en la semana.
+
 ```{r vector20}
 mean(gastos)
 ```
+
 * Obtener el total del gasto de la semana, (Sumar todos los elementos).
+
 ```{r vector21}
 sum(gastos)
 ```
+
 * Obtener el total del gasto de una semana laboral (Lunes-Viernes), (Sumar elementos específicos)
+
 ```{r vector22}
 sum(gastos[1:5])
 ```
+
 * Obtener la varianza del gasto semanal
+
 ```{r vector23}
 var(gastos)
 ```
+
 * Obtener la desviación estándar del gasto semanal
+
 ```{r vector24}
 sd(gastos)
 ```
-Obtener un resumen de los datos
+
+* Obtener un resumen de los datos
+
 ```{r vector25}
 summary(gastos)
 ```
@@ -313,23 +382,27 @@ Como ya se mencionó anteriormente, **R** es sensible a las Mayúsculas y Minús
 
 Crear un vector:
 <span style="color:#DA0101">MAL [X]</span> 
+
 ```{r vec_error1, error=T}
 vector <- C(1,2,3)
 ```
 
 <span style="color:#04B404">BIEN [O]</span> 
+
 ```{r vec_corr1}
 vector <- c(1,2,3)
 ```
 
 Sumar los datos de un vector:
 <span style="color:#DA0101">MAL [X]</span> 
+
 ```{r vec_error2, error=T}
 vector <- c(1,2,3)
 SUM(vector)
 ```
 
 <span style="color:#04B404">BIEN [O]</span> 
+
 ```{r vec_corr2}
 vector <- c(1,2,3)
 sum(vector)
@@ -354,53 +427,217 @@ Donde `matrix()` corresponde al nombre de la función y todo lo que está dentro
 |   `byrow`  |  Valor lógico. Si es falso (valor por defecto), la matriz se llena por orden columna, de otra manera se llenará primero por filas. |
 | `dimnames` |  Utilizado para darles nombres a las filas y a las columnas, respectivamente. |
 
+#### Crear una matriz 
+
 Algunos ejemplos de como crear una matriz:
 
 * Una matriz de NA de 5 * 5:
+
 ```{r DemoMatriz1}
-matrix(NA,nrow = 5, ncol = 5)
+m <- matrix(NA, nrow = 5, ncol = 5)
 ```
 
 * Una matriz desde los datos de un vector:
+
 ```{r DemoMatriz2, eval=F}
-vector <- c("Francisco",500)
-matrix()
+vector <- c("Francisco", 500, "Alberto", 200, "Enrique", 650, "Juan", 300)
+m <- matrix(vector, ncol = 2, byrow = T)
+m
+```
+
+* Una matriz desde los datos de dos o más vectores:
+
+```{r}
+Nombre <- c("Francisco", "Alberto", "Enrique", "Juan")
+Puntos <- c(500, 200, 650, 300)
+m <- matrix(c(Nombre, Puntos), ncol = 2)
+m
+```
+
+* Una matriz desde los datos de dos o más vectores con cbind:
+
+```{r}
+Nombre <- c("Francisco", "Alberto", "Enrique", "Juan")
+Puntos <- c(500, 200, 650, 300)
+m <- cbind(Nombre, Puntos)
+m
+```
+
+* Una matriz desde los datos de dos o más vectores con rbind:
+
+```{r}
+Cliente1 <- c("Francisco", 500)
+Cliente2 <- c("Alberto", 200)
+Cliente3 <- c("Enrique",  650)
+m <- rbind(Cliente1, Cliente2, Cliente3)
+m
+```
+
+#### Trabajar con matrices
+
+Continuaremos trabajando con la siguiente matriz, es necesario recordar que se puede llamar de cualquier forma, en este caso se llamará de manera generica, `matriz` :
+
+```{r}
+Nombre <- c("Francisco", "Alberto", "Enrique", "Juan", "Francisco", "Alberto", "Enrique", "Juan")
+Puntos <- c(500, 200, 650, 300, 300, 350, 600, 400)
+matriz <- cbind(Nombre, Puntos)
+matriz
+```
+
+* Nombrar las columnas de la matriz
+
+```{r}
+colnames(matriz) <- c("Cliente", "Puntos")
+matriz
+```
+
+* Nombrar las filas de la matriz
+
+```{r}
+rownames(matriz) <- c("Compra1", "Compra2", "Compra3", "Compra4", "Compra5", "Compra6", "Compra7", "Compra8")
+matriz
+```
+
+* Nombrar las columnas y las filas de la matriz
+
+```{r}
+dimnames(matriz) <- list(c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"),c("Cliente", "Puntos"))
+matriz
+```
+
+* Obtener los primeros valores de una matriz (tres en este caso):
+
+```{r}
+head(matriz,3)
+```
+
+* Obtener los últimos valores de una matriz (tres en este caso):
+
+```{r}
+tail(matriz,3)
+```
+
+* Obtener los nombres de los clientes:
+
+```{r}
+matriz[,1]
+```
+
+* Obtener los nombres ordenados:
+
+```{r}
+sort(matriz[,1])
 ```
 
 
+* Obtener los nombres de los clientes sin repetir:
 
+```{r}
+unique(matriz[,1])
+```
 
-#### Trabajar con matrices
-some text
+* Obtener los nombres de los clientes sin repetir y ordenados:
 
-------
+```{r}
+sort(unique(matriz[,1]))
+```
 
-#### Ordenar datos
-some text
+* Obtener la matriz ordenada según la cantidad de Puntos (ascendente):
 
-------
+```{r}
+matriz[order(matriz[, 2]), ]
+```
 
-#### Extraer datos
-some text
+* Obtener la matriz ordenada según la cantidad de Puntos (descendente):
 
-------
+```{r}
+matriz[order(matriz[, 2], decreasing = TRUE), ]
+```
 
-#### Tratar los datos (apply)
+ > Note que la matriz <span style="color:#DA0101">NO</span>  queda ordena debido a que los datos están saliendo a consola, si buscamos que se queden ordenados, tendríamos que asignarlos a la variable misma o en su defecto a una nueva variable, por ejemplo, `matriz <- matriz[order(matriz[, 2], decreasing = TRUE), ]`.
 
-some text
+* Obtener al primer cliente y sus puntos:
 
-------
+```{r}
+matriz[1,]
+```
+
+* Obtener la suma de los puntos (ver problemas comunes):
+
+```{r}
+sum(as.numeric(matriz[,2]))
+```
+
 
 #### Problemas comunes
 
+Estos son algunos de los problemas más comunes al momento de intentar trabajar con una matriz:
 
-##### Los nombres en `dimnames` no concuerdan con las dimensiones de la matriz.
+##### No puedo hacer la suma de números.
 
-##### Los datos no se ordenan o se desordenan.
+Es ocasiones **R** tiende a asignar nuestros datos de otra forma que no es la que nosotros esperamos, en este caso tenemos el siguiente error:
+
+```{r, message=T , error=T}
+sum(matriz[,2])
+```
+
+El error que retorna **R** es que el tipo character no es un argumento válido, esto significa que los datos que nosotros ingresamos son del tipo caracter, para comprobar esto, usaremos la función `type()`:
+
+```{r}
+typeof(matriz[,2])
+```
+
+Se puede observar que efectivamente, los datos que intentamos ingresar **R** los tiene almacenados como tipo caracter, por lo que, para poder sumar los datos utilizaremos la función `as.numeric` (existen otras funciones como `as.integer`, `as.double()` que tambien podrían funcionar):
+
+```{r}
+typeof(as.numeric(matriz[,2]))
+sum(as.numeric(matriz[,2]))
+```
+
+##### Los nombres en `dimnames(...)` no concuerdan con las dimensiones de la matriz.
+
+Al intentar nombrar una matriz, puede surgir este tipo de errores al usar la función `dimnames(...)`:
+
+```{r, error=T}
+dimnames(matriz) <- list(c("Cliente", "Puntos"),
+                         c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"))
+```
+
+El error en está ocasión se debe a que estamos intentar poner los nombres de las columnas en las filas y viceversa, así que cambiando el orden de los vectores de nombres es suficiente para que funcione:
+
+```{r}
+dimnames(matriz) <- list(c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"),
+                         c("Cliente", "Puntos"))
+matriz
+```
+
+Pero que pasa si no se busca nombrar las filas o las columnas, lo recomendable sería usar las funciones respectivas `colnames(...)` o `rownames(...)`.
+
 
 ##### Los datos no concuerdan con las dimensiones de la matriz
 
-Supongamos que tenemos un vector en secuencia del 1 hasta el 31 y queremos representar solo el mes de mayo del 2017
+Tenemos los siguientes vectores:
+
+```{r}
+Cliente <- c("Francisco", "Alberto", "Juan")
+Puntos <- c(10,2030)
+```
+
+> Observe que el vector `Puntos` a pesar de que le faltó una coma para separar el valor `20` de `30`, **R** lo sigue tomando como valido por que no rompe con la sintaxis del código, sin embargo, esto nos causará problemas más adelante.
+
+Ahora intentaremos crear una matriz con esos datos:
+
+```{r}
+matriz <- matrix(c(Cliente, Puntos), ncol=2)
+matriz
+```
+
+*¿Qué pasó?*, al no tener los datos completos, al querer crear una matriz de dos columnas por el tamaño del vector (en este caso, el más largo) no coinciden los datos ingresados (5 datos) con el "espacio disponible" en la matriz (6 datos), por lo que, el primer valor se repite para llenar el vació.  
+
+La solución consiste en agregar la coma que nos hizo falta en el primer vector e intentar de nuevo.
+
+Otro problema puede ser que, supongamos que tenemos un vector en secuencia del 1 hasta el 31 y queremos representar solo el mes de mayo del 2017
+
 ```{r}
 vector <- 1:31
 matrix(vector, nrow = 5, ncol=7, byrow=T)
@@ -420,20 +657,131 @@ Los dataframes, son una clase parecida a las matrices, sin embargo, poseen deter
 Al igual que los vectores y matrices, existen varias formas de crear data frames, una forma sencilla de crearlos es especificar los datos de las columnas como en el ejemplo siguiente:
 
 ```{r dataframe1}
-data.frame(w = 1, x = 1:5, y = LETTERS[1:5], z=runif(5))
+data.frame(columna1 = 1, columna2 = 1:5, columnay = LETTERS[1:5], z=runif(5))
 ```
 
 #### Crear un Data frame
 
+* Crear un data frame apartir de varios vectores:
+
+```{r}
+vec1 <- c("Francisco", "Alberto", "Enrique", "Juan")
+vec2 <- c(500, 200, 650, 300)
+
+datos <- data.frame(Clientes = vec1, Puntos = vec2) 
+datos
+```
+
+* Crear un data frame apartir de una matriz:
+
+```{r}
+Nombre <- c("Francisco", "Alberto", "Enrique", "Juan")
+Puntos <- c(500, 200, 650, 300)
+m <- matrix(c(Nombre, Puntos), ncol = 2)
+datos <- as.data.frame(m)
+datos
+```
+
 #### Trabajar con Data frames
 
-#### Ordenar los datos de un Data frame
+Continuaremos trabajando con el siguiente data frame, es necesario recordar que se puede llamar de cualquier forma, en este caso se llamará de manera generica, `df` :
 
-#### Extraer datos de un data frame
+```{r}
+Nombre <- c("Francisco", "Alberto", "Enrique", "Juan", "Francisco", "Alberto", "Enrique", "Juan")
+Puntos <- c(500, 200, 650, 300, 300, 350, 600, 400)
+df <- data.frame(Clientes = Nombre, Puntos = Puntos) 
+df
+```
 
-#### Tratar los datos de un data frame(apply)
+* Nombrar las columnas del data frame
 
-#### Problemas comunes
+```{r}
+colnames(df) <- c("Cliente", "Puntuación")
+df
+```
+
+* Nombrar las filas del data frame
+
+```{r}
+rownames(df) <- c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8")
+df
+```
+
+* Nombrar las columnas y las filas de la matriz
+
+```{r}
+dimnames(df) <- list(c("C-1", "C-2", "C-3", "C-4", "C-5", "C-6", "C-7", "C-8"),c("Cliente", "Puntos"))
+df
+```
+
+* Obtener los primeros valores de un data frame (tres en este caso):
+
+```{r}
+head(df,3)
+```
+
+* Obtener los últimos valores de una matriz (tres en este caso):
+
+```{r}
+tail(df,3)
+```
+
+* Obtener los nombres de los clientes:
+
+```{r}
+df$Cliente
+```
+
+Una alternativa poco recomendada
+
+```{r}
+df[,1]
+```
+
+* Obtener los nombres ordenados:
+
+```{r}
+sort(df$Cliente)
+```
+
+
+* Obtener los nombres de los clientes sin repetir:
+
+```{r}
+unique(df$Cliente)
+```
+
+* Obtener los nombres de los clientes sin repetir y ordenados:
+
+```{r}
+sort(unique(df$Cliente))
+```
+
+* Obtener el dataframe ordenado según la cantidad de Puntos (ascendente):
+
+```{r}
+df[order(df$Puntos), ]
+```
+
+* Obtener el dataframe ordenado según la cantidad de Puntos (descendente):
+
+```{r}
+df[order(df$Puntos, decreasing = TRUE), ]
+```
+
+ > Note que el data frame <span style="color:#DA0101">NO</span> queda ordena debido a que los datos están saliendo a consola, si buscamos que se queden ordenados, tendríamos que asignarlos a la variable misma o en su defecto a una nueva variable, por ejemplo, `df <- df[order(df$Puntos, decreasing = TRUE), ]`.
+
+* Obtener al primer cliente y sus puntos:
+
+```{r}
+df[1,]
+```
+
+* Obtener la suma de los puntos:
+
+```{r}
+sum(df$Puntos)
+```
 
 ### Lista
 
@@ -448,9 +796,11 @@ data.frame(w = 1, x = 1:5, y = LETTERS[1:5], z=runif(5))
 #### Tratar los datos de una lista
 
 #### Problemas comunes
+
 ## Manejo de datos
 
 ### Salvar datos
+
 En algún momento, tendremos la necesidad de guardar o leer algo en un formato determinado, sea `.csv` o `.Rdata`, veamos unos ejemplos que podrán ser de utilidad.
 
 #### CSV (Comma-separated values)
@@ -473,9 +823,10 @@ row.names = FALSE, qmethod = "double")
 ```
 
 #### .RData {#GuardarRdata}
+
 Si tienes objetos que te gustaría guardar como tal para luego procesarlos o simplemente se te hace más sencillo comprenderlo sobre un `.csv`, los comandos serán los siguientes:
 
-```{r save, eval=F}
+```{r save}
 foo = "bar"
 save(foo, file="nombre.RData")
 ```
@@ -483,6 +834,7 @@ save(foo, file="nombre.RData")
 ### Leer datos
 
 #### CSV
+
 ```{R ImportarCSVConFilas, eval=F} 
 read.table("dataframe1.csv", header = TRUE, sep = ",",
 row.names = 1) 
@@ -511,15 +863,18 @@ Dónde:
 | `...`       | Ver la documentación para argumentos extras   |
 
 Un ejemplo seria el siguiente:
+
 ```{r readcsv2,eval=F}
 csv <- read.csv("dataframe1.csv")
 ```
 
 #### .RData
+
 para volver a cargar los datos:
 ```{r load, eval=F}
 load("nombre.RData")
 ```
+
 Para llamar el objeto, basta con volver a introducir su variable, que, aunque no haya sido creada antes de usar la función `load()`, esta se encarga de crear el objeto y asignarle el valor que decidimos guardar en un principio, ver \@ref(GuardarRdata).
 
 ```{r loadfoo, eval=F}
@@ -529,13 +884,294 @@ foo
 "bar"
 ```
 
-##### Problemas comunes con .RData
+##### Problemas comunes
 
 
 ###### Error al cargar los datos
 
-> **R** dice que no los datos que trato de cargar no existen pero yo veo que sí existen en mi carpeta.
+> **R** marca un error sobre los datos se tratan de cargar no existen pero yo veo que sí existen en mi carpeta.
+
+Lo más probable es que el directorio de trabajo de **R** no sea el mismo que donde están los datos, la función `getwd()` sirve para revisar cuál esl el directorio de trabajo actual, será necesario revisar nuevamente los primeros pasos de esté capitulo para corregir el problema con el directorio de trabajo.
 
 ###### ¿Donde están los datos?
 
-###### ¿Cuales son los datos que cargué?
+Cuando se utilizan las funciones `read.table(...)` o `load(...)` utilizan la ruta del directorio de trabajo actual para guardar los datos, es decir, que si esa ruta apunta a tus documentos, los datos se guardaran en esa carpeta, será necesario revisar nuevamente los primeros pasos de esté capitulo para ver como funciona el directorio de trabajo.
+
+###### ¿Cuales son los datos que cargué con .RData?
+
+Si por algun motivo se desconoce cuales son los datos que se están cargando (No vienen documentados de alguna manera, etc.), la función `load(...)` incluye el parametro `verbose` que por default el `FALSE`, pero si cambiamos dicho parametro a `TRUE`, nos dira que el nombre del objeto que estamos cargando al entorno de **R**, así podremos llamarlo y ver que es lo que contiene.
+
+```{r}
+load("nombre.RData", verbose = TRUE)
+
+foo
+```
+
+## Tratamiento de datos
+
+Es momento de empezar a trabajar los datos para poder obtener más información sobre ellos, **R** incluye funciones bastante útiles, los cuales se pueden encontrar al final de documento, por el momento, conoceremos más sobre la función apply.
+
+### Función Apply
+
+La función `apply(...)` permite realizar un cálculo (como el promedio) por fila ó por columna (sin importar si es una matriz o un dataframe), el resultado de dicha operación será un vector de longitud $p$ con el resultado de la operación realizada, ya sea por filas o por columnas. 
+
+Su implementación es la siguiente:
+
+```{R Apply, eval=F}
+apply(X, MARGIN, FUN)
+```
+
+donde `apply()` corresponde al nombre de la función y todo lo que está dentro de los paréntesis son los argumentos de dicha función.
+
+| Argumentos | Significado |
+|------------|------------|
+|   `X`      |Es el vector o matriz original|
+|   `MARGIN` |Indica donde se aplicara la función (1 indica fila, 2 indica columna)      |
+|   `FUN`    |Es la función a aplicar (Suma, promedio, entre muchas otras)     |
+
+Para ver un ejemplo, crearemos una matriz con 9 valores y sacaremos el promedio por columna.
+
+```{R UsoApply}
+x <- matrix(data = 1:9, nrow=3, ncol=3, byrow = TRUE)
+x
+apply(x,2,mean)
+``` 
+
+El argumento 2 en `apply(x,2,mean)` indica que el cálculo del promedio debe realizarse en la segunda dimensión, es decir, en las columnas. 
+
+### Libreria dplyr
+
+Dicha libreria no se encuentra instalada por defecto en **R** para instalarla, como se vio en los primeros pasos de este capitulo, se usará el comando:
+
+```{r, eval=F}
+install.packages("dplyr")
+```
+
+Para aprender a usar esta libreria usaremos el comando:
+```{r, eval=F}
+library(dplyr)
+```
+
+y  utilizaremos los siguientes datos: 
+
+```{r}
+v1 <- c("Perro", "Gato", "Lagarto", "Orca", "Águila", "Jirafa")
+v2 <- c("Mamífero", "Mamífero", "Reptil", "Mamífero", "Ave", "Mamífero")
+v3 <- c("Carnívoro", "Carnívoro", "Carnívoro", "Carnívoro", "Carnívoro", "Herbívoro")
+v4 <- c(20,15,25,29,20,25)
+Animales <- data.frame(Nombre = v1, Especie = v2, Alimentacion = v3, Tiempo_Vida = v4)
+```
+
+Los datos se detallan a continuación:
+
+```{r echo=F}
+knitr::kable(Animales)
+```
+
+### Filtrar datos
+
+`filter()` permite seleccionar una serie de filas en un data frame, el primer argumento es el nombre del data frame (en este caso `Animales`), el segundo y resto de los argumentos son las expresiones a filtrar en el data frame: 
+
+Por ejemplo, filtraremos por los animales mamíferos:
+
+```{r}
+Mamiferos <- filter(Animales, Especie == "Mamífero") 
+```
+
+```{r, eval=F}
+Mamiferos
+```
+
+```{r echo=F}
+knitr::kable(Mamiferos)
+```
+
+Ahora filtraremos por los animales mamíferos y reptiles que sean carnivoros y tengan un tiempo de vida mayor a 19 años:
+
+```{r}
+filtrados <- filter(Animales, Especie == "Mamífero" | Especie == "Reptil", Alimentacion == "Carnívoro", Tiempo_Vida > 19) 
+```
+
+```{r, eval=F}
+filtrados
+```
+
+```{r echo=F}
+knitr::kable(filtrados)
+```
+
+Para seleccionar datos por su posición `dplyr` provee la función `slice(...)`
+
+Por ejemplo, seleccionaremos los primeros dos animales.
+
+```{r}
+seleccionados <- slice(Animales, 1:2)
+```
+
+```{r, eval=F}
+seleccionados
+```
+
+```{r echo=F}
+knitr::kable(seleccionados)
+```
+
+
+### Ordenar datos
+
+La función `arrange(...)` funciona de manera similiar a `filter(...)` solo que, en vez de filtrar los datos, los ordena.
+
+Por ejemplo, ordenaremos los animales por su especie y luego por su tiempo de vida
+```{r}
+ordenados <-  arrange(Animales, Especie, Tiempo_Vida)
+```
+
+```{r, eval=F}
+ordenados
+```
+
+```{r echo=F}
+knitr::kable(ordenados)
+```
+
+Para ordenarlos de manera descendente usaremos la función `desc(...)`
+
+```{r}
+ordenados <-  arrange(Animales, Especie, desc(Tiempo_Vida))
+```
+
+```{r, eval=F}
+ordenados
+```
+
+```{r echo=F}
+knitr::kable(ordenados)
+```
+
+### Seleccionar columnas especificas
+
+De manera seguida tendremos que trabajar con grandes cantidades de datos con varias columnas, pero en el momento, solo algunas podran ser de tu interés la función `select(...)` permite un rápido trabajo para seleccionar dichas columnas, por ejemplo, queremos conocer el tiempo de vida de cada animal, entonces:
+
+```{r}
+Tiempo_vida_por_Animal <- select(Animales, Nombre, Tiempo_Vida)
+```
+
+```{r, eval=F}
+Tiempo_vida_por_Animal
+```
+
+```{r echo=F}
+knitr::kable(Tiempo_vida_por_Animal)
+```
+
+### Renombrar una columna
+
+Para renombrar una columna, la libreria `dplyr` provee tambien una útil función llamada `rename(...)`, con ella cambiaremos el nombre de la columna `Nombre` del data frame `Animales` por `Animal`:
+
+```{r}
+Animales <- rename(Animales, Animal = Nombre)
+```
+
+```{r, eval=F}
+Animales
+```
+
+```{r echo=F}
+knitr::kable(Animales)
+```
+
+### Extraer los valores únicos
+
+Otra útil función dentro de está librería es la función `distinct(...)` que encuentra los valores distintos en una tabla, por ejemplo las Especies de los animales:
+
+```{r}
+Especies <- distinct(Animales, Especie)
+```
+
+```{r, eval=F}
+Especies
+```
+
+```{r echo=F}
+knitr::kable(Especies)
+```
+
+o tambien las especies y alimentación 
+
+```{r}
+Especie_Alimentacion <- distinct(Animales, Especie, Alimentacion)
+```
+
+```{r, eval=F}
+Especie_Alimentacion
+```
+
+```{r echo=F}
+knitr::kable(Especie_Alimentacion)
+```
+
+### Agregar nuevas columnas
+
+Es posible modificar las columnas existentes o agregar nuevas columnas con la función `mutate(...)` de la librería `dplyr`, por ejemplo, agregaremos dos años al tiempo de vida de los animales y añadiremos tambien otra columna con datos `NA`.
+
+```{r}
+Animales2 <- mutate(Animales, Tiempo_Vida = Tiempo_Vida + 2, Otra_Columna = NA)
+```
+
+```{r, eval=F}
+Animales2
+```
+
+```{r echo=F}
+knitr::kable(Animales2)
+```
+
+### Procesar datos
+
+La función `summarise(...)`. Colapsa un data frame en una fila, por ejemplo el tiempo de vida en promedio de los animales.
+
+```{r}
+Vida_Promedio <- summarise(Animales, Tiempo_Vida = mean(Tiempo_Vida, na.rm = TRUE))
+```
+
+```{r, eval=F}
+Vida_Promedio
+```
+
+```{r echo=F}
+knitr::kable(Vida_Promedio)
+```
+
+#### Datos agrupados
+
+`group_by(...)` aunque no modifica los datos, sirve para trabajar en conjunto con la función `summarise(...)`, por ejemplo, el tiempo de vida promedio entre las especies.
+
+```{r}
+Agrupados <- group_by(Animales, Especie)
+Especie_Vida_Promedio <- summarise(Agrupados, Tiempo_Vida = mean(Tiempo_Vida, na.rm = TRUE))
+```
+
+```{r, eval=F}
+Especie_Vida_Promedio
+```
+
+```{r echo=F}
+knitr::kable(Especie_Vida_Promedio)
+```
+
+O el tiempo de vida en promedio por Especie y su alimentación:
+
+```{r}
+Agrupados <- group_by(Animales, Especie, Alimentacion)
+EspecieAlimentacion_Vida_Promedio <- summarise(Agrupados, Tiempo_Vida = mean(Tiempo_Vida, na.rm = TRUE))
+```
+
+```{r, eval=F}
+EspecieAlimentacion_Vida_Promedio
+```
+
+```{r echo=F}
+knitr::kable(EspecieAlimentacion_Vida_Promedio)
+```
+
+
