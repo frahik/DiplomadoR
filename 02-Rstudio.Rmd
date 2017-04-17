@@ -1,6 +1,7 @@
 # Introducción a RStudio {#RStudio}
 
 ## El entorno y los paneles
+
 RStudio es un entorno de desarrollo para el lenguaje de programación en R de código libre, contiene potentes herramientas para facilitar el desarrollo de procesos matemáticos, estadísticos, llevar un control de versiones, fácil visualización, modificación e implementación de las rutinas en R, además entre sus potentes herramientas incluye Rmarkdown, el cual fué desarrollado para crear documentos interactivos, para facilitar la transmisión de ideas entre los desarrolladores de R sin tener que preocuparse por tener que desarrollar la documentación con diversos programas, pero por el momento nos enfocaremos solo en conocer el entorno de desarrollo de RStudio.
 
 En la siguiente imagen se puede observar la interfaz completa para RStudio.
@@ -48,8 +49,6 @@ observar en la siguiente tabla.
 |[Control] + [S]      | Salvar el archivo en el que se esta trabajando. |
 | [F1]                | Acceder a la ayuda del comando que se está escribiend o esté seleccionado. |
 
-----
-
 ### Panel de Consola
 
 ![Consola](./assets/images/Panel_Consola.png)
@@ -57,8 +56,6 @@ observar en la siguiente tabla.
 Este panel es la consola bien conocida de **R**, donde podremos interactuar directamente con ella o a traves del panel de código.
 
 Existe un comando que nos servirá de ayuda en caso de que ocupemos abortar la ejecución actual de **R**  `[CONTROL] + [C]`. Además de que al igual que el Panel de código, el panel de consola cuenta con autocompletado, podemos ir escribiendo un comando y con la tecla `[TAB]` podemos acceder al autocompletado y en caso de tener dudas podemos usar la tecla `[F1]` para acceder de manera rápida a la ayuda.
-
-----
 
 ### Panel de entorno
 
@@ -87,7 +84,9 @@ De manera superficial, este panel en la mayoría de los casos nos puede servir p
 |       9         | Así se muestra una matriz y un dataframe, la diferencia se encuentra en que al crear un dataframe aparece un botón para desplegar sus datos. | 
 |      10         | Muestra los datos que contiene una matriz o un dataframe especifico. |
 
+
 ### Panel de historial 
+
 
 ![Panel de historial](./assets/images/Panel_Historial.png)
 
@@ -108,6 +107,7 @@ El panel del historial es otro panel bastante simple, su importancia radica en q
 
 ### Panel de Construcción
 
+
 ![Panel de construcción](./assets/images/Panel_Construccion.png)
 
 Posiblemente el panel menos utilizado, solo aparece cuando estamos construyendo un paquete para **R** y su trabajo es construirlo para poder realizar pruebas en el entorno de R, de manera muy superficial tenemos las siguientes opciones:
@@ -122,6 +122,7 @@ Posiblemente el panel menos utilizado, solo aparece cuando estamos construyendo 
 
 
 ### Panel de Control de versiones (Git)
+
 
 Un panel bastante importante para los que ocupan trabajar con varias versiones de un mismo archivo o los que trabajan en el desarrollo de paquetes para **R**, hablar del control de versiones y como implementarlo en GitHub es agregar otro curso dentro de este curso, por lo que no nos saldremos del alcance y rescataremos las partes más importantes para aquellos que ya saben utilizar el controlador de versiones git.
 
@@ -182,7 +183,9 @@ Las opciones más importantes en el panel son las siguientes:
 |       7         | Volver a cargar el panel. | 
 
 
-### Panel de Paquetes ![Panel de Paquetes](./assets/images/Panel_Paquetes.png)
+### Panel de Paquetes 
+
+![Panel de Paquetes](./assets/images/Panel_Paquetes.png)
 
 Sin duda un panel que tendrá mucha utilidad, permite conocer de manera rapida los paquetes que tenemos instalados y actualizarlos de ser necesario.
 
@@ -197,9 +200,12 @@ Dentro de las opciones de este panel tenemos:
 |       3         | Buscar un paquete.  | 
 |       4         | Actualizar el panel. | 
 
-### Panel de ayuda ![Panel de ayuda](./assets/images/Panel_Ayuda.png)
+### Panel de ayuda
+
+![Panel de ayuda](./assets/images/Panel_Ayuda.png)
 
 Otro panel sencillo y de gran utilidad, aquí se mostrará la documentación de alguna función, paquete o sobre Rstudio, se puede acceder a el de manera sencilla al estar en el panel de código y tener seleccionada la función o paquete y presionar la tecla [F1], dentro de las caracteristicas de este panel tenemos
+
 ![Opciones Ayuda](./assets/images/Panel_Ayuda_Options.png)
 
 | Identificador   | Uso o significado           | 
@@ -228,3 +234,4 @@ Las opciones de este panel son reducidas pues es como un navegador de internet p
 
 
 ## Proyectos
+
