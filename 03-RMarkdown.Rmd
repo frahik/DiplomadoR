@@ -319,3 +319,80 @@ x <- matrix(NA, ncol=3, nrow=3)
 ``` 
 
 ## RMarkdown
+
+RMarkdown es una variación del Markdown que integra la facilidad de su estructura con la potencia y desarrollo de *R*, dicha variación fué desarrollado para crear documentos interactivos, para facilitar la transmisión de ideas entre los desarrolladores de **R** sin tener que preocuparse por tener que desarrollar la documentación con diversos programas y tener que actualizar los documentos en cada ocasión que se modifica el código, además RMarkdown permite desde un mismo código crear versiones en `.pdf`, `word` y `html` del mismo.
+
+Existen algunas diferencias entre Markdown y RMarkdown, mismas que se van a detallar a continuación.
+
+### Ecuaciones matemáticas
+
+Si algo le hizo falta a Markdown, fué la integración con las ecuaciones matematicas, es por ello que fué integrado con Rmarkdown para facilitar la explicación de las ecuaciones matematicas que van implicadas en el código, la manera de escribir ecuaciones es como en $\LaTeX$, rodeado de un símbolo `$` al inicio y final para escribirlo en la misma linea del texto y doble `$$` para hacerlo en una nueva línea, ejemplo:
+
+```
+$$
+x^2 - \sqrt{25} = 20 
+$$
+
+Donde $x$ es la incognita.
+```
+
+$$
+x^2 - \sqrt{25} = 20 
+$$
+
+Donde $x$ es la incognita.
+
+La escritura de ecuaciones matemáticas como en  $\LaTeX$ nos permite no solo reducir la cantidad de errores en cuanto a las ecuaciones, si no, tambien tener una excelente vizualicación de ellos.
+
+## Bloques de código ejecutables
+
+Al hablar de Markdown, se habló un poco de los bloques de código, dichos bloques sirven para mostrar el código que de los scripts, en RMarkdown el bloque de código es mejor conocido como trozo (chunk) y no solo cumplen la función de bloque de código como Markdown, además muestran el resultado de ejecutar dichas lineas de código y con ayuda de otros paquetes, se pueden hacer partes más interactivas con el fin de facilitar el entendimiento de lo que se desea transmitir.
+
+Una diferencia entre los bloques de código de Markdown y los chunk de RMarkdown es su sintaxis, mientras que en Markdown solo permite especificar el lenguaje, en RMarkdown tenemos una serie de opciones que nos permitiran llevar un mejor control de lo que queremos que se muestre.
+
+<pre lang="no-highlight"><code>
+```{r NombreChunk, echo=T, error=T, eval=T, fig.width=5, fig.height=5, message=T, warning=T}
+# Código a ejecutar
+```
+</code></pre>
+
+Donde las opciones representan lo siguiente:
+
+| Parametro | Uso |
+|-----------|-----|
+| r         | (Obligatoria) Lenguaje a ejecutar, opciones disponibles `r`, `sql`, `bash`, `Python`, `Rcpp`, `Stan`. |
+| NombreChunk | (Opcional) Identificador del chunk. |
+| `echo`    | (Opcional) Valor booleano, permite mostrar o no el bloque de código (TRUE por default). |
+| `error`   | (Opcional) Valor booleano, detiene la ejecución del código en caso de error (TRUE por default). |
+| `eval`    | (Opcional) Valor booleano, permite ejecutar o no el bloque de código (TRUE por default). |
+| `fig.width`| (Opcional) Valor númerico, en caso de tener como salida del código una gráfica, permite controlar el ancho del tamaño de la misma. |
+| `fig.height` | (Opcional) Valor númerico, en caso de tener como salida del código una gráfica, permite controlar el alto del tamaño de la misma. |
+| `message` | (Opcional) Valor booleano, en caso de que las librerias muestren un mensaje de ejecución, permite mostrarlo o no. (TRUE por default). |
+| `warning` | (Opcional) Valor booleano, en caso de que el código ejecutado tenga una advertencia, permite mostrarla o no. (TRUE por default). |
+
+Existen otras opciones disponibles y pueden ser consultadas en la siguiente liga https://yihui.name/knitr/options/ 
+
+### Nuevo documento en RStudio
+
+Para crear un nuevo documento de RMarkdown en RStudio utilizaremos el botón de nuevo archivo y presionaremos RMarkdown.
+
+
+Si es la primera ocasión que se utilizar RMarkdown, RStudio detectará que hacen falta algunos paquetes y pedirá permiso para instalarlos, de otro modo, podremos ingresar el título y autor del archivo.
+
+
+Finalmente nos creará un archivo con el template base de RMarkdown, es recomendable que si es la primera interacción con RMarkdown se analice el template y se compile para ver la relación del template con el documento de salida.
+
+
+#### Compilar RMarkdown a HTML
+
+
+#### Compilar RMarkdown a PDF
+
+
+#### Compilar RMarkdown a WORD
+
+
+
+
+
+
