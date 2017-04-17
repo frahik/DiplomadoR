@@ -33,13 +33,25 @@ Una vez instalado, un entorno de desarrollo integrado será necesario para facil
 
 |       IDE             |  Link     |
 |:---------------------:|-----------|
-|   Tinn-R              |https://sourceforge.net/projects/tinn-r/ |
-|RStudio [Recomendado] |https://www.rstudio.com/ |
-| R commander (Rcmdr)   |http://www.rcommander.com/ |
+|   Tinn-R              | https://sourceforge.net/projects/tinn-r/ |
+|RStudio [Recomendado]  | https://www.rstudio.com/ |
+| R commander (Rcmdr)   | http://www.rcommander.com/ |
 
 ![RIDE](https://rstudio.com/wp-content/uploads/2015/10/rstudio-300x260.png)
 
 En este caso, Sera necesario instalar RStudio para realizar los ejercicios de manera cómoda, por lo que, para instalar RStudio para los distintos Sistemas Operativos podemos hacerlo desde la liga principal, o para evitar buscar podemos usar la liga que más nos convenga de la siguiente tabla.
 
+| Rstudio | enlace  |
+|---------|---------|
+| Windows | https://download1.rstudio.org/RStudio-1.0.136.exe |
+| Linux (Debian y derivados)   | https://download1.rstudio.org/rstudio-1.0.136-amd64.deb |
+| Linux (RedHat y derivados)   | https://download1.rstudio.org/rstudio-1.0.136-x86_64.rpm |
+| Linux (Arch y derivados)     | `sudo pacman -S rstudio-desktop` |
+| Mac 	 | https://download1.rstudio.org/RStudio-1.0.136.dmg |
 
+Y finalmente sera necesario tener instalados el siguiente paquete:
+
+`install.packages("rmarkdown", dependencies = TRUE)`
+
+Con dicho paquete crearemos documentos dinamicos en la tercera parte del curso.
 
