@@ -1,4 +1,4 @@
-# Apendice A {#apendA}
+# Funciones de R {#apendA}
 
 
 | Aritméticos |                     | Lógicos |                 | Comparativos |           |
@@ -29,7 +29,7 @@
 |            | ($x_1, x_1 + x_2, + x_1 +\ldots+x_n$) |  choose(n,k) | Combinatoria de $n$ sobre $k$ |
 
 
-| Distribución             | Función de densidad | distribución acumulada | función cuantil | Uso de numeros aleatorios |
+| Distribución             | Función de densidad | distribución acumulada | función cuantil | Uso de números aleatorios |
 |--------------------------|---------------------|------------------------|-----------------|---------------------------|
 | Normal                   | dnorm(...)          | pnorm(...)             | qnorm(...)      | rnorm(...)                |
 | Uniforme                 | dunif(...)          | punif(...)             | qunif(...)      | runif(...)                |
