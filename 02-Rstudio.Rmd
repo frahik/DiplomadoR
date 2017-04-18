@@ -2,13 +2,13 @@
 
 ## El entorno y los paneles
 
-RStudio es un entorno de desarrollo para el lenguaje de programación en R de código libre, contiene potentes herramientas para facilitar el desarrollo de procesos matemáticos, estadísticos, llevar un control de versiones, fácil visualización, modificación e implementación de las rutinas en R, además entre sus potentes herramientas incluye Rmarkdown, el cual fué desarrollado para crear documentos interactivos, para facilitar la transmisión de ideas entre los desarrolladores de R sin tener que preocuparse por tener que desarrollar la documentación con diversos programas, pero por el momento nos enfocaremos solo en conocer el entorno de desarrollo de RStudio.
+RStudio es un entorno de desarrollo para el lenguaje de programación en R de código libre, contiene potentes herramientas para facilitar el desarrollo de procesos matemáticos, estadísticos, llevar un control de versiones, fácil visualización, modificación e implementación de las rutinas en R, además entre sus potentes herramientas incluye Rmarkdown, el cual fue desarrollado para crear documentos interactivos, para facilitar la transmisión de ideas entre los desarrolladores de R sin tener que preocuparse por tener que desarrollar la documentación con diversos programas, pero por el momento nos enfocaremos solo en conocer el entorno de desarrollo de RStudio.
 
 En la siguiente imagen se puede observar la interfaz completa para RStudio.
 
 ![Rstudio](./assets/images/Rstudio.png)
 
-Rstudio se compone por 4 secciones, las cuales están divididas en 12 importantes paneles  que pueden ser configurados a las necesidades de cada persona.
+Rstudio se compone por 4 secciones, las cuales están divididas en 12 importantes paneles que pueden ser configurados a las necesidades de cada persona.
 
 ### Panel de código
 
@@ -37,37 +37,35 @@ En esta ventana podremos controlar el resaltado de sintaxis para hacerlo lo más
 |      10         | Ejecutar todo el código con el comando `source(...)`. |
 |      11         | Despliega una ventana para ayudar en la navegación del código (Ideal para navegar entre grandes scripts). |
 
-Además de tener todas estás funcionalidades a la mano, tambien es posible
-acceder a algunas de ellas de manera rápida a tráves del teclado como se puede
-observar en la siguiente tabla.
+Además de tener todas estás funcionalidades a la mano, también es posible acceder a algunas de ellas de manera rápida a través del teclado como se puede observar en la siguiente tabla.
 
 | Comando             |       Uso       | 
 |---------------------|-----------------|
 | [Control] + [Shift] + [A] | Formatea el código de **R** que se encuentre seleccionado. | 
 | [Tab]               | Abre la opción de auto-completado en función a lo que se va escribiendo. |
 |[Control] + [Enter]  | Ejecutar la línea que se encuentre seleccionada (pueden ser varias).  | 
-|[Control] + [S]      | Salvar el archivo en el que se esta trabajando. |
-| [F1]                | Acceder a la ayuda del comando que se está escribiend o esté seleccionado. |
+|[Control] + [S]      | Salvar el archivo en el que se está trabajando. |
+| [F1]                | Acceder a la ayuda del comando que se está escribiendo o esté seleccionado. |
 
 ### Panel de Consola
 
 ![Consola](./assets/images/Panel_Consola.png)
 
-Este panel es la consola bien conocida de **R**, donde podremos interactuar directamente con ella o a traves del panel de código.
+Este panel es la consola bien conocida de **R**, donde podremos interactuar directamente con ella o a través del panel de código.
 
-Existe un comando que nos servirá de ayuda en caso de que ocupemos abortar la ejecución actual de **R**  `[CONTROL] + [C]`. Además de que al igual que el Panel de código, el panel de consola cuenta con autocompletado, podemos ir escribiendo un comando y con la tecla `[TAB]` podemos acceder al autocompletado y en caso de tener dudas podemos usar la tecla `[F1]` para acceder de manera rápida a la ayuda.
+Existe un comando que nos servirá de ayuda en caso de que ocupemos abortar la ejecución actual de **R** `[CONTROL] + [C]`. Además de que al igual que el Panel de código, el panel de consola cuenta con autocompletado, podemos ir escribiendo un comando y con la tecla `[TAB]` podemos acceder al autocompletado y en caso de tener dudas podemos usar la tecla `[F1]` para acceder de manera rápida a la ayuda.
 
 ### Panel de entorno
 
-Dentro los paneles del lado derecho, podemos observar el panel de entorno, el trabajo de este panel es mostrar los datos que nosotros estamos trabajando en **R** para no perder de vista si ya hemos creado una variable o si dicha variable contiene los datos que debe contener, para poder sacar el maximo provecho a este panel  deberemos de considerar lo siguiente: 
+Dentro los paneles del lado derecho, podemos observar el panel de entorno, el trabajo de este panel es mostrar los datos que nosotros estamos trabajando en **R** para no perder de vista si ya hemos creado una variable o si dicha variable contiene los datos que debe contener, para poder sacar el máximo provecho a este panel deberemos de considerar lo siguiente: 
 
 - Nos muestra nuestras variables. 
 - Permite limpiar la entorno con un solo clic (en vez de escribir el comando `rm(list=ls())`, RStudio lo hace por nosotros). 
-- Permite importar bases de datos en distintos formatos (La primera vez requerira instalar algunos paquetes).
+- Permite importar bases de datos en distintos formatos (La primera vez requerirá instalar algunos paquetes).
 
 ![Panel de entorno](./assets/images/Panel_Entorno.png)
 
-De manera superficial, este panel en la mayoría de los casos nos puede servir para dar una vista rapida al entorno y saber si la o las variables que creamos ya existen o si nos falta ejecutar alguna parte de nuestro código, ahora veremos más a detalle las opciones que nos ofrece este panel.
+De manera superficial, este panel en la mayoría de los casos nos puede servir para dar una vista rápida al entorno y saber si la o las variables que creamos ya existen o si nos falta ejecutar alguna parte de nuestro código, ahora veremos más a detalle las opciones que nos ofrece este panel.
 
 ![Opciones de Entorno](./assets/images/Panel_Entorno_Options.png)
 
@@ -79,10 +77,10 @@ De manera superficial, este panel en la mayoría de los casos nos puede servir p
 |       4         | Limpiar el área de trabajo actual (Entorno). | 
 |       5         | Alternar la vista de los datos entre modo lista y modo tabla.  |
 |       6         | Mostrar los datos creados por varios entornos (Entorno global o a nivel de paquetes). |
-|       7         | Permite filtrar y buscar algún objeto de interes por su nombre. | 
+|       7         | Permite filtrar y buscar algún objeto de interés por su nombre. | 
 |       8         | Así se muestra un vector. |
 |       9         | Así se muestra una matriz y un dataframe, la diferencia se encuentra en que al crear un dataframe aparece un botón para desplegar sus datos. | 
-|      10         | Muestra los datos que contiene una matriz o un dataframe especifico. |
+|      10         | Muestra los datos que contiene una matriz o un dataframe específico. |
 
 
 ### Panel de historial 
@@ -90,7 +88,7 @@ De manera superficial, este panel en la mayoría de los casos nos puede servir p
 
 ![Panel de historial](./assets/images/Panel_Historial.png)
 
-El panel del historial es otro panel bastante simple, su importancia radica en que cada vez que un comando es ejecutado irá a parar a este panel, así que sin importar cuantas veces cerremos RStudio, ese historial seguira ahí, si en algun momento queremos volver a buscar un comando podremos encontrarlo aquí, para conocer más a detalle este panel tenemos las siguientes opciones:
+El panel del historial es otro panel bastante simple, su importancia radica en que cada vez que un comando es ejecutado irá a parar a este panel, así que sin importar cuantas veces cerremos RStudio, ese historial seguirá ahí, si en algún momento queremos volver a buscar un comando podremos encontrarlo aquí, para conocer más a detalle este panel tenemos las siguientes opciones:
 
 ![Opciones Historial](./assets/images/Panel_Historia_Options.png)
 
@@ -102,7 +100,7 @@ El panel del historial es otro panel bastante simple, su importancia radica en q
 |       4         | Mandar al panel de código el comando seleccionado. | 
 |       5         | Remover los comandos seleccionados del historial. |
 |       6         | Eliminar todo el historial de comandos usados. |
-|       7         | Permite filtrar y buscar algún comando de interes por parte de su contenido. | 
+|       7         | Permite filtrar y buscar algún comando de interés por parte de su contenido. | 
 
 
 ### Panel de Construcción
@@ -124,11 +122,11 @@ Posiblemente el panel menos utilizado, solo aparece cuando estamos construyendo 
 ### Panel de Control de versiones (Git)
 
 
-Un panel bastante importante para los que ocupan trabajar con varias versiones de un mismo archivo o los que trabajan en el desarrollo de paquetes para **R**, hablar del control de versiones y como implementarlo en GitHub es agregar otro curso dentro de este curso, por lo que no nos saldremos del alcance y rescataremos las partes más importantes para aquellos que ya saben utilizar el controlador de versiones git.
+Un panel bastante importante para los que ocupan trabajar con varias versiones de un mismo archivo o los que trabajan en el desarrollo de paquetes para **R**, hablar del control de versiones y cómo implementarlo en GitHub es agregar otro curso dentro de este curso, por lo que no nos saldremos del alcance y rescataremos las partes más importantes para aquellos que ya saben utilizar el controlador de versiones git.
 
 ![git](./assets/images/Panel_Git.png)
 
-La imagen anterior es una muestra de del uso de este panel y las opciones que se muestran se describen acontinuación
+La imagen anterior es una muestra de del uso de este panel y las opciones que se muestran se describen a continuación
 
 ![Opciones Git](./assets/images/Panel_Git_Options.png)
 
@@ -136,24 +134,24 @@ La imagen anterior es una muestra de del uso de este panel y las opciones que se
 |-----------------|-----------------------------| 
 |       1         | Muestra las diferencias entre la antigua versión de un archivo y su nueva versión.  | 
 |       2         | Comenta los archivos seleccionados (staged) para guardar una nueva versión de ellos.  | 
-|       3         | Recupera las ultimas modificaciones del repositorio realizadas en otras computadoras.  | 
-|       4         | Sube al repositorio las ultimas modificaciones "comentadas(ver identificador 2)" en la maquina. | 
+|       3         | Recupera las últimas modificaciones del repositorio realizadas en otras computadoras.  | 
+|       4         | Sube al repositorio las últimas modificaciones "comentadas (ver identificador 2)" en la máquina. | 
 |       5         | Muestra un historial de las modificaciones realizadas. |
 |       6         | Otras opciones (Ignorar un archivo seleccionado o revertir la modificación) |
 |       7         | Rama (branch) a la que se desea subir las modificaciones del archivo. | 
 |       8         | Recargar el panel. |
 |       9         | Caja para seleccionar los archivos a comentar (ver identificador 2), ignorar o revertir (ver identificador 7) | 
-|      10         | El estado en el cuál se encuentra el archivo, (M es Modificado, ? es que aun no se encuentra en el respositorio, A significa que se agregará al repositorio y D es que se elimina del repositorio. |
+|      10         | El estado en el cuál se encuentra el archivo, (M es Modificado, ? es que aún no se encuentra en el repositorio, A significa que se agregará al repositorio y D es que se elimina del repositorio. |
 |      11         | Es el archivo que está siendo supervisado por el controlador de versiones. |
 
 
 ### Panel de archivos
 
-Volviendo a los paneles sencillos, este panel hace la función de explorador de archivos, para evitar la necesidad de estar abriendo y cerrando esta aplicación, podremos navegar hasta la carpeta de nuestro archivo de interés o si estamos trabajando por proyectos, veremos que esta ventana se actualiza directamente a la carpeta donde está 'hospedada' el proyecto, sin duda es de mayor utilidad de está forma, pero antes de hablar sobre los proyectos en RStudio, veremos un par de paneles más.
+Volviendo a los paneles sencillos, este panel hace la función de explorador de archivos, para evitar la necesidad de estar abriendo y cerrando esta aplicación, podremos navegar hasta la carpeta de nuestro archivo de interés o si estamos trabajando por proyectos, veremos que esta ventana se actualiza directamente a la carpeta donde está 'hospedada' el proyecto, sin duda es de mayor utilidad de esta forma, pero antes de hablar sobre los proyectos en RStudio, veremos un par de paneles más.
 
 ![Panel de archivos](./assets/images/Panel_Archivos.png)
 
-La imagen anterior es la vista que comunmente se obtiene donde las carpetas que todos conocemos (Descargas, Documentos, Escritorio, etc.) son las que nos muestra **RStudio**, algunas de las opciones más importantes son las siguientes:
+La imagen anterior es la vista que comúnmente se obtiene donde las carpetas que todos conocemos (Descargas, Documentos, Escritorio, etc.) son las que nos muestra **RStudio**, algunas de las opciones más importantes son las siguientes:
 
 ![Opciones Archivos](./assets/images/Panel_Archivos_Options.png)
 
@@ -187,7 +185,7 @@ Las opciones más importantes en el panel son las siguientes:
 
 ![Panel de Paquetes](./assets/images/Panel_Paquetes.png)
 
-Sin duda un panel que tendrá mucha utilidad, permite conocer de manera rapida los paquetes que tenemos instalados y actualizarlos de ser necesario.
+Sin duda un panel que tendrá mucha utilidad, permite conocer de manera rápida los paquetes que tenemos instalados y actualizarlos de ser necesario.
 
 ![Opciones Paquetes](./assets/images/Panel_Paquetes_Options.png)
 
@@ -204,17 +202,17 @@ Dentro de las opciones de este panel tenemos:
 
 ![Panel de ayuda](./assets/images/Panel_Ayuda.png)
 
-Otro panel sencillo y de gran utilidad, aquí se mostrará la documentación de alguna función, paquete o sobre Rstudio, se puede acceder a el de manera sencilla al estar en el panel de código y tener seleccionada la función o paquete y presionar la tecla [F1], dentro de las caracteristicas de este panel tenemos
+Otro panel sencillo y de gran utilidad, aquí se mostrará la documentación de alguna función, paquete o sobre Rstudio, se puede acceder a él de manera sencilla al estar en el panel de código y tener seleccionada la función o paquete y presionar la tecla [F1], dentro de las características de este panel tenemos
 
 ![Opciones Ayuda](./assets/images/Panel_Ayuda_Options.png)
 
 | Identificador   | Uso o significado           | 
 |-----------------|-----------------------------| 
-|       1         | Navegar entre las paginas consultadas,  | 
+|       1         | Navegar entre las paginas consultadas.  | 
 |       2         | Ir a la página inicial de ayuda.  | 
 |       3         | Imprimir la hoja de ayuda actual. | 
-|       4         | Mostrar el panel en una ventana separada(por si no nos ajusta el tamaño de la ventana). | 
-|       5         | Buscar ayuda con un paquete o funcion especifico.  | 
+|       4         | Mostrar el panel en una ventana separada (por si no nos ajusta el tamaño de la ventana). | 
+|       5         | Buscar ayuda con un paquete o función especifico.  | 
 
 ### Panel de visualización
 
@@ -235,3 +233,43 @@ Las opciones de este panel son reducidas pues es como un navegador de internet p
 
 ## Proyectos
 
+Un proyecto en **RStudio** es una carpeta que el programa reconoce como un espacio de trabajo de **R**, donde dependiendo de las especificaciones iniciales, se puede mantener las versiones del proyecto, crear un paquete para **R**, una aplicación web con la librería shiny, entre otras cosas útiles, pero siempre manteniendo el orden de los trabajos ya que además de mantener organizados los códigos, RStudio permite recuperar las pestañas abiertas sin importar si se cambió de proyecto, **RStudio** fue cerrado o si se apagó el sistema operativo.
+
+Para crear un nuevo proyecto, tenemos nuestro entorno de una forma muy parecida a la siguiente
+
+![Rstudio](./assets/images/Rstudio.png)
+
+En la parte superior derecha está el botón para crear un nuevo proyecto
+
+![Nuevo Proyecto](./assets/images/ProyectNone.png)
+
+Si accedemos al botón podremos ver las siguientes opciones, New Project desplegará una ventana para ayudarnos a escoger entre varias opciones.
+
+![Menú de opciones](./assets/images/ProyectOptions.png)
+
+
+Las opciones son las siguientes:
+
+![Opciones del nuevo proyecto](./assets/images/ProyectNew.png)
+
+Si lo que buscamos es crear un nuevo proyecto desde cero, entonces seleccionaremos [New Directory], por otro lado, si ya tenemos una carpeta con nuestros archivos de R, se puede escoger la opción [Existing Directory], la cual tomará una carpeta normal y la adecuará a nuestro entorno de Rstudio, si se cuenta con la experiencia de haber trabajado con anterioridad con un programa de control de versiones como git o SVN y alguno de ellos está disponible en la máquina, se podrá utilizar la tercera opción, la cual nos ayudará a mantener aún más organizado nuestro código.
+
+Empezaremos creando un proyecto vacío.
+
+![Nuevo proyecto vacío](./assets/images/ProyectNewP.png)
+
+Tenemos varias opciones, como será un proyecto para trabajar los ejercicios de R usaremos la primera opción.
+
+![Nuevo Proyecto vacío](./assets/images/ProyectNewPrueba.png)
+
+En la ventana de «Crear un nuevo proyecto» podremos escoger el nombre de nuestra carpeta y donde se creará, además nos da dos opciones para integrar nuestro control de versiones git, una vez creado nuestro nuevo proyecto, obsérvese que, automáticamente se asigna el directorio de trabajo hacia la ruta donde se ha creado nuestro proyecto, eso te confirma en el panel de archivos, que ahora muestra solamente nuestro archivo de proyecto `.Rproj` el cual, si es eliminado, se pierde el entorno de trabajo en **RStudio**.
+
+![Proyecto cargado en RStudio](./assets/images/ProyectNewEmpty.png)
+
+Si en vez de crear un nuevo directorio, queremos usar una ruta ya existente, podemos usar la opción de crear proyecto desde un directorio existente, con lo cual podremos buscar la ruta con el botón [Browse] y convertir esa carpeta a un Proyecto de RStudio.
+
+![Proyecto con un directorio existente](./assets/images/ProyectNewExisting.png)
+
+Para poder cambiar entre proyectos, solo basta con seleccionar el proyecto, en este caso, los disponibles en la siguiente imagen solo es "DiplomadoR", pero en caso de tener varios proyectos se podrá seleccionar entre los existentes, en caso de que no aparezca, podemos usar el botón [Open Project...] el cual nos dejará buscar la carpeta en la cual está el archivo `.Rproj`, o en caso de que no queramos usar ningún proyecto, para hacer pruebas o alguna otra cosa, basta con cerrar el proyecto abierto con el botón [Close Project]. 
+
+![](./assets/images/Projectaccess.png)
