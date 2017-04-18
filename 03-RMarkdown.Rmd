@@ -1,7 +1,7 @@
-# Introducción a R-Markdown {#RMarkDown}
+# Introducción a RMarkdown {#RMarkDown}
 
 ## Sintaxis de Markdown
-Esta es una rápida referencia de como usar **Markdown**, para consultar más información sobre **Markdown** usar el siguiente enlace [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
+Esta es una rápida referencia de cómo usar **Markdown**, para consultar más información sobre **Markdown** usar el siguiente enlace [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
 
 ### Encabezados o Títulos
 
@@ -29,7 +29,7 @@ Alt-H2
 ```
 Para usar texto en itálica (cursiva), es a través de *asteriscos* o _Guion bajo_.
 
-Para usar texto en negritas, es a través de **doble asterisco** o __doble guión bajo__.
+Para usar texto en negritas, es a través de **doble asterisco** o __doble guion bajo__.
 
 Es posible combinarlos con **Una parte en negritas y __además en cursiva__**
 
@@ -39,7 +39,7 @@ Para tachar algo usar ~~Texto no deseado~~.
 **DEMOSTRACIÓN**
 Para usar texto en itálica (cursiva), es a través de *asteriscos* o _Guion bajo_.
 
-Para usar texto en negritas, es a través de **doble asterisco** o __doble guión bajo__.
+Para usar texto en negritas, es a través de **doble asterisco** o __doble guion bajo__.
 
 Es posible combinarlos con **Una parte en negritas y __además en cursiva__**
 
@@ -81,18 +81,18 @@ Otro tipo de listas:
 
 ### Enlaces
 
-Existen varás formas de crear enlaces:
+Existen varias formas de crear enlaces:
 
 ```
-[Enlace a google](https://www.google.com)
+[Enlace a Google](https://www.google.com)
 
-[Enlace a google con título](https://www.google.com "Página de Google")
+[Enlace a Google con título](https://www.google.com "Página de Google")
 
-[Enlace a google][Texto de referencia al enlace]
+[Enlace a Google][Texto de referencia al enlace]
 
 [También es posible usar números para realizar referencias][1]
 
-o dejarlo vacío y usar el enlace como propio texto [texto].
+O dejarlo vacío y usar el enlace como propio texto [texto].
 
 URLs y URLs entre los símbolos `<` y `>` automáticamente serán transformados a enlace.
 http://www.example.com o <http://www.example.com>.
@@ -104,15 +104,15 @@ http://www.example.com o <http://www.example.com>.
 
 DEMOSTRACIÓN:
 
-[Enlace a google](https://www.google.com)
+[Enlace a Google](https://www.google.com)
 
-[Enlace a google con título](https://www.google.com "Página de Google")
+[Enlace a Google con título](https://www.google.com "Página de Google")
 
-[Enlace a google][Texto de referencia al enlace]
+[Enlace a Google][Texto de referencia al enlace]
 
 [También es posible usar números para realizar referencias][1]
 
-o dejarlo vacío y usar el enlace como propio texto [texto].
+O dejarlo vacío y usar el enlace como propio texto [texto].
 
 URLs y URLs entre los símbolos `<` y `>` automáticamente serán transformados a enlace.
 http://www.example.com o <http://www.example.com>.
@@ -137,7 +137,7 @@ Reference-style:
 
 DEMOSTRACIÓN:
 
-Referencia en la misma linea:
+Referencia en la misma línea:
 ![Texto alternativo](./assets/images/escudo_uqroo_negro.png "Logo UQroo")
 
 Mediante referencia de texto:
@@ -169,7 +169,7 @@ DEMOSTRACIÓN:
 
 ---
 
-Es necesario que en cada columna haya por lo menos 3 lineas separando cada celda, donde las barras de los extremos son opcionales (|), además de que no es necesario (Pero es preferible), que la tabla tenga que estar alineada en las columnas como se muestra en el siguiente código, esta se seguirá mostrando igual que una alineada:
+Es necesario que en cada columna haya por lo menos 3 líneas separando cada celda, donde las barras de los extremos son opcionales (|), además de que no es necesario (Pero es preferible), que la tabla tenga que estar alineada en las columnas como se muestra en el siguiente código, esta se seguirá mostrando igual que una alineada:
 
 ```
 Ejemplo | de una | Tabla
@@ -193,9 +193,9 @@ la | tabla | anterior
 > Los bloques de cita son especialmente útiles para enfatizar.
 > También para realizar citas de texto.
 >
-> Esta linea también pertenece al bloque.
+> Esta línea también pertenece al bloque.
 
-Esta linea ya no pertenece al bloque al estar separado por un salto de línea.
+Esta línea ya no pertenece al bloque al estar separado por un salto de línea.
 
 > Sin embargo, siempre es posible utilizar nuevamente los bloques de citas, aunque sean de una línea.
 ```
@@ -205,9 +205,9 @@ DEMOSTRACIÓN:
 > Los bloques de cita son especialmente útiles para enfatizar.
 > También para realizar citas de texto.
 >
-> Esta linea también pertenece al bloque.
+> Esta línea también pertenece al bloque.
 
-Esta linea ya no pertenece al bloque al estar separado por un salto de línea.
+Esta línea ya no pertenece al bloque al estar separado por un salto de línea.
 
 > Sin embargo, siempre es posible utilizar nuevamente los bloques de citas, aunque sean de una línea.
 
@@ -226,9 +226,9 @@ Por ejemplo, poner el texto de <span style="color:#DA0101">otro color</span>.
 
 ---
 
-### Lineas horizontales
+### Líneas horizontales
 
-Es posible poner lineas horizontales para separar zonas de texto usando alguno de los siguientes códigos:
+Es posible poner líneas horizontales para separar zonas de texto usando alguno de los siguientes códigos:
 
 ```
 Una línea hecha con tres líneas
@@ -320,35 +320,35 @@ x <- matrix(NA, ncol=3, nrow=3)
 
 ## RMarkdown
 
-RMarkdown es una variación del Markdown que integra la facilidad de su estructura con la potencia y desarrollo de *R*, dicha variación fué desarrollado para crear documentos interactivos, para facilitar la transmisión de ideas entre los desarrolladores de **R** sin tener que preocuparse por tener que desarrollar la documentación con diversos programas y tener que actualizar los documentos en cada ocasión que se modifica el código, además RMarkdown permite desde un mismo código crear versiones en `.pdf`, `word` y `html` del mismo.
+RMarkdown es una variación del Markdown que integra la facilidad de su estructura con la potencia y desarrollo de *R*, dicha variación fue desarrollado para crear documentos interactivos, para facilitar la transmisión de ideas entre los desarrolladores de **R** sin tener que preocuparse por tener que desarrollar la documentación con diversos programas y tener que actualizar los documentos en cada ocasión que se modifica el código, además RMarkdown permite desde un mismo código crear versiones en `.pdf`, `word` y `html` del mismo.
 
 Existen algunas diferencias entre Markdown y RMarkdown, mismas que se van a detallar a continuación.
 
 ### Ecuaciones matemáticas
 
-Si algo le hizo falta a Markdown, fué la integración con las ecuaciones matematicas, es por ello que fué integrado con Rmarkdown para facilitar la explicación de las ecuaciones matematicas que van implicadas en el código, la manera de escribir ecuaciones es como en $\LaTeX$, rodeado de un símbolo `$` al inicio y final para escribirlo en la misma linea del texto y doble `$$` para hacerlo en una nueva línea, ejemplo:
+Si algo le hizo falta a Markdown, fue la integración con las ecuaciones matemáticas, es por ello que fue integrado con Rmarkdown para facilitar la explicación de las ecuaciones matemáticas que van implicadas en el código, la manera de escribir ecuaciones es como en $\LaTeX$, rodeado de un símbolo `$` al inicio y final para escribirlo en la misma línea del texto y doble `$$` para hacerlo en una nueva línea, ejemplo:
 
 ```
 $$
 x^2 - \sqrt{25} = 20 
 $$
 
-Donde $x$ es la incognita.
+Donde $x$ es la incógnita.
 ```
 
 $$
 x^2 - \sqrt{25} = 20 
 $$
 
-Donde $x$ es la incognita.
+Donde $x$ es la incógnita.
 
-La escritura de ecuaciones matemáticas como en  $\LaTeX$ nos permite no solo reducir la cantidad de errores en cuanto a las ecuaciones, si no, tambien tener una excelente vizualicación de ellos.
+La escritura de ecuaciones matemáticas como en $\LaTeX$ nos permite no solo reducir la cantidad de errores en cuanto a las ecuaciones, si no, también tener una excelente visualización de ellos.
 
-## Bloques de código ejecutables
+### Bloques de código ejecutables
 
-Al hablar de Markdown, se habló un poco de los bloques de código, dichos bloques sirven para mostrar el código que de los scripts, en RMarkdown el bloque de código es mejor conocido como trozo (chunk) y no solo cumplen la función de bloque de código como Markdown, además muestran el resultado de ejecutar dichas lineas de código y con ayuda de otros paquetes, se pueden hacer partes más interactivas con el fin de facilitar el entendimiento de lo que se desea transmitir.
+Al hablar de Markdown, se habló un poco de los bloques de código, dichos bloques sirven para mostrar el código que de los scripts, en RMarkdown el bloque de código es mejor conocido como trozo (chunk) y no solo cumplen la función de bloque de código como Markdown, además muestran el resultado de ejecutar dichas líneas de código y con ayuda de otros paquetes, se pueden hacer partes más interactivas con el fin de facilitar el entendimiento de lo que se desea transmitir.
 
-Una diferencia entre los bloques de código de Markdown y los chunk de RMarkdown es su sintaxis, mientras que en Markdown solo permite especificar el lenguaje, en RMarkdown tenemos una serie de opciones que nos permitiran llevar un mejor control de lo que queremos que se muestre.
+Una diferencia entre los bloques de código de Markdown y los chunk de RMarkdown es su sintaxis, mientras que en Markdown solo permite especificar el lenguaje, en RMarkdown tenemos una serie de opciones que nos permitirán llevar un mejor control de lo que queremos que se muestre.
 
 <pre lang="no-highlight"><code>
 ```{r NombreChunk, echo=T, error=T, eval=T, fig.width=5, fig.height=5, message=T, warning=T}
@@ -358,16 +358,16 @@ Una diferencia entre los bloques de código de Markdown y los chunk de RMarkdown
 
 Donde las opciones representan lo siguiente:
 
-| Parametro | Uso |
+| Parámetro | Uso |
 |-----------|-----|
 | r         | (Obligatoria) Lenguaje a ejecutar, opciones disponibles `r`, `sql`, `bash`, `Python`, `Rcpp`, `Stan`. |
 | NombreChunk | (Opcional) Identificador del chunk. |
 | `echo`    | (Opcional) Valor booleano, permite mostrar o no el bloque de código (TRUE por default). |
 | `error`   | (Opcional) Valor booleano, detiene la ejecución del código en caso de error (TRUE por default). |
 | `eval`    | (Opcional) Valor booleano, permite ejecutar o no el bloque de código (TRUE por default). |
-| `fig.width`| (Opcional) Valor númerico, en caso de tener como salida del código una gráfica, permite controlar el ancho del tamaño de la misma. |
-| `fig.height` | (Opcional) Valor númerico, en caso de tener como salida del código una gráfica, permite controlar el alto del tamaño de la misma. |
-| `message` | (Opcional) Valor booleano, en caso de que las librerias muestren un mensaje de ejecución, permite mostrarlo o no. (TRUE por default). |
+| `fig.width`| (Opcional) Valor numérico, en caso de tener como salida del código una gráfica, permite controlar el ancho del tamaño de la misma. |
+| `fig.height` | (Opcional) Valor numérico, en caso de tener como salida del código una gráfica, permite controlar el alto del tamaño de la misma. |
+| `message` | (Opcional) Valor booleano, en caso de que las librerías muestren un mensaje de ejecución, permite mostrarlo o no. (TRUE por default). |
 | `warning` | (Opcional) Valor booleano, en caso de que el código ejecutado tenga una advertencia, permite mostrarla o no. (TRUE por default). |
 
 Existen otras opciones disponibles y pueden ser consultadas en la siguiente liga https://yihui.name/knitr/options/ 
@@ -382,17 +382,21 @@ Si es la primera ocasión que se utilizar RMarkdown, RStudio detectará que hace
 
 Finalmente nos creará un archivo con el template base de RMarkdown, es recomendable que si es la primera interacción con RMarkdown se analice el template y se compile para ver la relación del template con el documento de salida.
 
+Cuando estamos trabajando con un archivo de RMarkdown (la extensión es .Rmd), **RStudio** nos permite compilar dicho archivo a varias versiones a través del botón [Knit], dichas versiones son las que veremos a continuación:
+
+![Compilar](./assets/images/Knit.png)
 
 #### Compilar RMarkdown a HTML
 
+La opción de [Knit to HTML] permite traducir de manera sencilla y rápida el archivo `.Rmd` a `.html`, siempre y cuando no tenga errores al ejecutar los comandos de **R**.
+
+El botón Knirt tiene te funciones, compilar Rmarkdown (desde ahora .RMD) a HTML, compilar .RMD a PDF y compilar .RMD a .docx (Word), para HTML solo tienes que presionar el botón o compile HTML, que sale en el menú de la flechita que está justo al lado derecho, para PDF es más complicado, requieres de LaTeX, supondremos que no lo conoces, así que no podrás compilar a PDF y PPT último para Word, solo falta presionar de nuevo el menú y escoger compile to Word
 
 #### Compilar RMarkdown a PDF
 
+La opción de [Knit to PDF] permite traducir de manera sencilla y rápida el archivo `.Rmd` a `.pdf`, siempre y cuando no tenga errores al ejecutar los comandos de **R**, sin embargo, es necesario que se tenga instalado un compilador de $\LaTeX$, ya sea TeXlive o Miktex que son los más recomendados.
 
 #### Compilar RMarkdown a WORD
 
-
-
-
-
+La opción de [Knit to Word] permite traducir de manera sencilla y rápida el archivo `.Rmd` a `.docx`, siempre y cuando no tenga errores al ejecutar los comandos de **R** y estén todos los paquetes dependientes de "Rmarkdown" al día.
 
