@@ -1,5 +1,6 @@
 # Funciones de R {#apendA}
 
+## Tabla símbolos básicos
 
 | Aritméticos |                     | Lógicos |                 | Comparativos |           |
 |:-----------:|---------------------|:-------:|-----------------|:------------:|-----------|
@@ -11,7 +12,7 @@
 |    \%/\%    | División de enteros |    >=   | Mayor o igual a |   is.nan(x)  | ¿Es NaN?  |
 
 
-
+## Tabla funciones básicas
 
 |   Función  | Matemáticas                           |    Función   | Estadísticas                  |
 |:----------:|---------------------------------------|:------------:|-------------------------------|
@@ -28,6 +29,7 @@
 |  cumsum(x) | Calcula las sumas acumuladas          |    summary   | Resumen de las variables      |
 |            | ($x_1, x_1 + x_2, + x_1 +\ldots+x_n$) |  choose(n,k) | Combinatoria de $n$ sobre $k$ |
 
+## Tabla de funciones de distribución
 
 | Distribución             | Función de densidad | distribución acumulada | función cuantil | Uso de números aleatorios |
 |--------------------------|---------------------|------------------------|-----------------|---------------------------|
@@ -42,5 +44,6 @@
 | Cauchy                   | dcauchy(...)        | pcauchy(...)           | qcauchy(...)    | rcauchy(...)              |
 | Wishart                  | dwish(...)          |                        |                 | rwish(...)                |
 
+> Nota, algunas de estas distribuciones se encuentran en las librerías de MASS, MCMCpack y mvtnorm.
 
 
