@@ -326,7 +326,7 @@ Existen algunas diferencias entre Markdown y RMarkdown, mismas que se van a deta
 
 ### Ecuaciones matemáticas
 
-Si algo le hizo falta a Markdown, fue la integración con las ecuaciones matemáticas, es por ello que fue integrado con Rmarkdown para facilitar la explicación de las ecuaciones matemáticas que van implicadas en el código, la manera de escribir ecuaciones es como en $\LaTeX$, rodeado de un símbolo `$` al inicio y final para escribirlo en la misma línea del texto y doble `$$` para hacerlo en una nueva línea, ejemplo:
+Si algo le hizo falta a Markdown, fue la integración con las ecuaciones matemáticas, es por ello que fue integrado con Rmarkdown para facilitar la explicación de las ecuaciones matemáticas que van implicadas en el código, la manera de escribir ecuaciones es como en **LaTeX**, rodeado de un símbolo `$` al inicio y final para escribirlo en la misma línea del texto y doble `$$` para hacerlo en una nueva línea, ejemplo:
 
 ```
 $$
@@ -342,7 +342,7 @@ $$
 
 Donde $x$ es la incógnita.
 
-La escritura de ecuaciones matemáticas como en $\LaTeX$ nos permite no solo reducir la cantidad de errores en cuanto a las ecuaciones, si no, también tener una excelente visualización de ellos.
+La escritura de ecuaciones matemáticas como en **LaTeX** nos permite no solo reducir la cantidad de errores en cuanto a las ecuaciones, si no, también tener una excelente visualización de ellos.
 
 ### Bloques de código ejecutables
 
