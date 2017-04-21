@@ -1,0 +1,71 @@
+# Ejercicios
+
+## Primeros pasos
+
+* Crear la variable `x` y asignarle el valor `10`.
+* Crear la variable `y` y asignar el resultado de multiplicar `x * 10`.
+* Crear la variable `edad` y asignarle tu edad.
+* Realizar una secuencia de `1` hasta `edad` (Solo crear salida a consola).
+* Crear la variable `sec` y asignarle la secuencia de `1`hasta `edad`.
+* Multiplicar la variable `sec` por `3.1415` (Solo crear salida a consola).
+
+
+## Vectores y listas
+
+### Ejercicio 1
+
+> Usando la semilla 10
+
+```r
+set.seed(10)
+```
+
+Una persona quema calorías durante 100 días según una distribución normal `rnomr(...)`, con un promedio de 1900 calorías y una desviación estándar de 150.
+
+- Obtener la máxima cantidad de calorías quemadas durante un día.
+- Obtener la mínima cantidad de calorías quemadas durante un día.
+- Utilizar la función `summary(...)` e interpretar los resultados.
+
+
+## Matrices y dataframes
+
+### Ejercicio 1
+
+El profesor quiere conocer el rendimiento del semestre de sus 5 alumnos de maestría:
+
+|                   | Alberto | Francisco | Juan  | Alejandro | Oswaldo |
+|-------------------|:-------:|:---------:|:-----:|:---------:|:-------:|
+| Primera parcial   |   7     |     9     | 7.5   |     10    |   8.5   |
+| Segunda parcial   |   8.3   |     7.9   | 8.2   |     7.1   |   8.5   |
+| Tercera parcial   |   8     |     9.5   | 7     |     8.3   |   8.5   |
+
+1. ¿Cuál es el promedio de la calificación del grupo en el semestre?:
+2. ¿Cuál es el promedio de la calificación del grupo por parcial?:
+3. ¿Cuál es el promedio de la calificación de cada alumno en el semestre?:
+4. ¿Quíenes han reprobado la materia?
+
+### Ejercicio 2
+
+En una pista de carreras, se observan 3 autos dar 4 vueltas:
+
+|           | Civic   | Mazda   |Tsuru  |
+|-----------|---------|---------|-------|
+| Vuleta 1  |  110 km |  125 km |  95 km|  
+| Vuleta 2  |  140 km |  130 km | 105 km|
+| Vuleta 3  |  135 km |  125 km | 115 km|
+| Vuleta 4  |  135 km |  115 km | 120 km|
+
+1. ¿A qué velocidad va el primer auto en promedio?
+2. ¿A qué velocidad va el segundo auto en promedio?
+3. ¿A qué velocidad va el tercer auto en promedio?
+
+### Ejercicio 3
+
+Si tenemos el peso de 4 personas durante 3 semanas y queremos ver el promedio del peso por persona, ¿Qué comando deberíamos utilizar?
+
+|            | Persona 1 | Persona 2 | Persona 3  | Persona 4 |
+|------------|:---------:|:---------:|:----------:|:---------:|
+| Semana 1   |   79      |     59    |    67.5    |     60    |
+| Semana 2   |   82.3    |     57.9  |    68.2    |     57.1  |
+| Semana 3   |   80      |     59.5  |    67      |     58.3  |
+

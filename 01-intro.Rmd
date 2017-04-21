@@ -1,9 +1,11 @@
 # Introducción a R{#intro}
 
-## Primeros pasos 
+## Primeros pasos
+
 Para interactuar con **R** se dispone de una potente línea de comandos y en un principio, la manera más sencilla de ver **R** es que puede ser usado como una calculadora: 
 
-Como sumar: 
+Como sumar:
+
 ```{R Suma}
 10+5 
 ``` 
@@ -29,11 +31,13 @@ getwd()
 Dicho directorio va a variar dependiendo del sistema, por ello, más de una vez será necesario modificar esta ruta, para lo cual se usara el comando `setwd("Ruta")`, el cual varía dependiendo del Sistema Operativo, como buena práctica del programador, se recomienda establecer el directorio de trabajado dentro de la carpeta de Documentos, además de que es más sencillo encontrar los proyectos de trabajo, si se usa la ruta **ruta relativa** y no la **ruta física**, si se requiere mover todos los archivos para trabajar en otra computadora, no se tendrá que volver a modificar todo el directorio de trabajo.
 
 **Ejemplo usando la Ruta relativa en Linux**
+
 ```{r SWD, eval=FALSE}
 setwd("~/Documentos/Curso") #Linux
 ```
 
 **Ejemplo usando la _Ruta física_ y la _ruta relativa_ en Windows**
+
 ```{r SWDWindows, eval=FALSE}
 setwd("C:\\Usuario\\Documentos\\Curso") #MALA PRACTICA (Ruta física)
 setwd("~/Curso") #BUENA PRACTICA (Ruta relativa del comando anterior)
@@ -73,7 +77,7 @@ Otra manera de asignar valores a las variables es mediante el símbolo `<-` que 
 x <- 10 + 5 
 ``` 
 
-  > «Podemos ver a las variables como una persona, cada persona tiene su nombre para poder ser identificadas sobre el resto de las personas, pero bajo la manera de ordenar del lenguaje R, si dos personas quieren llamarse de la misma manera, la nueva persona tiene que 'matar' a la persona ya existente para poder tomar su lugar.»
+> «Podemos ver a las variables como una persona, cada persona tiene su nombre para poder ser identificadas sobre el resto de las personas, pero bajo la manera de ordenar del lenguaje R, si dos personas quieren llamarse de la misma manera, la nueva persona tiene que 'matar' a la persona ya existente para poder tomar su lugar.»
   
 Se recomienda incluir un espacio simple a cada lado del operador de asignación para incrementar la legibilidad. Pero <span style="color:#DA0101">NO</span> coloques un espacio entre el `<` y el `-` que forman la flecha, recuerda que a pesar de estar compuesto por dos caracteres es un único símbolo. 
  
@@ -97,6 +101,7 @@ y
 
 
 ### Instalar librerías
+
 Los paquetes en **R**, son como _«Extensiones»_ y nos sirven para evitar reinventar la rueda, existen muchos paquetes disponibles en el CRAN de **R** o GitHub y para instalarlos basta un comando en la propia terminal de **R**:
 
 *Para paquetes oficiales de CRAN*
@@ -153,19 +158,22 @@ La manera de representar un vector es de la siguiente forma:
 Una vez entendido el mensaje anterior, existen varias formas de declarar un vector de más de un valor, la manera más sencilla es a través de la función concatenar `c(...)`; la cual es una función genérica que combina los valores separado por comas en un vector.
 
 Ejemplos:
-Vector con varios datos y un `NA`.
+Vector con varios datos y un `NA`:
+
 ```{r}
 vector <- c(1:9,NA,10:15)
 vector
 ```
 
-Vector de nombres de personas
+Vector de nombres de personas:
+
 ```{r}
 vectorNombres <- c("Francisco","Claudia","Valeria","Fernando","Julia")
 vectorNombres
 ```
 
-Vector con los datos de otros vectores
+Vector con los datos de otros vectores:
+
 ```{r}
 vec1 <- 1
 vec2 <- 20:30
@@ -204,11 +212,13 @@ vector[3]
 ```
 
   * Varios elementos en secuencia.
+  
 ```{r vector2}
 vector[2:4]
 ```  
 
   * Un elemento especificado anteriormente.
+  
 ```{r vector3}
 n <- 3
 vector[n]
@@ -247,6 +257,7 @@ vector
 ```
 
   * Modificar varios elementos de un vector
+  
 ```{r vector9}
 vector[4:6] <- NA
 vector
@@ -290,16 +301,19 @@ vector[which(vector == "Francisco")] <- "Francisco Javier"
 Para ordenar los datos existe la función `sort(...)`.
 
 * Ordenar un vector de forma creciente
+
 ```{r vector15}
 sort(vector)
 ```
 
 * Ordenar un vector de forma decreciente
+
 ```{r vector16}
 sort(vector, decreasing = T)
 ```
 
 * Ordenar un vector y conocer sus antiguas posiciones.
+
 ```{r vector17}
 sort(vector, decreasing = T, index.return = TRUE)
 ```
@@ -447,7 +461,7 @@ m
 
 * Una matriz desde los datos de dos o más vectores:
 
-```{r}
+```{r DemoMatriz3}
 Nombre <- c("Francisco", "Alberto", "Enrique", "Juan")
 Puntos <- c(500, 200, 650, 300)
 m <- matrix(c(Nombre, Puntos), ncol = 2)
@@ -456,7 +470,7 @@ m
 
 * Una matriz desde los datos de dos o más vectores con cbind:
 
-```{r}
+```{r DemoMatriz4}
 Nombre <- c("Francisco", "Alberto", "Enrique", "Juan")
 Puntos <- c(500, 200, 650, 300)
 m <- cbind(Nombre, Puntos)
@@ -465,7 +479,7 @@ m
 
 * Una matriz desde los datos de dos o más vectores con rbind:
 
-```{r}
+```{r DemoMatriz5}
 Cliente1 <- c("Francisco", 500)
 Cliente2 <- c("Alberto", 200)
 Cliente3 <- c("Enrique",  650)
@@ -477,7 +491,7 @@ m
 
 Continuaremos trabajando con la siguiente matriz, es necesario recordar que se puede llamar de cualquier forma, en este caso se llamará de manera genérica, `matriz` :
 
-```{r}
+```{r matriz1}
 Nombre <- c("Francisco", "Alberto", "Enrique", "Juan", "Francisco", "Alberto", "Enrique", "Juan")
 Puntos <- c(500, 200, 650, 300, 300, 350, 600, 400)
 matriz <- cbind(Nombre, Puntos)
@@ -486,71 +500,71 @@ matriz
 
 * Nombrar las columnas de la matriz
 
-```{r}
+```{r matriz2}
 colnames(matriz) <- c("Cliente", "Puntos")
 matriz
 ```
 
 * Nombrar las filas de la matriz
 
-```{r}
+```{r matriz3}
 rownames(matriz) <- c("Compra1", "Compra2", "Compra3", "Compra4", "Compra5", "Compra6", "Compra7", "Compra8")
 matriz
 ```
 
 * Nombrar las columnas y las filas de la matriz
 
-```{r}
+```{r matriz4}
 dimnames(matriz) <- list(c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"),c("Cliente", "Puntos"))
 matriz
 ```
 
 * Obtener los primeros valores de una matriz (tres en este caso):
 
-```{r}
+```{r matriz5}
 head(matriz,3)
 ```
 
 * Obtener los últimos valores de una matriz (tres en este caso):
 
-```{r}
+```{r matriz6}
 tail(matriz,3)
 ```
 
 * Obtener los nombres de los clientes:
 
-```{r}
+```{r matriz7}
 matriz[,1]
 ```
 
 * Obtener los nombres ordenados:
 
-```{r}
+```{r matriz8}
 sort(matriz[,1])
 ```
 
 
 * Obtener los nombres de los clientes sin repetir:
 
-```{r}
+```{r matriz9}
 unique(matriz[,1])
 ```
 
 * Obtener los nombres de los clientes sin repetir y ordenados:
 
-```{r}
+```{r matriz10}
 sort(unique(matriz[,1]))
 ```
 
 * Obtener la matriz ordenada según la cantidad de Puntos (ascendente):
 
-```{r}
+```{r matriz11}
 matriz[order(matriz[, 2]), ]
 ```
 
 * Obtener la matriz ordenada según la cantidad de Puntos (descendente):
 
-```{r}
+```{r matriz12}
 matriz[order(matriz[, 2], decreasing = TRUE), ]
 ```
 
@@ -558,13 +572,13 @@ matriz[order(matriz[, 2], decreasing = TRUE), ]
 
 * Obtener al primer cliente y sus puntos:
 
-```{r}
+```{r matriz13}
 matriz[1,]
 ```
 
 * Obtener la suma de los puntos (ver problemas comunes):
 
-```{r}
+```{r matriz14}
 sum(as.numeric(matriz[,2]))
 ```
 
@@ -577,19 +591,19 @@ Estos son algunos de los problemas más comunes al momento de intentar trabajar 
 
 Es ocasiones **R** tiende a asignar nuestros datos de otra forma que no es la que nosotros esperamos, en este caso tenemos el siguiente error:
 
-```{r, message=T , error=T}
+```{r matriz15, message=T , error=T}
 sum(matriz[,2])
 ```
 
 El error que retorna **R** es que el tipo ‘character’ no es un argumento válido, esto significa que los datos que nosotros ingresamos son del tipo carácter, para comprobar esto, usaremos la función `typeof(…)`:
 
-```{r}
+```{r matriz16}
 typeof(matriz[,2])
 ```
 
 Se puede observar que efectivamente, los datos que intentamos ingresar **R** los tiene almacenados como tipo carácter, por lo que, para poder sumar los datos utilizaremos la función `as.numeric` (existen otras funciones como `as.integer`, `as.double()` que también podrían funcionar):
 
-```{r}
+```{r matriz17}
 typeof(as.numeric(matriz[,2]))
 sum(as.numeric(matriz[,2]))
 ```
@@ -598,14 +612,14 @@ sum(as.numeric(matriz[,2]))
 
 Al intentar nombrar una matriz, puede surgir este tipo de errores al usar la función `dimnames(...)`:
 
-```{r, error=T}
+```{r matriz18, error=T}
 dimnames(matriz) <- list(c("Cliente", "Puntos"),
                          c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"))
 ```
 
 El error en está ocasión se debe a que estamos intentar poner los nombres de las columnas en las filas y viceversa, así que cambiando el orden de los vectores de nombres es suficiente para que funcione:
 
-```{r}
+```{r matriz19}
 dimnames(matriz) <- list(c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"),
                          c("Cliente", "Puntos"))
 matriz
@@ -618,7 +632,7 @@ Pero ¿Qué pasa si no se busca nombrar las filas o las columnas?, lo recomendab
 
 Tenemos los siguientes vectores:
 
-```{r}
+```{r matriz20}
 Cliente <- c("Francisco", "Alberto", "Juan")
 Puntos <- c(10,2030)
 ```
@@ -627,7 +641,7 @@ Puntos <- c(10,2030)
 
 Ahora intentaremos crear una matriz con esos datos:
 
-```{r}
+```{r matriz21}
 matriz <- matrix(c(Cliente, Puntos), ncol=2)
 matriz
 ```
@@ -638,18 +652,25 @@ La solución consiste en agregar la coma que nos hizo falta en el primer vector 
 
 Otro problema puede ser que, supongamos que tenemos un vector en secuencia del 1 hasta el 31 y queremos representar solo el mes de mayo del 2017
 
-```{r}
+```{r matriz22}
 vector <- 1:31
 matrix(vector, nrow = 5, ncol=7, byrow=T)
 ```
 
 Vemos que R nos ha devuelto un error que nos indica que el vector de datos no es un submúltiplo o múltiplo del número de filas y columnas de la matriz, en otras palabras, la matriz es de 5 renglones por 7 columnas, es decir, tendrá un espacio para ingresar 35 valores y nosotros estamos ingresando solo 31, por lo que R intentará completar la matriz repitiendo el vector hasta completar los 35 valores. Si nosotros no queremos que suceda esto debemos de completar la cantidad de datos, existen varias maneras de solucionar este problema, este es uno de varias de ellas:
 
-```{r}
+```{r matriz23}
 vector <- 1:31
-matrix(c(vector,NA,NA,NA,NA), nrow = 5, ncol=7, byrow=T)
+matrix(
+    c(vector, NA, NA, NA, NA),
+    nrow = 5,
+    ncol = 7,
+    byrow = T
+    )
 ```
+
 Lo que sucede aquí es que al vector le agregamos 4 valores `NA` que significa que no están disponibles y ahora tenemos un vector de longitud 35, la cual entra exactamente en la matriz de 5*7.
+
 ### Data Frame
 
 Los dataframes, son una clase parecida a las matrices, sin embargo, poseen determinadas características que las hacen más útiles en ciertas ocasiones. 
@@ -657,24 +678,29 @@ Los dataframes, son una clase parecida a las matrices, sin embargo, poseen deter
 Al igual que los vectores y matrices, existen varias formas de crear data frames, una forma sencilla de crearlos es especificar los datos de las columnas como en el ejemplo siguiente:
 
 ```{r dataframe1}
-data.frame(columna1 = 1, columna2 = 1:5, columnay = LETTERS[1:5], z=runif(5))
+data.frame(
+    columna1 = 1,
+    columna2 = 1:5,
+    columnay = LETTERS[1:5],
+    z = runif(5)
+    )
 ```
 
 #### Crear un Data frame
 
 * Crear un data frame a partir de varios vectores:
 
-```{r}
+```{r dataframe2}
 vec1 <- c("Francisco", "Alberto", "Enrique", "Juan")
 vec2 <- c(500, 200, 650, 300)
 
-datos <- data.frame(Clientes = vec1, Puntos = vec2) 
+datos <- data.frame(Clientes = vec1, Puntos = vec2)
 datos
 ```
 
 * Crear un data frame a partir de una matriz:
 
-```{r}
+```{r dataframe3}
 Nombre <- c("Francisco", "Alberto", "Enrique", "Juan")
 Puntos <- c(500, 200, 650, 300)
 m <- matrix(c(Nombre, Puntos), ncol = 2)
@@ -686,7 +712,7 @@ datos
 
 Continuaremos trabajando con el siguiente data frame, es necesario recordar que se puede llamar de cualquier forma, en este caso se llamará de manera genérica, `df` :
 
-```{r}
+```{r dataframe4}
 Nombre <- c("Francisco", "Alberto", "Enrique", "Juan", "Francisco", "Alberto", "Enrique", "Juan")
 Puntos <- c(500, 200, 650, 300, 300, 350, 600, 400)
 df <- data.frame(Clientes = Nombre, Puntos = Puntos) 
@@ -695,77 +721,77 @@ df
 
 * Nombrar las columnas del data frame
 
-```{r}
+```{r dataframe5}
 colnames(df) <- c("Cliente", "Puntuación")
 df
 ```
 
 * Nombrar las filas del data frame
 
-```{r}
+```{r dataframe6}
 rownames(df) <- c("C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8")
 df
 ```
 
 * Nombrar las columnas y las filas de la matriz
 
-```{r}
+```{r dataframe7}
 dimnames(df) <- list(c("C-1", "C-2", "C-3", "C-4", "C-5", "C-6", "C-7", "C-8"),c("Cliente", "Puntos"))
 df
 ```
 
 * Obtener los primeros valores de un data frame (tres en este caso):
 
-```{r}
+```{r dataframe8}
 head(df,3)
 ```
 
 * Obtener los últimos valores de una matriz (tres en este caso):
 
-```{r}
+```{r dataframe9}
 tail(df,3)
 ```
 
 * Obtener los nombres de los clientes:
 
-```{r}
+```{r dataframe10}
 df$Cliente
 ```
 
 Una alternativa poco recomendada
 
-```{r}
+```{r dataframe11}
 df[,1]
 ```
 
 * Obtener los nombres ordenados:
 
-```{r}
+```{r dataframe12}
 sort(df$Cliente)
 ```
 
 
 * Obtener los nombres de los clientes sin repetir:
 
-```{r}
+```{r dataframe13}
 unique(df$Cliente)
 ```
 
 * Obtener los nombres de los clientes sin repetir y ordenados:
 
-```{r}
+```{r dataframe14}
 sort(unique(df$Cliente))
 ```
 
 * Obtener el dataframe ordenado según la cantidad de Puntos (ascendente):
 
-```{r}
+```{r dataframe15}
 df[order(df$Puntos), ]
 ```
 
 * Obtener el dataframe ordenado según la cantidad de Puntos (descendente):
 
-```{r}
+```{r dataframe16}
 df[order(df$Puntos, decreasing = TRUE), ]
 ```
 
@@ -773,13 +799,13 @@ df[order(df$Puntos, decreasing = TRUE), ]
 
 * Obtener al primer cliente y sus puntos:
 
-```{r}
+```{r dataframe17}
 df[1,]
 ```
 
 * Obtener la suma de los puntos:
 
-```{r}
+```{r dataframe18}
 sum(df$Puntos)
 ```
 
@@ -796,14 +822,14 @@ Observe que para crear una lista, es necesario usar la función `list(...)`, don
 
 > Recordando la forma de ver de un vector, era como la fila del banco, una lista es como tren, donde en cada vagón tiene una cantidad finita $n$ de objetos de la misma clase, en el primer vagón puede estar $x$ materia prima sin procesar, en el segundó vagón puede estar algo similar o algún otro tipo de cargamento y así sucesivamente. 
 
-```{r}
+```{r Demolista}
 lista <- list(1:10, c("A", "B", "C"))
 lista
 ```
 
 En este caso, para saber lo que contiene cada vagón, usaremos el doble corchete `[[i]]` donde i representa un número de los "vagones" de la lista.
 
-```{r}
+```{r lista1}
 lista[[1]]
 lista[[2]]
 ```
@@ -811,12 +837,12 @@ lista[[2]]
 También es posible crear listas nombradas, es decir para facilitar el acceso e interacción, las listas pueden tener nombres para sus objetos
 (O sus "vagones"" haciendo referencia a la explicación pasada).
 
-```{r}
+```{r lista2}
 Tren <- list(vagon1 = 1:10, vagon2 = c("A", "B", "C"))
 ```
 
 Ahora el acceso a la lista nombrada "Tren", se vuelve más sencilla
-```{r}
+```{r lista3}
 Tren$vagon1
 Tren$vagon2
 ```
@@ -825,63 +851,65 @@ Tren$vagon2
 
 * Para conocer la cantidad de elementos (vagones) en la lista:
 
-```{r}
+```{r lista4}
 length(lista)
 ```
 
 El caso es el mismo para una lista nombrada:
 
-```{r}
+```{r lista5}
 length(Tren)
 ```
 
 * Para conocer la cantidad de objetos dentro de un elemento (vagón) en la lista:
 
-```{r}
+```{r lista6}
 length(lista[[1]])
 ```
 
 Y para la lista nombrada se puede acceder la misma manera que en una lista no nombrada o a través de su nombre:
 
-```{r}
+```{r lista7}
 length(Tren[[1]])
 length(Tren$vagon1)
 ```
 
 * Acceder a un elemento específico dentro de un índice de la lista:
 
-```{r}
+```{r lista8}
 lista[[1]][5]
 ```
 
 O lo que es equivalente en una lista nombrada:
 
-```{r}
+```{r lista9}
 Tren$vagon1[5]
 ```
 
 * Añadir más elementos a la lista:
 
-```{r}
+```{r lista10}
 lista[[3]] <- c(10, 20, 30, 40, 50)
 lista
 ```
 
 O en una lista nombrada
-```{r}
+
+```{r lista11}
 Tren$vagon3 <- c(10, 20, 30, 40, 50)
 Tren
 ```
 
 * Modificar un nombre (o agregar un nombre en caso de que no tenga):
 
-```{r}
+```{r lista12}
 names(lista)[1] <- "vagon1"
 lista
 ```
 
 * Modificar todos los nombres (o agregarle nombres en caso de que no tenga):
-```{r}
+
+```{r lista13}
 names(lista) <- c("vagon1", "vagon2", "vagon3")
 lista
 ```
@@ -990,7 +1018,7 @@ Cuando se utilizan las funciones `read.table(...)` o `load(...)` utilizan la rut
 
 Si por algún motivo se desconoce cuáles son los datos que se están cargando (No vienen documentados de alguna manera, etc.), la función `load(...)` incluye el parámetro `verbose` que por default el `FALSE`, pero si cambiamos dicho parámetro a `TRUE`, nos dirá que el nombre del objeto que estamos cargando al entorno de **R**, así podremos llamarlo y ver qué es lo que contiene.
 
-```{r}
+```{r exaload}
 load("nombre.RData", verbose = TRUE)
 
 foo
@@ -1032,18 +1060,18 @@ El argumento 2 en `apply(x,2,mean)` indica que el cálculo del promedio debe rea
 
 Dicha librería no se encuentra instalada por defecto en **R** para instalarla, como se vio en los primeros pasos de este capítulo, se usará el comando:
 
-```{r, eval=F}
+```{r dplyr1, eval=F}
 install.packages("dplyr")
 ```
 
 Para aprender a usar esta librería usaremos el comando:
-```{r, eval=F}
+```{r dplyr2, echo=F, message=F}
 library(dplyr)
 ```
 
 Y utilizaremos los siguientes datos: 
 
-```{r}
+```{r dplyr3}
 v1 <- c("Perro", "Gato", "Lagarto", "Orca", "Águila", "Jirafa")
 v2 <- c("Mamífero", "Mamífero", "Reptil", "Mamífero", "Ave", "Mamífero")
 v3 <- c("Carnívoro", "Carnívoro", "Carnívoro", "Carnívoro", "Carnívoro", "Herbívoro")
@@ -1053,7 +1081,7 @@ Animales <- data.frame(Nombre = v1, Especie = v2, Alimentacion = v3, Tiempo_Vida
 
 Los datos se detallan a continuación:
 
-```{r echo=F}
+```{r dplyr4, echo=F}
 knitr::kable(Animales)
 ```
 
@@ -1063,29 +1091,29 @@ knitr::kable(Animales)
 
 Por ejemplo, filtraremos por los animales mamíferos:
 
-```{r}
+```{r dplyr5}
 Mamiferos <- filter(Animales, Especie == "Mamífero") 
 ```
 
-```{r, eval=F}
+```{r dplyr6, eval=F}
 Mamiferos
 ```
 
-```{r echo=F}
+```{r dplyr7, echo=F}
 knitr::kable(Mamiferos)
 ```
 
 Ahora filtraremos por los animales mamíferos y reptiles que sean carnívoros y tengan un tiempo de vida mayor a 19 años:
 
-```{r}
+```{r dplyr8}
 filtrados <- filter(Animales, Especie == "Mamífero" | Especie == "Reptil", Alimentacion == "Carnívoro", Tiempo_Vida > 19) 
 ```
 
-```{r, eval=F}
+```{r dplyr9, eval=F}
 filtrados
 ```
 
-```{r echo=F}
+```{r dplyr10, echo=F}
 knitr::kable(filtrados)
 ```
 
@@ -1093,15 +1121,15 @@ Para seleccionar datos por su posición `dplyr` provee la función `slice(...)`
 
 Por ejemplo, seleccionaremos los primeros dos animales.
 
-```{r}
+```{r dplyr11}
 seleccionados <- slice(Animales, 1:2)
 ```
 
-```{r, eval=F}
+```{r dplyr12, eval=F}
 seleccionados
 ```
 
-```{r echo=F}
+```{r dplyr13, echo=F}
 knitr::kable(seleccionados)
 ```
 
@@ -1111,29 +1139,29 @@ knitr::kable(seleccionados)
 La función `arrange(...)` funciona de manera similar a `filter(...)` solo que, en vez de filtrar los datos, los ordena.
 
 Por ejemplo, ordenaremos los animales por su especie y luego por su tiempo de vida
-```{r}
+```{r dplyr14}
 ordenados <-  arrange(Animales, Especie, Tiempo_Vida)
 ```
 
-```{r, eval=F}
+```{r dplyr15, eval=F}
 ordenados
 ```
 
-```{r echo=F}
+```{r dplyr16, echo=F}
 knitr::kable(ordenados)
 ```
 
 Para ordenarlos de manera descendente usaremos la función `desc(...)`
 
-```{r}
+```{r dplyr17}
 ordenados <-  arrange(Animales, Especie, desc(Tiempo_Vida))
 ```
 
-```{r, eval=F}
+```{r dplyr18, eval=F}
 ordenados
 ```
 
-```{r echo=F}
+```{r dplyr19, echo=F}
 knitr::kable(ordenados)
 ```
 
@@ -1141,15 +1169,15 @@ knitr::kable(ordenados)
 
 De manera seguida tendremos que trabajar con grandes cantidades de datos con varias columnas, pero en el momento, solo algunas podrán ser de tu interés la función `select(...)` permite un rápido trabajo para seleccionar dichas columnas, por ejemplo, queremos conocer el tiempo de vida de cada animal, entonces:
 
-```{r}
+```{r dplyr20}
 Tiempo_vida_por_Animal <- select(Animales, Nombre, Tiempo_Vida)
 ```
 
-```{r, eval=F}
+```{r dplyr21, eval=F}
 Tiempo_vida_por_Animal
 ```
 
-```{r echo=F}
+```{r dplyr22, echo=F}
 knitr::kable(Tiempo_vida_por_Animal)
 ```
 
@@ -1157,15 +1185,15 @@ knitr::kable(Tiempo_vida_por_Animal)
 
 Para renombrar una columna, la librería `dplyr` provee también una útil función llamada `rename(...)`, con ella cambiaremos el nombre de la columna `Nombre` del data frame `Animales` por `Animal`:
 
-```{r}
+```{r dplyr23}
 Animales <- rename(Animales, Animal = Nombre)
 ```
 
-```{r, eval=F}
+```{r dplyr24, eval=F}
 Animales
 ```
 
-```{r echo=F}
+```{r dplyr25, echo=F}
 knitr::kable(Animales)
 ```
 
@@ -1173,29 +1201,22 @@ knitr::kable(Animales)
 
 Otra útil función dentro de esta librería es la función `distinct(...)` que encuentra los valores distintos en una tabla, por ejemplo las Especies de los animales:
 
-```{r}
+```{r dplyr26}
 Especies <- distinct(Animales, Especie)
-```
-
-```{r, eval=F}
 Especies
-```
-
-```{r echo=F}
-knitr::kable(Especies)
 ```
 
 O también las especies y alimentación 
 
-```{r}
+```{r dplyr27}
 Especie_Alimentacion <- distinct(Animales, Especie, Alimentacion)
 ```
 
-```{r, eval=F}
+```{r dplyr28, eval=F}
 Especie_Alimentacion
 ```
 
-```{r echo=F}
+```{r dplyr29, echo=F}
 knitr::kable(Especie_Alimentacion)
 ```
 
@@ -1203,15 +1224,15 @@ knitr::kable(Especie_Alimentacion)
 
 Es posible modificar las columnas existentes o agregar nuevas columnas con la función `mutate(...)` de la librería `dplyr`, por ejemplo, agregaremos dos años al tiempo de vida de los animales y añadiremos también otra columna con datos `NA`.
 
-```{r}
+```{r dplyr30}
 Animales2 <- mutate(Animales, Tiempo_Vida = Tiempo_Vida + 2, Otra_Columna = NA)
 ```
 
-```{r, eval=F}
+```{r dplyr31, eval=F}
 Animales2
 ```
 
-```{r echo=F}
+```{r dplyr32, echo=F}
 knitr::kable(Animales2)
 ```
 
@@ -1219,48 +1240,39 @@ knitr::kable(Animales2)
 
 La función `summarise(...)`. Colapsa un data frame en una fila, por ejemplo el tiempo de vida en promedio de los animales.
 
-```{r}
+```{r dplyr33}
 Vida_Promedio <- summarise(Animales, Tiempo_Vida = mean(Tiempo_Vida, na.rm = TRUE))
-```
-
-```{r, eval=F}
 Vida_Promedio
-```
-
-```{r echo=F}
-knitr::kable(Vida_Promedio)
 ```
 
 #### Datos agrupados
 
 `group_by(...)` aunque no modifica los datos, sirve para trabajar en conjunto con la función `summarise(...)`, por ejemplo, el tiempo de vida promedio entre las especies.
 
-```{r}
+```{r dplyr34}
 Agrupados <- group_by(Animales, Especie)
 Especie_Vida_Promedio <- summarise(Agrupados, Tiempo_Vida = mean(Tiempo_Vida, na.rm = TRUE))
 ```
 
-```{r, eval=F}
+```{r dplyr35, eval=F}
 Especie_Vida_Promedio
 ```
 
-```{r echo=F}
+```{r dplyr36, echo=F}
 knitr::kable(Especie_Vida_Promedio)
 ```
 
 O el tiempo de vida en promedio por Especie y su alimentación:
 
-```{r}
+```{r dplyr37}
 Agrupados <- group_by(Animales, Especie, Alimentacion)
 EspecieAlimentacion_Vida_Promedio <- summarise(Agrupados, Tiempo_Vida = mean(Tiempo_Vida, na.rm = TRUE))
 ```
 
-```{r, eval=F}
+```{r dplyr38, eval=F}
 EspecieAlimentacion_Vida_Promedio
 ```
 
-```{r echo=F}
+```{r dplyr39, echo=F}
 knitr::kable(EspecieAlimentacion_Vida_Promedio)
 ```
-
-
