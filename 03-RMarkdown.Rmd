@@ -292,7 +292,7 @@ La siguiente tabla ya se visualiza:
 
 ### Código y Resaltado de Sintaxis
 
-Los bloques de código son parte de la sintaxis de _Markdown_, pero, el resaltado de sintaxis no lo es, sin embargo, muchos programas que trabajan con _Markdown_ para exportarlo a HTML ya lo incluyen, tal es el caso como RStudio con _RMarkdown_, que nos permitira crear bloques especiales para lenguajes como _R_, _Python_, _Sql_, _Bash_, _RCpp_. Existen otros programas que incluyen otros lenguajes para el resaltado de sintaxis, por el momento veremos más a detalle _RMarkdown_ y su forma de trabajar uniendo _Markdown_ y _R_.
+Los bloques de código son parte de la sintaxis de _Markdown_, pero, el resaltado de sintaxis no lo es, sin embargo, muchos programas que trabajan con _Markdown_ para exportarlo a HTML ya lo incluyen, tal es el caso como RStudio con _RMarkdown_, que nos permitirá crear bloques especiales para lenguajes como _R_, _Python_, _Sql_, _Bash_, _RCpp_. Existen otros programas que incluyen otros lenguajes para el resaltado de sintaxis, por el momento veremos más a detalle _RMarkdown_ y su forma de trabajar uniendo _Markdown_ y _R_.
 
 ```
 En **Markdown** para resaltar partes de `código` es necesario ponerlo entre `comillas inversas`.
@@ -390,7 +390,7 @@ Cuando estamos trabajando con un archivo de RMarkdown (la extensión es .Rmd), *
 
 La opción de [Knit to HTML] permite traducir de manera sencilla y rápida el archivo `.Rmd` a `.html`, siempre y cuando no tenga errores al ejecutar los comandos de **R**.
 
-El botón Knirt tiene te funciones, compilar Rmarkdown (desde ahora .RMD) a HTML, compilar .RMD a PDF y compilar .RMD a .docx (Word), para HTML solo tienes que presionar el botón o compile HTML, que sale en el menú de la flechita que está justo al lado derecho, para PDF es más complicado, requieres de LaTeX, supondremos que no lo conoces, así que no podrás compilar a PDF y PPT último para Word, solo falta presionar de nuevo el menú y escoger compile to Word
+El botón Knirt tiene te funciones, compilar Rmarkdown (desde ahora .RMD) a HTML, compilar .RMD a PDF y compilar .RMD a .docx (Word), para HTML solo tienes que presionar el botón o compile HTML, que sale en el menú presionando el triangulo que está justo al lado derecho, para PDF es más complicado, requieres de LaTeX, supondremos que no lo conoces, así que no podrás compilar a PDF y PPT último para Word, solo falta presionar de nuevo el menú y escoger compile to Word
 
 #### Compilar RMarkdown a PDF
 

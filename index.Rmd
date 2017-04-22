@@ -51,7 +51,10 @@ En este caso, Sera necesario instalar RStudio para realizar los ejercicios de ma
 
 Y finalmente sera necesario tener instalados el siguiente paquete:
 
-`install.packages("rmarkdown", dependencies = TRUE)`
 
-Con dicho paquete crearemos documentos dinamicos en la tercera parte del curso.
+```{r, eval=F}
+install.packages("dplyr")
+install.packages("rmarkdown", dependencies = TRUE)
+```
 
+Dichos paquetes nos servirán para la manipulación  de datos (dplyr) y crear documentos dinámicos en la tercera parte del curso.

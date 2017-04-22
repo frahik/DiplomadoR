@@ -53,7 +53,7 @@ Además de tener todas estás funcionalidades a la mano, también es posible acc
 
 Este panel es la consola bien conocida de **R**, donde podremos interactuar directamente con ella o a través del panel de código.
 
-Existe un comando que nos servirá de ayuda en caso de que ocupemos abortar la ejecución actual de **R** `[CONTROL] + [C]`. Además de que al igual que el Panel de código, el panel de consola cuenta con autocompletado, podemos ir escribiendo un comando y con la tecla `[TAB]` podemos acceder al autocompletado y en caso de tener dudas podemos usar la tecla `[F1]` para acceder de manera rápida a la ayuda.
+Existe un comando que nos servirá de ayuda en caso de que ocupemos abortar la ejecución actual de **R** `[CONTROL] + [C]`. Además de que al igual que el Panel de código, el panel de consola cuenta con auto-completado, podemos ir escribiendo un comando y con la tecla `[TAB]` podemos acceder al auto-completado y en caso de tener dudas podemos usar la tecla `[F1]` para acceder de manera rápida a la ayuda.
 
 ### Panel de entorno
 
@@ -243,7 +243,7 @@ En la parte superior derecha está el botón para crear un nuevo proyecto
 
 ![Nuevo Proyecto](./assets/images/ProyectNone.png)
 
-Si accedemos al botón podremos ver las siguientes opciones, New Project desplegará una ventana para ayudarnos a escoger entre varias opciones.
+Si accedemos al botón podremos ver las siguientes opciones, [New Project] desplegará una ventana para ayudarnos a escoger entre varias opciones.
 
 ![Menú de opciones](./assets/images/ProyectOptions.png)
 
