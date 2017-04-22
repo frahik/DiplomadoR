@@ -44,6 +44,6 @@
 | Cauchy                   | dcauchy(...)        | pcauchy(...)           | qcauchy(...)    | rcauchy(...)              |
 | Wishart                  | dwish(...)          |                        |                 | rwish(...)                |
 
-> Nota, algunas de estas distribuciones se encuentran en las librerías de MASS, MCMCpack y mvtnorm.
+> Nota: algunas de estas distribuciones se encuentran en las librerías de MASS, MCMCpack y mvtnorm.
 
 

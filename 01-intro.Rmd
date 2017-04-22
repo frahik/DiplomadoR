@@ -433,13 +433,15 @@ matrix(data = NA, nrow = 1, ncol = 1, byrow = FALSE, dimnames = NULL)
 
 Donde `matrix()` corresponde al nombre de la función y todo lo que está dentro de los paréntesis son los argumentos de dicha función.
 
-| Argumentos | Significado del argumento        |
-|------------|----------------------------------|
-|   `data`   |  Son los datos a ingresar en la matriz.  |
-|   `nrow`   |  Número deseado de filas.        |
-|   `ncol`   |  Número deseado de columnas.     |
-|   `byrow`  |  Valor lógico. Si es falso (valor por defecto), la matriz se llena por orden columna, de otra manera se llenará primero por filas. |
-| `dimnames` |  Utilizado para darles nombres a las filas y a las columnas, respectivamente. |
+
+| Argumentos | Significado del argumento                                                                                                         |
+|:----------:|-----------------------------------------------------------------------------------------------------------------------------------|
+|   `data`   | Son los datos a ingresar en la matriz.                                                                                            |
+|   `nrow`   | Número deseado de filas.                                                                                                          |
+|   `ncol`   | Número deseado de columnas.                                                                                                       |
+|   `byrow`  | Valor lógico. Si es falso (valor por defecto), la matriz se llena por orden columna, de otra manera se llenará primero por filas. |
+| `dimnames` | Utilizado para darles nombres a las filas y a las columnas, respectivamente.                                                      |
+
 
 #### Crear una matriz 
 
@@ -971,13 +973,13 @@ read.csv(file, header = TRUE, sep = ",", dec = ".", ...)
 
 Dónde:
 
-| Argumentos  | Significado o uso  |
-|-------------|-------------------|
-| `file`      | Ruta al archivo, en caso de estar en el mismo directorio de trabajo poner solo el nombre del archivo, de otro modo ingresar la ruta completa  |
-| `header`    | Valor lógico para determinar si el archivo incluye encabezados en la primera línea.   |
-| `sep`       | Este campo sirve para especificar el carácter de separación. |
-| `dec`       | El carácter usado para los puntos decimales  |
-| `...`       | Ver la documentación para argumentos extras   |
+| Argumentos | Significado o uso                       |
+|------------|----------------------------------------------------|
+| `file`     | Ruta al archivo, en caso de estar en el mismo directorio de trabajo poner solo el nombre del archivo, de otro modo ingresar la ruta completa |
+| `header`   | Valor lógico para determinar si el archivo incluye encabezados en la primera línea.                                                          |
+| `sep`      | Este campo sirve para especificar el carácter de separación.                                                                                 |
+| `dec`      | El carácter usado para los puntos decimales                                                                                                  |
+| `...`      | Ver la documentación para argumentos extras                                                                                                  |
 
 Un ejemplo seria el siguiente:
 
@@ -1040,11 +1042,12 @@ apply(X, MARGIN, FUN)
 
 Donde `apply()` corresponde al nombre de la función y todo lo que está dentro de los paréntesis son los argumentos de dicha función.
 
-| Argumentos | Significado |
-|------------|------------|
-|   `X`      |Es el vector o matriz original|
-|   `MARGIN` |Indica donde se aplicara la función (1 indica fila, 2 indica columna)      |
-|   `FUN`    |Es la función a aplicar (Suma, promedio, entre muchas otras)     |
+| Argumentos | Significado                                                           |
+|------------|-----------------------------------------------------------------------|
+| `X`        | Es el vector o matriz original                                        |
+| `MARGIN`   | Indica donde se aplicara la función (1 indica fila, 2 indica columna) |
+| `FUN`      | Es la función a aplicar (Suma, promedio, entre muchas otras)          |
+
 
 Para ver un ejemplo, crearemos una matriz con 9 valores y sacaremos el promedio por columna.
 

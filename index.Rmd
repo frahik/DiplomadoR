@@ -20,7 +20,7 @@ Pero como muchos somos algo despistados, estas son las maneras más sencillas pa
 
 |Sistema Operativo | Método   |
 |------------------|----------|
-|   Windows        | [CRAN-R-Windows.Exe](https://cran.itam.mx/bin/windows/base/R-3.3.3-win.exe)  |
+|   Windows        | [CRAN-R-Windows.exe](https://cran.itam.mx/bin/windows/base/R-3.3.3-win.exe)  |
 |Debian y derivados|`sudo apt-get install r-base`                           |
 |Redhat y derivados| `sudo yum install R-core R-devel`                      |
 |Arch y derivados  | `sudo pacman -S r`                                     |
@@ -41,13 +41,13 @@ Una vez instalado, un entorno de desarrollo integrado será necesario para facil
 
 En este caso, Sera necesario instalar RStudio para realizar los ejercicios de manera cómoda, por lo que, para instalar RStudio para los distintos Sistemas Operativos podemos hacerlo desde la liga principal, o para evitar buscar podemos usar la liga que más nos convenga de la siguiente tabla.
 
-| Rstudio | enlace  |
-|---------|---------|
-| Windows | https://download1.rstudio.org/RStudio-1.0.136.exe |
-| Linux (Debian y derivados)   | https://download1.rstudio.org/rstudio-1.0.136-amd64.deb |
-| Linux (RedHat y derivados)   | https://download1.rstudio.org/rstudio-1.0.136-x86_64.rpm |
+|Sistema Operativo | Método   |
+|------------------|----------|
+| Windows (7 en adelante) | [RStudio-Windows.exe](https://download1.rstudio.org/RStudio-1.0.136.exe) |
+| Linux (Debian y derivados)   | [RStudio-Linux.deb](https://download1.rstudio.org/rstudio-1.0.136-amd64.deb) |
+| Linux (RedHat y derivados)   | [RStudio-Linux.rpm](https://download1.rstudio.org/rstudio-1.0.136-x86_64.rpm) |
 | Linux (Arch y derivados)     | `sudo pacman -S rstudio-desktop` |
-| Mac 	 | https://download1.rstudio.org/RStudio-1.0.136.dmg |
+| Mac 	 | [RStudio-Mac.dmg](https://download1.rstudio.org/RStudio-1.0.136.dmg) |
 
 Y finalmente sera necesario tener instalados el siguiente paquete:
 

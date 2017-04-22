@@ -23,29 +23,31 @@ En esta ventana podremos controlar el resaltado de sintaxis para hacerlo lo más
 ![Opciones](./assets/images/Panel_Script_Options.png)
 
 
-| Identificador   | Uso o significado           | 
-|-----------------|-----------------------------| 
-|       1         | Pestaña de trabajo actual.  | 
-|       2         | Abrir el código en una ventana independiente.  | 
-|       3         | Guardar el archivo del código actual.   | 
-|       4         | Si esta seleccionado, el código será ejecutado cada vez que se guarde el archivo. | 
-|       5         | Buscar o Reemplazar una parte del código.  |
-|       6         | Herramientas para el código. |
-|       7         | Genera un reporte del código actual en base a los comentarios en el código (No recomendable). | 
-|       8         | Ejecutar la línea de código seleccionada. |
-|       9         | Se vuelve a ejecutar el bloque ejecutado anteriormente. | 
-|      10         | Ejecutar todo el código con el comando `source(...)`. |
-|      11         | Despliega una ventana para ayudar en la navegación del código (Ideal para navegar entre grandes scripts). |
+| Identificador | Uso o significado                                                                                         |
+|---------------|-----------------------------------------------------------------------------------------------------------|
+| 1             | Pestaña de trabajo actual.                                                                                |
+| 2             | Abrir el código en una ventana independiente.                                                             |
+| 3             | Guardar el archivo del código actual.                                                                     |
+| 4             | Si esta seleccionado, el código será ejecutado cada vez que se guarde el archivo.                         |
+| 5             | Buscar o Reemplazar una parte del código.                                                                 |
+| 6             | Herramientas para el código.                                                                              |
+| 7             | Genera un reporte del código actual en base a los comentarios en el código (No recomendable).             |
+| 8             | Ejecutar la línea de código seleccionada.                                                                 |
+| 9             | Se vuelve a ejecutar el bloque ejecutado anteriormente.                                                   |
+| 10            | Ejecutar todo el código con el comando `source(...)`.                                                     |
+| 11            | Despliega una ventana para ayudar en la navegación del código (Ideal para navegar entre grandes scripts). |
+
 
 Además de tener todas estás funcionalidades a la mano, también es posible acceder a algunas de ellas de manera rápida a través del teclado como se puede observar en la siguiente tabla.
 
-| Comando             |       Uso       | 
-|---------------------|-----------------|
-| [Control] + [Shift] + [A] | Formatea el código de **R** que se encuentre seleccionado. | 
-| [Tab]               | Abre la opción de auto-completado en función a lo que se va escribiendo. |
-|[Control] + [Enter]  | Ejecutar la línea que se encuentre seleccionada (pueden ser varias).  | 
-|[Control] + [S]      | Salvar el archivo en el que se está trabajando. |
-| [F1]                | Acceder a la ayuda del comando que se está escribiendo o esté seleccionado. |
+| Comando                   | Uso                                                                         |
+|---------------------------|-----------------------------------------------------------------------------|
+| [Control] + [Shift] + [A] | Formatea el código de **R** que se encuentre seleccionado.                  |
+| [Tab]                     | Abre la opción de auto-completado en función a lo que se va escribiendo.    |
+| [Control] + [Enter]       | Ejecutar la línea que se encuentre seleccionada (pueden ser varias).        |
+| [Control] + [S]           | Salvar el archivo en el que se está trabajando.                             |
+| [F1]                      | Acceder a la ayuda del comando que se está escribiendo o esté seleccionado. |
+
 
 ### Panel de Consola
 
@@ -69,19 +71,18 @@ De manera superficial, este panel en la mayoría de los casos nos puede servir p
 
 ![Opciones de Entorno](./assets/images/Panel_Entorno_Options.png)
 
-| Identificador   | Uso o significado           | 
-|-----------------|-----------------------------| 
-|       1         | Cargar un área de trabajo.  | 
-|       2         | Guardar el área de trabajo actual.  | 
-|       3         | Importar una nueva base de datos (desde SPSS, CSV, Excel y otros).   | 
-|       4         | Limpiar el área de trabajo actual (Entorno). | 
-|       5         | Alternar la vista de los datos entre modo lista y modo tabla.  |
-|       6         | Mostrar los datos creados por varios entornos (Entorno global o a nivel de paquetes). |
-|       7         | Permite filtrar y buscar algún objeto de interés por su nombre. | 
-|       8         | Así se muestra un vector. |
-|       9         | Así se muestra una matriz y un dataframe, la diferencia se encuentra en que al crear un dataframe aparece un botón para desplegar sus datos. | 
-|      10         | Muestra los datos que contiene una matriz o un dataframe específico. |
-
+| Identificador | Uso o significado                                                                                                                            |
+|---------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| 1             | Cargar un área de trabajo.                                                                                                                   |
+| 2             | Guardar el área de trabajo actual.                                                                                                           |
+| 3             | Importar una nueva base de datos (desde SPSS, CSV, Excel y otros).                                                                           |
+| 4             | Limpiar el área de trabajo actual (Entorno).                                                                                                 |
+| 5             | Alternar la vista de los datos entre modo lista y modo tabla.                                                                                |
+| 6             | Mostrar los datos creados por varios entornos (Entorno global o a nivel de paquetes).                                                        |
+| 7             | Permite filtrar y buscar algún objeto de interés por su nombre.                                                                              |
+| 8             | Así se muestra un vector.                                                                                                                    |
+| 9             | Así se muestra una matriz y un dataframe, la diferencia se encuentra en que al crear un dataframe aparece un botón para desplegar sus datos. |
+| 10            | Muestra los datos que contiene una matriz o un dataframe específico.                                                                         |
 
 ### Panel de historial 
 
@@ -92,16 +93,13 @@ El panel del historial es otro panel bastante simple, su importancia radica en q
 
 ![Opciones Historial](./assets/images/Panel_Historia_Options.png)
 
-| Identificador   | Uso o significado           | 
-|-----------------|-----------------------------| 
-|       1         | Cargar un historial.  | 
-|       2         | Guardar el historial en un archivo.  | 
-|       3         | Mandar al panel de consola el comando seleccionado.   | 
-|       4         | Mandar al panel de código el comando seleccionado. | 
-|       5         | Remover los comandos seleccionados del historial. |
-|       6         | Eliminar todo el historial de comandos usados. |
-|       7         | Permite filtrar y buscar algún comando de interés por parte de su contenido. | 
-
+| Identificador | Uso o significado                                   |
+|---------------|-----------------------------------------------------|
+| 1             | Cargar un historial.                                |
+| 2             | Guardar el historial en un archivo.                 |
+| 3             | Mandar al panel de consola el comando seleccionado. |
+| 4             | Mandar al panel de código el comando seleccionado.  |
+| 5             | Remover los comandos seleccionados del historial.   |
 
 ### Panel de Construcción
 
@@ -112,11 +110,11 @@ Posiblemente el panel menos utilizado, solo aparece cuando estamos construyendo 
 
 ![Opciones Construcción](./assets/images/Panel_Construccion_Options.png)
 
-| Identificador   | Uso o significado           | 
-|-----------------|-----------------------------| 
-|       1         | Construir o recargar el paquete.  | 
-|       2         | Revisar que el paquete este correctamente instalado (entre otras pequeñas funciones).  | 
-|       3         | Diversas opciones que permiten hacer pruebas, empaquetar los paquetes para distribución entre otras funciones.   | 
+| Identificador | Uso o significado                                                                                              |
+|---------------|----------------------------------------------------------------------------------------------------------------|
+| 1             | Construir o recargar el paquete.                                                                               |
+| 2             | Revisar que el paquete este correctamente instalado (entre otras pequeñas funciones).                          |
+| 3             | Diversas opciones que permiten hacer pruebas, empaquetar los paquetes para distribución entre otras funciones. |
 
 
 ### Panel de Control de versiones (Git)
@@ -130,19 +128,19 @@ La imagen anterior es una muestra de del uso de este panel y las opciones que se
 
 ![Opciones Git](./assets/images/Panel_Git_Options.png)
 
-| Identificador   | Uso o significado           | 
-|-----------------|-----------------------------| 
-|       1         | Muestra las diferencias entre la antigua versión de un archivo y su nueva versión.  | 
-|       2         | Comenta los archivos seleccionados (staged) para guardar una nueva versión de ellos.  | 
-|       3         | Recupera las últimas modificaciones del repositorio realizadas en otras computadoras.  | 
-|       4         | Sube al repositorio las últimas modificaciones "comentadas (ver identificador 2)" en la máquina. | 
-|       5         | Muestra un historial de las modificaciones realizadas. |
-|       6         | Otras opciones (Ignorar un archivo seleccionado o revertir la modificación) |
-|       7         | Rama (branch) a la que se desea subir las modificaciones del archivo. | 
-|       8         | Recargar el panel. |
-|       9         | Caja para seleccionar los archivos a comentar (ver identificador 2), ignorar o revertir (ver identificador 7) | 
-|      10         | El estado en el cuál se encuentra el archivo, (M es Modificado, ? es que aún no se encuentra en el repositorio, A significa que se agregará al repositorio y D es que se elimina del repositorio. |
-|      11         | Es el archivo que está siendo supervisado por el controlador de versiones. |
+| Identificador | Uso o significado                                                                                                                                                                                 |
+|---------------|------------------------------------------------------------------------------|
+| 1             | Muestra las diferencias entre la antigua versión de un archivo y su nueva versión.                                                                                                                |
+| 2             | Comenta los archivos seleccionados (staged) para guardar una nueva versión de ellos.                                                                                                              |
+| 3             | Recupera las últimas modificaciones del repositorio realizadas en otras computadoras.                                                                                                             |
+| 4             | Sube al repositorio las últimas modificaciones "comentadas (ver identificador 2)" en la máquina.                                                                                                  |
+| 5             | Muestra un historial de las modificaciones realizadas.                                                                                                                                            |
+| 6             | Otras opciones (Ignorar un archivo seleccionado o revertir la modificación)                                                                                                                       |
+| 7             | Rama (branch) a la que se desea subir las modificaciones del archivo.                                                                                                                             |
+| 8             | Recargar el panel.                                                                                                                                                                                |
+| 9             | Caja para seleccionar los archivos a comentar (ver identificador 2), ignorar o revertir (ver identificador 7)                                                                                     |
+| 10            | El estado en el cuál se encuentra el archivo, (M es Modificado, ? es que aún no se encuentra en el repositorio, A significa que se agregará al repositorio y D es que se elimina del repositorio. |
+| 11            | Es el archivo que está siendo supervisado por el controlador de versiones.                                                                                                                        |
 
 
 ### Panel de archivos
@@ -155,13 +153,13 @@ La imagen anterior es la vista que comúnmente se obtiene donde las carpetas que
 
 ![Opciones Archivos](./assets/images/Panel_Archivos_Options.png)
 
-| Identificador   | Uso o significado           | 
-|-----------------|-----------------------------| 
-|       1         | Crear una nueva carpeta en el directorio de trabajo actual.  | 
-|       2         | Seleccionar algún archivo o carpeta para realizar alguna de las operaciones de los identificadores siguientes. | 
-|       3         | Eliminar el archivo o carpeta seleccionado.  | 
-|       4         | Renombrar el archivo o carpeta seleccionado. | 
-|       5         | Opciones varias, Copiar o Mover el archivo seleccionado, seleccionar la carpeta actual como directorio de trabajo (reemplaza al comando `setwd(...)`) , entre otras opciones. |
+| Identificador | Uso o significado                                                                                                                                                             |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1             | Crear una nueva carpeta en el directorio de trabajo actual.                                                                                                                   |
+| 2             | Seleccionar algún archivo o carpeta para realizar alguna de las operaciones de los identificadores siguientes.                                                                |
+| 3             | Eliminar el archivo o carpeta seleccionado.                                                                                                                                   |
+| 4             | Renombrar el archivo o carpeta seleccionado.                                                                                                                                  |
+| 5             | Opciones varias, Copiar o Mover el archivo seleccionado, seleccionar la carpeta actual como directorio de trabajo (reemplaza al comando `setwd(...)`) , entre otras opciones. |
 
 ### Panel de gráficos ![Panel de gráficos](./assets/images/Panel_Grafica.png)
 
@@ -170,15 +168,15 @@ La función del panel de gráficos es mostrarnos en este espacio los gráficos q
 ![Opciones Graficos](./assets/images/Panel_Grafica_Options.png)
 Las opciones más importantes en el panel son las siguientes:
 
-| Identificador   | Uso o significado           | 
-|-----------------|-----------------------------| 
-|       1         | Ir a la gráfica anterior o siguiente.  | 
-|       2         | Realizar Zoom a la gráfica actual.  | 
-|       3         | Exportar la gráfica actual.  | 
-|       4         | Remover la gráfica actual. | 
-|       5         | Limpiar el entorno de todas las gráficas realizadas. |
-|       6         | Publicar la gráfica en _RPubs_.|
-|       7         | Volver a cargar el panel. | 
+| Identificador | Uso o significado                                    |
+|---------------|------------------------------------------------------|
+| 1             | Ir a la gráfica anterior o siguiente.                |
+| 2             | Realizar Zoom a la gráfica actual.                   |
+| 3             | Exportar la gráfica actual.                          |
+| 4             | Remover la gráfica actual.                           |
+| 5             | Limpiar el entorno de todas las gráficas realizadas. |
+| 6             | Publicar la gráfica en _RPubs_.                      |
+| 7             | Volver a cargar el panel.                            |
 
 
 ### Panel de Paquetes 
@@ -191,12 +189,12 @@ Sin duda un panel que tendrá mucha utilidad, permite conocer de manera rápida 
 
 Dentro de las opciones de este panel tenemos:
 
-| Identificador   | Uso o significado           | 
-|-----------------|-----------------------------| 
-|       1         | Instalar uno o varios paquetes.  | 
-|       2         | Actualizar todos los paquetes que tengan una nueva versión disponible.  | 
-|       3         | Buscar un paquete.  | 
-|       4         | Actualizar el panel. | 
+| Identificador | Uso o significado                                                      |
+|---------------|------------------------------------------------------------------------|
+| 1             | Instalar uno o varios paquetes.                                        |
+| 2             | Actualizar todos los paquetes que tengan una nueva versión disponible. |
+| 3             | Buscar un paquete.                                                     |
+| 4             | Actualizar el panel.                                                   |
 
 ### Panel de ayuda
 
@@ -206,13 +204,13 @@ Otro panel sencillo y de gran utilidad, aquí se mostrará la documentación de 
 
 ![Opciones Ayuda](./assets/images/Panel_Ayuda_Options.png)
 
-| Identificador   | Uso o significado           | 
-|-----------------|-----------------------------| 
-|       1         | Navegar entre las paginas consultadas.  | 
-|       2         | Ir a la página inicial de ayuda.  | 
-|       3         | Imprimir la hoja de ayuda actual. | 
-|       4         | Mostrar el panel en una ventana separada (por si no nos ajusta el tamaño de la ventana). | 
-|       5         | Buscar ayuda con un paquete o función especifico.  | 
+| Identificador | Uso o significado                                                                        |
+|---------------|------------------------------------------------------------------------------------------|
+| 1             | Navegar entre las paginas consultadas.                                                   |
+| 2             | Ir a la página inicial de ayuda.                                                         |
+| 3             | Imprimir la hoja de ayuda actual.                                                        |
+| 4             | Mostrar el panel en una ventana separada (por si no nos ajusta el tamaño de la ventana). |
+| 5             | Buscar ayuda con un paquete o función especifico.                                        |
 
 ### Panel de visualización
 
@@ -224,11 +222,11 @@ Las opciones de este panel son reducidas pues es como un navegador de internet p
 
 ![Opciones de Visualización](./assets/images/Panel_Viewer_Options.png)
 
-| Identificador   | Uso o significado           | 
-|-----------------|-----------------------------| 
-|       1         | Remover la vista actual.  | 
-|       2         | Remover todas las vistas.  | 
-|       3         | Abrir la vista actual en nuestro navegador web predeterminado. | 
+| Identificador | Uso o significado                                              |
+|---------------|----------------------------------------------------------------|
+| 1             | Remover la vista actual.                                       |
+| 2             | Remover todas las vistas.                                      |
+| 3             | Abrir la vista actual en nuestro navegador web predeterminado. |
 
 
 ## Proyectos
