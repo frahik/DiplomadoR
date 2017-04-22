@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="introduccion-a-r.html">
+<link rel="prev" href="RMarkDown.html">
+<link rel="next" href="ejercicios.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -202,112 +202,255 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Diplomado en R</h1>
-<h4 class="author"><em>Francisco Javier Luna Vázquez</em></h4>
-<h4 class="date"><em>2017-04-22</em></h4>
-</div>
-<div id="prerequisitos" class="section level1">
-<h1><span class="header-section-number">Capítulo 1</span> Prerequisitos</h1>
-<div id="instalacion-de-r" class="section level2">
-<h2><span class="header-section-number">1.1</span> Instalación de R</h2>
-<p>Empezaremos por lo más básico, Podemos instalar <strong>R</strong> desde el siguiente link: <a href="https://www.r-project.org/" class="uri">https://www.r-project.org/</a></p>
-<p>Pero como muchos somos algo despistados, estas son las maneras más sencillas para instalar <strong>R</strong> en distintos Sistemas Operativos:</p>
+<div id="apendA" class="section level1">
+<h1><span class="header-section-number">Capítulo 5</span> Funciones de R</h1>
+<div id="tabla-simbolos-basicos" class="section level2">
+<h2><span class="header-section-number">5.1</span> Tabla símbolos básicos</h2>
 <table>
 <thead>
 <tr class="header">
-<th>Sistema Operativo</th>
-<th>Método</th>
+<th align="center">Aritméticos</th>
+<th></th>
+<th align="center">Lógicos</th>
+<th></th>
+<th align="center">Comparativos</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Windows</td>
-<td><a href="https://cran.itam.mx/bin/windows/base/R-3.3.3-win.exe">CRAN-R-Windows.exe</a></td>
+<td align="center">+</td>
+<td>Adición</td>
+<td align="center">==</td>
+<td>Igual a</td>
+<td align="center">&amp;</td>
+<td>Y Lógico</td>
 </tr>
 <tr class="even">
-<td>Debian y derivados</td>
-<td><code>sudo apt-get install r-base</code></td>
+<td align="center">-</td>
+<td>Substracción</td>
+<td align="center">!=</td>
+<td>Diferente de</td>
+<td align="center">!</td>
+<td>No Lógico</td>
 </tr>
 <tr class="odd">
-<td>Redhat y derivados</td>
-<td><code>sudo yum install R-core R-devel</code></td>
+<td align="center">*</td>
+<td>Multiplicación</td>
+<td align="center">&lt;</td>
+<td>Menor que</td>
+<td align="center"></td>
+<td></td>
 </tr>
 <tr class="even">
-<td>Arch y derivados</td>
-<td><code>sudo pacman -S r</code></td>
+<td align="center">/</td>
+<td>División</td>
+<td align="center">&gt;</td>
+<td>Mayor que</td>
+<td align="center">is.na(x)</td>
+<td>¿Es NA?</td>
 </tr>
 <tr class="odd">
-<td>Mac</td>
-<td><a href="https://www.youtube.com/watch?v=ICGkG7Gg6j0" class="uri">https://www.youtube.com/watch?v=ICGkG7Gg6j0</a></td>
+<td align="center"><span class="math inline">\(\hat{ }\)</span></td>
+<td>Potencia</td>
+<td align="center">&lt;=</td>
+<td>Menor o igual a</td>
+<td align="center">is.null(x)</td>
+<td>¿Es Null?</td>
+</tr>
+<tr class="even">
+<td align="center">%/%</td>
+<td>División de enteros</td>
+<td align="center">&gt;=</td>
+<td>Mayor o igual a</td>
+<td align="center">is.nan(x)</td>
+<td>¿Es NaN?</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="entornos-de-desarrollo-para-r" class="section level2">
-<h2><span class="header-section-number">1.2</span> Entornos de desarrollo para R</h2>
-<p>Una vez instalado, un entorno de desarrollo integrado será necesario para facilitar el desarrollo de códigos en <strong>R</strong>, por lo que se presentan tres de varias opciones para trabajar con <strong>R</strong>.</p>
+<div id="tabla-funciones-basicas" class="section level2">
+<h2><span class="header-section-number">5.2</span> Tabla funciones básicas</h2>
 <table>
 <thead>
 <tr class="header">
-<th align="center">IDE</th>
-<th>Link</th>
+<th align="center">Función</th>
+<th>Matemáticas</th>
+<th align="center">Función</th>
+<th>Estadísticas</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center">Tinn-R</td>
-<td><a href="https://sourceforge.net/projects/tinn-r/" class="uri">https://sourceforge.net/projects/tinn-r/</a></td>
+<td align="center">sqrt(x)</td>
+<td>Raíz de <span class="math inline">\(x\)</span></td>
+<td align="center">mean(x)</td>
+<td>Media</td>
 </tr>
 <tr class="even">
-<td align="center">RStudio [Recomendado]</td>
-<td><a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a></td>
+<td align="center">exp(x)</td>
+<td>Exponencial de <span class="math inline">\(x\)</span></td>
+<td align="center">sd(x)</td>
+<td>Desviación estándar</td>
 </tr>
 <tr class="odd">
-<td align="center">R commander (Rcmdr)</td>
-<td><a href="http://www.rcommander.com/" class="uri">http://www.rcommander.com/</a></td>
+<td align="center">log(x)</td>
+<td>Logaritmo natural de <span class="math inline">\(x\)</span></td>
+<td align="center">var(x)</td>
+<td>Varianza</td>
+</tr>
+<tr class="even">
+<td align="center">log10(x)</td>
+<td>Logaritmo base 10</td>
+<td align="center">median(x)</td>
+<td>Mediana</td>
+</tr>
+<tr class="odd">
+<td align="center">sum(x)</td>
+<td>Suma de los elementos de <span class="math inline">\(x\)</span></td>
+<td align="center">quantiles(x)</td>
+<td>Quantiles</td>
+</tr>
+<tr class="even">
+<td align="center">prod(x)</td>
+<td>Producto de los elementos de <span class="math inline">\(x\)</span></td>
+<td align="center">cor(x,y)</td>
+<td>Correlación</td>
+</tr>
+<tr class="odd">
+<td align="center">sin(x)</td>
+<td>Seno</td>
+<td align="center">max(x)</td>
+<td>Valor máximo</td>
+</tr>
+<tr class="even">
+<td align="center">cos(x)</td>
+<td>Coseno</td>
+<td align="center">min(x)</td>
+<td>Valor mínimo</td>
+</tr>
+<tr class="odd">
+<td align="center">tan(x)</td>
+<td>Tangente</td>
+<td align="center">range(x)</td>
+<td>Retorna el máximo y mínimo</td>
+</tr>
+<tr class="even">
+<td align="center">round(x,n)</td>
+<td>Redondea a <span class="math inline">\(n\)</span> dígitos</td>
+<td align="center">sort(x)</td>
+<td>Ordena los elementos de <span class="math inline">\(x\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">cumsum(x)</td>
+<td>Calcula las sumas acumuladas</td>
+<td align="center">summary</td>
+<td>Resumen de las variables</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td>(<span class="math inline">\(x_1, x_1 + x_2, + x_1 +\ldots+x_n\)</span>)</td>
+<td align="center">choose(n,k)</td>
+<td>Combinatoria de <span class="math inline">\(n\)</span> sobre <span class="math inline">\(k\)</span></td>
 </tr>
 </tbody>
 </table>
-<div class="figure">
-<img src="assets/images/Rstudio-300x260.png" alt="RIDE" />
-<p class="caption">RIDE</p>
 </div>
-<p>En este caso, Sera necesario instalar RStudio para realizar los ejercicios de manera cómoda, por lo que, para instalar RStudio para los distintos Sistemas Operativos podemos hacerlo desde la liga principal, o para evitar buscar podemos usar la liga que más nos convenga de la siguiente tabla.</p>
-<table>
+<div id="tabla-de-funciones-de-distribucion" class="section level2">
+<h2><span class="header-section-number">5.3</span> Tabla de funciones de distribución</h2>
+<table style="width:100%;">
+<colgroup>
+<col width="22%" />
+<col width="18%" />
+<col width="20%" />
+<col width="15%" />
+<col width="23%" />
+</colgroup>
 <thead>
 <tr class="header">
-<th>Sistema Operativo</th>
-<th>Método</th>
+<th>Distribución</th>
+<th>Función de densidad</th>
+<th>distribución acumulada</th>
+<th>función cuantil</th>
+<th>Uso de números aleatorios</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Windows (7 en adelante)</td>
-<td><a href="https://download1.rstudio.org/RStudio-1.0.136.exe">RStudio-Windows.exe</a></td>
+<td>Normal</td>
+<td>dnorm(…)</td>
+<td>pnorm(…)</td>
+<td>qnorm(…)</td>
+<td>rnorm(…)</td>
 </tr>
 <tr class="even">
-<td>Linux (Debian y derivados)</td>
-<td><a href="https://download1.rstudio.org/rstudio-1.0.136-amd64.deb">RStudio-Linux.deb</a></td>
+<td>Uniforme</td>
+<td>dunif(…)</td>
+<td>punif(…)</td>
+<td>qunif(…)</td>
+<td>runif(…)</td>
 </tr>
 <tr class="odd">
-<td>Linux (RedHat y derivados)</td>
-<td><a href="https://download1.rstudio.org/rstudio-1.0.136-x86_64.rpm">RStudio-Linux.rpm</a></td>
+<td>Student’s t</td>
+<td>dt(…)</td>
+<td>pt(…)</td>
+<td>qt(…)</td>
+<td>rt(…)</td>
 </tr>
 <tr class="even">
-<td>Linux (Arch y derivados)</td>
-<td><code>sudo pacman -S rstudio-desktop</code></td>
+<td>Chi-cuadrada</td>
+<td>dchisq(…)</td>
+<td>pchisq(…)</td>
+<td>qchisq(…)</td>
+<td>rchisq(…)</td>
 </tr>
 <tr class="odd">
-<td>Mac</td>
-<td><a href="https://download1.rstudio.org/RStudio-1.0.136.dmg">RStudio-Mac.dmg</a></td>
+<td>Gamma</td>
+<td>dgamma(…)</td>
+<td>pgamma(…)</td>
+<td>qgamma(…)</td>
+<td>rgamma(…)</td>
+</tr>
+<tr class="even">
+<td>Normal Multivariada</td>
+<td>dmvnorm(…)</td>
+<td>pmvnorm(…)</td>
+<td></td>
+<td>rmvnorm(…)</td>
+</tr>
+<tr class="odd">
+<td>Student’s t Multivariada</td>
+<td>dmvt(…)</td>
+<td>pmvt(…)</td>
+<td>qmvt(…)</td>
+<td>rmvt(…)</td>
+</tr>
+<tr class="even">
+<td>Exponencial</td>
+<td>dexp(…)</td>
+<td>pexp(…)</td>
+<td>qexp(…)</td>
+<td>rexp(…)</td>
+</tr>
+<tr class="odd">
+<td>Cauchy</td>
+<td>dcauchy(…)</td>
+<td>pcauchy(…)</td>
+<td>qcauchy(…)</td>
+<td>rcauchy(…)</td>
+</tr>
+<tr class="even">
+<td>Wishart</td>
+<td>dwish(…)</td>
+<td></td>
+<td></td>
+<td>rwish(…)</td>
 </tr>
 </tbody>
 </table>
-<p>Y finalmente sera necesario tener instalados el siguiente paquete:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)
-<span class="kw">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>, <span class="dt">dependencies =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<p>Dichos paquetes nos servirán para la manipulación de datos (dplyr) y crear documentos dinámicos en la tercera parte del curso.</p>
+<blockquote>
+<p>Nota: algunas de estas distribuciones se encuentran en las librerías de MASS, MCMCpack y mvtnorm.</p>
+</blockquote>
 
 </div>
 </div>
@@ -316,8 +459,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-
-<a href="introduccion-a-r.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="RMarkDown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ejercicios.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
